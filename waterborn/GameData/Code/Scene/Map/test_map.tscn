@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bcv6foge85byl"]
+
+[ext_resource type="Texture2D" uid="uid://r3vfmq1xn43v" path="res://icon.svg" id="1_t1dbi"]
+[ext_resource type="Script" uid="uid://cq11v2npdaov8" path="res://GameData/Code/Script/Character/player.gd" id="2_36w3b"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_36w3b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oeqoi"]
+size = Vector3(1, 0.05, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t1dbi"]
+
+[node name="TestMap" type="Node3D" unique_id=1017150095]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1023124523]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_36w3b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=965958719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_oeqoi")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D" unique_id=488341769]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+texture = ExtResource("1_t1dbi")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1031223897]
+script = ExtResource("2_36w3b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=691307575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_t1dbi")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1828192856]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.8, 0)
