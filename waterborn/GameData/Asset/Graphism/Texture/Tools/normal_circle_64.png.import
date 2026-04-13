@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3cb4nxpr4y6p"
-path="res://.godot/imported/6618-normal.jpg-d7a9f77533cf8cb70e4c7671e45869cd.ctex"
+uid="uid://bykx0oinm5tsk"
+path="res://.godot/imported/normal_circle_64.png-e561cb616ae49025fd26484399e120f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Tools/6618-normal.jpg"
-dest_files=["res://.godot/imported/6618-normal.jpg-d7a9f77533cf8cb70e4c7671e45869cd.ctex"]
+source_file="res://GameData/Asset/Graphism/Texture/Tools/normal_circle_64.png"
+dest_files=["res://.godot/imported/normal_circle_64.png-e561cb616ae49025fd26484399e120f7.ctex"]
 
 [params]
 

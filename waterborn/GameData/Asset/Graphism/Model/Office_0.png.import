@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxj7lgg5oogy4"
-path="res://.godot/imported/height_map2.png-e28767784a3d26ebc0a665309f6afbad.ctex"
+uid="uid://jeq6xs25mkbb"
+path.s3tc="res://.godot/imported/Office_0.png-a0920f96a0a31d6a2f0266bb74c73c20.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "68f1b66d6aace80669b2c40d3c0bc870"
 }
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Tools/height_map2.png"
-dest_files=["res://.godot/imported/height_map2.png-e28767784a3d26ebc0a665309f6afbad.ctex"]
+source_file="res://GameData/Asset/Graphism/Model/Office_0.png"
+dest_files=["res://.godot/imported/Office_0.png-a0920f96a0a31d6a2f0266bb74c73c20.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

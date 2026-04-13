@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwas0xr8xytd4"
-path="res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-834ca2086ab135272eab5da14a5a21b8.ctex"
+uid="uid://c2vr068bs3t7o"
+path="res://.godot/imported/height_map.png-ea460517fb7f01c0f52a056bd499c6a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Tools/2d_lights_and_shadows_neutral_point_light.webp"
-dest_files=["res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-834ca2086ab135272eab5da14a5a21b8.ctex"]
+source_file="res://GameData/Asset/Graphism/Texture/Tools/height_map.png"
+dest_files=["res://.godot/imported/height_map.png-ea460517fb7f01c0f52a056bd499c6a6.ctex"]
 
 [params]
 
