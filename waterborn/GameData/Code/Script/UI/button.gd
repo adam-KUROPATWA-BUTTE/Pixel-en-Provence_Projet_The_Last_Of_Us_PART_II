@@ -12,8 +12,10 @@ func _pressed():
 		"FullscreenButton":
 			if Vector2i(window.size) == window.window_size:
 				window.size = get_viewport().get_visible_rect().size
+				window.position = Vector2i.ZERO
 			else:
 				window.size = window.window_size
+				window.position = window.pos
 		"CloseButton":
 			print("Bye")
 			window.queue_free()

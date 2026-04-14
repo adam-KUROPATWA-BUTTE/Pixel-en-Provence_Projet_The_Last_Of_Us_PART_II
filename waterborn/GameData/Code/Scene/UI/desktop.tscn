@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://chgxlcvdk4nda" path="res://GameData/Asset/Graphism/Texture/UI/close_icon.png" id="9_4l110"]
 [ext_resource type="Texture2D" uid="uid://8f7vusu411qn" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed.png" id="10_dvm0a"]
 [ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="11_2geot"]
+[ext_resource type="Texture2D" uid="uid://cuykt6sqg8mng" path="res://GameData/Asset/Graphism/Texture/UI/folder_icon.png" id="12_acbyf"]
+[ext_resource type="Script" uid="uid://ctb6ljjp4bnho" path="res://GameData/Code/Script/UI/window_bar.gd" id="12_ig3hw"]
 
 [sub_resource type="Gradient" id="Gradient_orhlc"]
 colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156863, 0.78431374, 1)
@@ -19,6 +21,10 @@ colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156
 gradient = SubResource("Gradient_orhlc")
 
 [sub_resource type="LabelSettings" id="LabelSettings_127m7"]
+font = ExtResource("11_2geot")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig3hw"]
 font = ExtResource("11_2geot")
 font_size = 8
 
@@ -67,6 +73,7 @@ grow_horizontal = 0
 texture = ExtResource("3_ig3hw")
 
 [node name="ReduceButton" type="TextureButton" parent="Window/WindowIconContainer" unique_id=89133885]
+visible = false
 layout_mode = 0
 offset_left = 4.0
 offset_top = 5.0
@@ -96,7 +103,7 @@ texture_normal = ExtResource("9_4l110")
 texture_pressed = ExtResource("10_dvm0a")
 script = ExtResource("6_i3tbq")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Window" unique_id=1896732353]
+[node name="WindowTopBar" type="HBoxContainer" parent="Window" unique_id=1896732353]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -106,7 +113,7 @@ offset_right = -31.0
 offset_bottom = 14.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Window/HBoxContainer" unique_id=116764905]
+[node name="Label" type="Label" parent="Window/WindowTopBar" unique_id=116764905]
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -114,3 +121,63 @@ text = "Nom de logiciel très important"
 label_settings = SubResource("LabelSettings_127m7")
 clip_text = true
 text_overrun_behavior = 3
+
+[node name="TextureButton" type="TextureButton" parent="Window/WindowTopBar/Label" unique_id=10659901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_ig3hw")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1864342594]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("12_acbyf")
+
+[node name="Label" type="Label" parent="Icon" unique_id=1514655188]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -6.0
+offset_right = 18.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Important"
+label_settings = SubResource("LabelSettings_ig3hw")
+
+[node name="Icon2" type="TextureRect" parent="." unique_id=1361814238]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 112.0
+texture = ExtResource("12_acbyf")
+
+[node name="Label" type="Label" parent="Icon2" unique_id=2110656810]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -6.0
+offset_right = 18.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Important"
+label_settings = SubResource("LabelSettings_ig3hw")
+
+[connection signal="button_down" from="Window/WindowTopBar/Label/TextureButton" to="Window/WindowTopBar/Label/TextureButton" method="_on_button_down"]
+[connection signal="button_up" from="Window/WindowTopBar/Label/TextureButton" to="Window/WindowTopBar/Label/TextureButton" method="_on_button_up"]
