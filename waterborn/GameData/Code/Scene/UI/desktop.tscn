@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://d35oto7o386j"]
+
+[ext_resource type="Texture2D" uid="uid://dgjmrmw84n5ua" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset.png" id="1_vt8pt"]
+[ext_resource type="Script" uid="uid://o7m6uagb3uku" path="res://GameData/Code/Script/UI/window.gd" id="2_acbyf"]
+[ext_resource type="Texture2D" uid="uid://dsegyf7luhref" path="res://GameData/Asset/Graphism/Texture/UI/window_icons_container.png" id="3_ig3hw"]
+[ext_resource type="Texture2D" uid="uid://bwi368s8f6dqw" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon.png" id="4_qawy3"]
+[ext_resource type="Texture2D" uid="uid://bgipg7p4bfvmj" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon_pressed.png" id="5_n4uon"]
+[ext_resource type="Script" uid="uid://cni0dowa5q1a" path="res://GameData/Code/Script/UI/button.gd" id="6_i3tbq"]
+[ext_resource type="Texture2D" uid="uid://cnmdkg6xefy3i" path="res://GameData/Asset/Graphism/Texture/UI/fullscreen_icon.png" id="7_d2o5o"]
+[ext_resource type="Texture2D" uid="uid://cd6l5mntrkv2" path="res://GameData/Asset/Graphism/Texture/UI/fullscreen_icon_pressed.png" id="8_i56hs"]
+[ext_resource type="Texture2D" uid="uid://chgxlcvdk4nda" path="res://GameData/Asset/Graphism/Texture/UI/close_icon.png" id="9_4l110"]
+[ext_resource type="Texture2D" uid="uid://8f7vusu411qn" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed.png" id="10_dvm0a"]
+[ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="11_2geot"]
+
+[sub_resource type="Gradient" id="Gradient_orhlc"]
+colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156863, 0.78431374, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0gtju"]
+gradient = SubResource("Gradient_orhlc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_127m7"]
+font = ExtResource("11_2geot")
+font_size = 8
+
+[node name="Desktop" type="Control" unique_id=972921025]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=114342256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_0gtju")
+expand_mode = 1
+
+[node name="Window" type="NinePatchRect" parent="." unique_id=1318438655]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 224.0
+offset_right = 439.0
+offset_bottom = 330.0
+texture = ExtResource("1_vt8pt")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_acbyf")
+
+[node name="WindowIconContainer" type="TextureRect" parent="Window" unique_id=1645999465]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 16.0
+grow_horizontal = 0
+texture = ExtResource("3_ig3hw")
+
+[node name="ReduceButton" type="TextureButton" parent="Window/WindowIconContainer" unique_id=89133885]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 13.0
+offset_bottom = 14.0
+texture_normal = ExtResource("4_qawy3")
+texture_pressed = ExtResource("5_n4uon")
+script = ExtResource("6_i3tbq")
+
+[node name="FullscreenButton" type="TextureButton" parent="Window/WindowIconContainer" unique_id=766029572]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 21.0
+offset_bottom = 14.0
+texture_normal = ExtResource("7_d2o5o")
+texture_pressed = ExtResource("8_i56hs")
+script = ExtResource("6_i3tbq")
+
+[node name="CloseButton" type="TextureButton" parent="Window/WindowIconContainer" unique_id=937945624]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 5.0
+offset_right = 29.0
+offset_bottom = 14.0
+texture_normal = ExtResource("9_4l110")
+texture_pressed = ExtResource("10_dvm0a")
+script = ExtResource("6_i3tbq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window" unique_id=1896732353]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = -31.0
+offset_bottom = 14.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Window/HBoxContainer" unique_id=116764905]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nom de logiciel très important"
+label_settings = SubResource("LabelSettings_127m7")
+clip_text = true
+text_overrun_behavior = 3

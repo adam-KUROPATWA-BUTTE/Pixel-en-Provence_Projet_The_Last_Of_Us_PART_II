@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://r3vfmq1xn43v" path="res://icon.svg" id="1_t1dbi"]
 [ext_resource type="Script" uid="uid://cq11v2npdaov8" path="res://GameData/Code/Script/Character/player.gd" id="2_36w3b"]
 [ext_resource type="PackedScene" uid="uid://gkys1oa2b81m" path="res://GameData/Asset/Graphism/Model/Office.gltf" id="3_wh7ha"]
+[ext_resource type="PackedScene" uid="uid://d35oto7o386j" path="res://GameData/Code/Scene/UI/desktop.tscn" id="4_yptfu"]
+[ext_resource type="Shader" uid="uid://db4gotqic31d6" path="res://GameData/Code/Shader/test_map.gdshader" id="5_8dteh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_36w3b"]
 
@@ -10,6 +12,19 @@
 size = Vector3(1, 0.05, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t1dbi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vw2fk"]
+shader = ExtResource("5_8dteh")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8dteh"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cldo"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_8dteh")
+texture_filter = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_8dteh"]
 
 [node name="TestMap" type="Node3D" unique_id=1017150095]
 
@@ -41,3 +56,14 @@ transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.8, 0)
 
 [node name="blockbench_export" parent="StaticBody3D2" unique_id=1826930491 instance=ExtResource("3_wh7ha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5888536, 0, 11.399323)
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=384941960]
+disable_3d = true
+
+[node name="Desktop" parent="SubViewport" unique_id=972921025 instance=ExtResource("4_yptfu")]
+material = SubResource("ShaderMaterial_vw2fk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=423531049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48587632, 2.137447, -8.118478)
+material_override = SubResource("StandardMaterial3D_8cldo")
+mesh = SubResource("QuadMesh_8dteh")
