@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://d35oto7o386j"]
+
+[ext_resource type="Texture2D" uid="uid://j2pd4pvga3n0" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset_debug.png" id="1_raew6"]
+[ext_resource type="Texture2D" uid="uid://brx10u52gsrcj" path="res://GameData/Asset/Graphism/Texture/UI/window_icons.png" id="2_8nk77"]
+[ext_resource type="Texture2D" uid="uid://dgjmrmw84n5ua" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset.png" id="3_oibww"]
+
+[node name="Control" type="Control" unique_id=972921025]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WithGrid" type="NinePatchRect" parent="." unique_id=1114661882]
+visible = false
+layout_mode = 0
+offset_right = 372.0
+offset_bottom = 245.0
+texture = ExtResource("1_raew6")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="WithGrid" unique_id=605065276]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 16.0
+grow_horizontal = 0
+texture = ExtResource("2_8nk77")
+
+[node name="WithoutGrid" type="NinePatchRect" parent="." unique_id=1318438655]
+layout_mode = 0
+offset_right = 367.0
+offset_bottom = 237.0
+texture = ExtResource("3_oibww")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="WithoutGrid" unique_id=2124714059]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 16.0
+grow_horizontal = 0
+texture = ExtResource("2_8nk77")
