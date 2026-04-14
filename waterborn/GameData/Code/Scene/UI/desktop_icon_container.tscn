@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c7kkjqdpi8hw0"]
+
+[ext_resource type="Script" uid="uid://2upw5fr2jx1a" path="res://GameData/Code/Script/UI/desktop_icon.gd" id="1_3e8em"]
+[ext_resource type="Texture2D" uid="uid://cuykt6sqg8mng" path="res://GameData/Asset/Graphism/Texture/UI/folder_icon.png" id="2_3e8em"]
+[ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="3_xmjnt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig3hw"]
+font = ExtResource("3_xmjnt")
+font_size = 8
+
+[node name="DesktopIconContainer3" type="Control" unique_id=412043561]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 144.0
+offset_right = 80.0
+offset_bottom = 216.0
+script = ExtResource("1_3e8em")
+
+[node name="IconTexture" type="TextureRect" parent="." unique_id=907117478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3e8em")
+stretch_mode = 3
+
+[node name="IconName" type="Label" parent="IconTexture" unique_id=680852477]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 48.0
+offset_bottom = 71.0
+grow_horizontal = 2
+text = "Default"
+label_settings = SubResource("LabelSettings_ig3hw")
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="IconHitBox" type="TextureButton" parent="." unique_id=1714592880]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="IconHitBox" to="." method="_on_icon_hit_box_pressed"]
