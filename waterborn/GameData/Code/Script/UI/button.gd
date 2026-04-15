@@ -10,6 +10,7 @@ func _pressed():
 		"ReduceButton":
 			pass
 		"FullscreenButton":
+			window.get_parent().move_child(window, -1)
 			if Vector2i(window.size) == window.window_size:
 				window.size = get_viewport().get_visible_rect().size
 				window.position = Vector2i.ZERO
