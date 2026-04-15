@@ -13,11 +13,8 @@ size = Vector3(1, 0.05, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t1dbi"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vw2fk"]
-shader = ExtResource("5_8dteh")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_8dteh"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("MeshInstance3D/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cldo"]
 resource_local_to_scene = true
@@ -25,6 +22,10 @@ albedo_texture = SubResource("ViewportTexture_8dteh")
 texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_8dteh"]
+size = Vector2(1.6, 0.9)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vw2fk"]
+shader = ExtResource("5_8dteh")
 
 [node name="TestMap" type="Node3D" unique_id=1017150095]
 
@@ -51,19 +52,32 @@ shape = SubResource("CapsuleShape3D_t1dbi")
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.8, 0)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=470366961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3081799, 0, -20.51146)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1623041872]
 
 [node name="blockbench_export" parent="StaticBody3D2" unique_id=1826930491 instance=ExtResource("3_wh7ha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5888536, 0, 11.399323)
-
-[node name="SubViewport" type="SubViewport" parent="." unique_id=384941960]
-disable_3d = true
-
-[node name="Desktop" parent="SubViewport" unique_id=972921025 instance=ExtResource("4_yptfu")]
-material = SubResource("ShaderMaterial_vw2fk")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5888536, 0, 11.030514)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=423531049]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48587632, 2.137447, -8.118478)
+layers = 2
 material_override = SubResource("StandardMaterial3D_8cldo")
 mesh = SubResource("QuadMesh_8dteh")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D" unique_id=384941960]
+disable_3d = true
+size = Vector2i(1152, 648)
+
+[node name="Desktop" parent="MeshInstance3D/SubViewport" unique_id=972921025 instance=ExtResource("4_yptfu")]
+material = SubResource("ShaderMaterial_vw2fk")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="MeshInstance3D" unique_id=282333003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91592455)
+layers = 2
+light_indirect_energy = 0.0
+light_size = 1.0
+light_cull_mask = 4293918722
+spot_range = 1.6979673
+spot_angle = 57.90211
+spot_angle_attenuation = 1e-05

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxcibwu4g7nqb" path="res://GameData/Code/Script/UI/desktop.gd" id="1_5ogt5"]
 [ext_resource type="PackedScene" uid="uid://ca5hgykrfl6uo" path="res://GameData/Code/Scene/UI/window.tscn" id="3_lg7vl"]
+[ext_resource type="PackedScene" uid="uid://cirdnwv6m51wb" path="res://GameData/Code/Scene/UI/error.tscn" id="4_lg7vl"]
 [ext_resource type="PackedScene" uid="uid://c7kkjqdpi8hw0" path="res://GameData/Code/Scene/UI/desktop_icon_container.tscn" id="4_n4uon"]
 [ext_resource type="Shader" uid="uid://dtslnmxfhxun2" path="res://GameData/Code/Shader/vhs_shader.gdshader" id="14_qawy3"]
 
@@ -85,6 +86,21 @@ offset_left = 339.0
 offset_top = 206.0
 offset_right = 538.0
 offset_bottom = 312.0
+
+[node name="Erros" type="Control" parent="." unique_id=1906758052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Error" parent="Erros" unique_id=688648162 instance=ExtResource("4_lg7vl")]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 362.0
+offset_right = 926.0
+offset_bottom = 456.0
 
 [node name="VHSFilter" type="TextureRect" parent="." unique_id=140234150]
 material = SubResource("ShaderMaterial_n4uon")
