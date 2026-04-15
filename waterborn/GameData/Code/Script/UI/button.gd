@@ -15,7 +15,7 @@ func _pressed():
 				window.position = Vector2i.ZERO
 			else:
 				window.size = window.window_size
-				window.position = window.pos
+				window.position = window.window_pos
 		"CloseButton":
 			print("Bye")
 			window.queue_free()
