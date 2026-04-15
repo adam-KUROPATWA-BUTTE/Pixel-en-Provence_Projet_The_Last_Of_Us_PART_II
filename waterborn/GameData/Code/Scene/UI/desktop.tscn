@@ -32,7 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5ogt5")
-duplicate_window = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=114342256]
 layout_mode = 1
@@ -72,6 +71,14 @@ icon_name = "Godot"
 icon_type = 1
 window_id = 1
 
+[node name="DesktopIconContainer6" parent="Icons" unique_id=479526420 instance=ExtResource("4_n4uon")]
+layout_mode = 0
+offset_top = 192.0
+offset_bottom = 264.0
+icon_name = "Sandwich Archive"
+icon_type = 1
+window_id = 2
+
 [node name="Windows" type="Control" parent="." unique_id=1739345683]
 layout_mode = 1
 anchors_preset = 15
@@ -87,6 +94,7 @@ offset_left = 339.0
 offset_top = 206.0
 offset_right = 538.0
 offset_bottom = 312.0
+window_pos = Vector2i(150, 180)
 
 [node name="Errors" type="Control" parent="." unique_id=1906758052]
 layout_mode = 1

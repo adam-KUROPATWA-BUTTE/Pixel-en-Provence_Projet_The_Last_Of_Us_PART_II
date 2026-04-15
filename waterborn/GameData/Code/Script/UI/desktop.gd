@@ -11,12 +11,20 @@ var windows : Dictionary = {
 	0 : {
 		"size" : Vector2i(500, 300),
 		"pos" : Vector2i(150, 180),
-		"name" : "Default"
+		"name" : "Default",
+		"content" : null
 	},
 	1 : {
 		"size" : Vector2i(500, 300),
 		"pos" : Vector2i(150, 180),
-		"name" : "Godot"
+		"name" : "Godot",
+		"content" : null
+	},
+	2 : {
+		"size" : Vector2i(278, 258),
+		"pos" : Vector2i(512, 96),
+		"name" : "Sandwich Archive",
+		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/sandwich_content.tscn")
 	}
 }
 
@@ -24,7 +32,8 @@ var errors: Dictionary = {
 	0 : {
 		"size" : Vector2i(150, 90),
 		"pos" : Vector2i(900, 470),
-		"name" : "Your computer have a virus"
+		"name" : "Your computer have a virus",
+		"content" : null
 	}
 }
 
@@ -55,5 +64,7 @@ func load_window(window_id, type) -> void:
 		new_window.window_name = dico[window_id]["name"]
 		new_window.window_size = dico[window_id]["size"]
 		new_window.window_pos  = dico[window_id]["pos"]
+		if dico[window_id]["content"] != null:
+			new_window.window_content  = dico[window_id]["content"]
 	
-	container.add_child(new_window)
+		container.add_child(new_window)

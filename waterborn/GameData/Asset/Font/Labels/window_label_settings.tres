@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dmg6u0iiwml6b"]
+
+[ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="1_t8cje"]
+
+[resource]
+font = ExtResource("1_t8cje")
+font_size = 8

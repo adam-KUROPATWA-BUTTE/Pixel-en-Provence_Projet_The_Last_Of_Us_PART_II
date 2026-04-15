@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://74klhw5aqbc"]
+
+[ext_resource type="Texture2D" uid="uid://ctpfgk2j2iif0" path="res://GameData/Asset/Graphism/Texture/Software_Image/amu_sandwich.png" id="1_vqbci"]
+[ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="2_yka2u"]
+
+[node name="WindowContent" type="Control" unique_id=1030209999]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 16.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1782032953]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 112.0
+grow_vertical = 2
+texture = ExtResource("1_vqbci")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1849439501]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = 4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Le sandwich amU est une représentation du très populaire premier devoir de l'IUT amU.
+Devoir durant lequel les étudiants doivents décrire le plus précisement les étapes de \"fabrication\" d'un sandwich banane chocolat.
+La popularité de cette exercice viens essentiellement du résultat obtenue par certain étudiant, donnant des \"structures\" tous autant chaotique que stupidement drôle"
+label_settings = ExtResource("2_yka2u")
+autowrap_mode = 3
