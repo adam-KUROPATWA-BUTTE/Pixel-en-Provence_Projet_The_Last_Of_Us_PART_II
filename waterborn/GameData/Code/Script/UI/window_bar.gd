@@ -1,6 +1,7 @@
 extends TextureButton
 
-@onready var window = get_parent().get_parent().get_parent()
+@onready var window = $"../../.."
+@onready var container = window.get_parent()
 
 var hold : bool
 var cursor_start_pos
@@ -12,6 +13,8 @@ func _process(_delta: float) -> void:
 func _on_button_down() -> void:
 	cursor_start_pos = get_viewport().get_mouse_position()
 	hold = true
+	container.move_child(window, -1)
+
 
 func _on_button_up() -> void:
 	hold = false

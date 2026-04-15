@@ -29,8 +29,9 @@ var errors: Dictionary = {
 }
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("Left"):
-		load_window(0, "error")
+	pass
+	#if Input.is_action_just_pressed("Left"):
+	#	load_window(0, "error")
 
 func load_window(window_id, type) -> void:
 	if window_id == -1:
