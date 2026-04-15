@@ -14,7 +14,7 @@ gradient = SubResource("Gradient_orhlc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n4uon"]
 shader = ExtResource("14_qawy3")
-shader_parameter/shake = 0.0010000000475
+shader_parameter/shake_frequency = 0.0010000000475
 shader_parameter/scanline_opacity = 0.0130000006175
 shader_parameter/scanline_size = 302.2290119808775
 shader_parameter/color_glitch_intensity = 0.0010000000475
@@ -87,20 +87,23 @@ offset_top = 206.0
 offset_right = 538.0
 offset_bottom = 312.0
 
-[node name="Erros" type="Control" parent="." unique_id=1906758052]
+[node name="Errors" type="Control" parent="." unique_id=1906758052]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="Error" parent="Erros" unique_id=688648162 instance=ExtResource("4_lg7vl")]
+[node name="Error" parent="Errors" unique_id=688648162 instance=ExtResource("4_lg7vl")]
 layout_mode = 0
-offset_left = 782.0
-offset_top = 362.0
-offset_right = 926.0
-offset_bottom = 456.0
+offset_left = 914.0
+offset_top = 471.0
+offset_right = 1058.0
+offset_bottom = 565.0
+window_size = Vector2i(150, 90)
+window_pos = Vector2i(900, 470)
 
 [node name="VHSFilter" type="TextureRect" parent="." unique_id=140234150]
 material = SubResource("ShaderMaterial_n4uon")

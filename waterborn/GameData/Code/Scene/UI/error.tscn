@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cirdnwv6m51wb"]
 
 [ext_resource type="Texture2D" uid="uid://bhajo1ge3pfe6" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset_warning.png" id="1_wemtv"]
+[ext_resource type="Script" uid="uid://o7m6uagb3uku" path="res://GameData/Code/Script/UI/window.gd" id="2_prgmj"]
 [ext_resource type="Texture2D" uid="uid://b8p05ens2eso8" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_red.png" id="2_yf1dk"]
 [ext_resource type="Texture2D" uid="uid://dj08fbuac0nst" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed_red.png" id="3_prgmj"]
 [ext_resource type="Script" uid="uid://cni0dowa5q1a" path="res://GameData/Code/Script/UI/button.gd" id="4_2shet"]
@@ -21,8 +22,9 @@ patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
+script = ExtResource("2_prgmj")
 
-[node name="CloseButton" type="TextureButton" parent="." unique_id=2102519671]
+[node name="Control" type="Control" parent="." unique_id=1756101731]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -32,6 +34,11 @@ offset_top = 5.0
 offset_right = -3.0
 offset_bottom = 14.0
 grow_horizontal = 0
+
+[node name="CloseButton" type="TextureButton" parent="Control" unique_id=2102519671]
+layout_mode = 0
+offset_right = 9.0
+offset_bottom = 9.0
 texture_normal = ExtResource("2_yf1dk")
 texture_pressed = ExtResource("3_prgmj")
 script = ExtResource("4_2shet")
