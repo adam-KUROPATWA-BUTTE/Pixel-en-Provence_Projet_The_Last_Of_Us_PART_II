@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dgjmrmw84n5ua" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset.png" id="1_vt8pt"]
 [ext_resource type="Script" uid="uid://o7m6uagb3uku" path="res://GameData/Code/Script/UI/window.gd" id="2_acbyf"]
 [ext_resource type="Texture2D" uid="uid://dsegyf7luhref" path="res://GameData/Asset/Graphism/Texture/UI/window_icons_container.png" id="3_ig3hw"]
-[ext_resource type="Script" uid="uid://2upw5fr2jx1a" path="res://GameData/Code/Script/UI/desktop_icon.gd" id="3_n4uon"]
 [ext_resource type="PackedScene" uid="uid://c7kkjqdpi8hw0" path="res://GameData/Code/Scene/UI/desktop_icon_container.tscn" id="4_n4uon"]
 [ext_resource type="Texture2D" uid="uid://bwi368s8f6dqw" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon.png" id="4_qawy3"]
 [ext_resource type="Texture2D" uid="uid://bgipg7p4bfvmj" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon_pressed.png" id="5_n4uon"]
@@ -13,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://chgxlcvdk4nda" path="res://GameData/Asset/Graphism/Texture/UI/close_icon.png" id="9_4l110"]
 [ext_resource type="Texture2D" uid="uid://8f7vusu411qn" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed.png" id="10_dvm0a"]
 [ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="11_2geot"]
-[ext_resource type="Texture2D" uid="uid://cuykt6sqg8mng" path="res://GameData/Asset/Graphism/Texture/UI/folder_icon.png" id="12_acbyf"]
 [ext_resource type="Script" uid="uid://ctb6ljjp4bnho" path="res://GameData/Code/Script/UI/window_bar.gd" id="12_ig3hw"]
+[ext_resource type="Shader" uid="uid://dtslnmxfhxun2" path="res://GameData/Code/Shader/vhs_shader.gdshader" id="14_qawy3"]
 
 [sub_resource type="Gradient" id="Gradient_orhlc"]
 colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156863, 0.78431374, 1)
@@ -22,13 +21,21 @@ colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0gtju"]
 gradient = SubResource("Gradient_orhlc")
 
-[sub_resource type="LabelSettings" id="LabelSettings_ig3hw"]
-font = ExtResource("11_2geot")
-font_size = 8
-
 [sub_resource type="LabelSettings" id="LabelSettings_127m7"]
 font = ExtResource("11_2geot")
 font_size = 8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4uon"]
+shader = ExtResource("14_qawy3")
+shader_parameter/shake = 1.0
+shader_parameter/scanline_opacity = 0.10000000149012
+shader_parameter/scanline_size = 500.0
+shader_parameter/color_glitch_intensity = 0.00999999977648
+
+[sub_resource type="Gradient" id="Gradient_i3tbq"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d2o5o"]
+gradient = SubResource("Gradient_i3tbq")
 
 [node name="Desktop" type="Control" unique_id=972921025]
 layout_mode = 3
@@ -53,99 +60,23 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DesktopIconContainer" type="Control" parent="Icons" unique_id=318493023]
-anchors_preset = 0
-offset_right = 80.0
-offset_bottom = 72.0
-script = ExtResource("3_n4uon")
-
-[node name="IconTexture" type="TextureRect" parent="Icons/DesktopIconContainer" unique_id=1864342594]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -24.0
-offset_right = 24.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("12_acbyf")
-
-[node name="IconName" type="Label" parent="Icons/DesktopIconContainer/IconTexture" unique_id=1514655188]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 37.0
-offset_bottom = 47.0
-grow_horizontal = 2
-text = "Important"
-label_settings = SubResource("LabelSettings_ig3hw")
-autowrap_mode = 2
-
-[node name="IconHitBox" type="TextureButton" parent="Icons/DesktopIconContainer" unique_id=719861778]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="DesktopIconContainer2" type="Control" parent="Icons" unique_id=65719171]
-anchors_preset = 0
-offset_top = 72.0
-offset_right = 80.0
-offset_bottom = 144.0
-script = ExtResource("3_n4uon")
-
-[node name="IconTexture" type="TextureRect" parent="Icons/DesktopIconContainer2" unique_id=1361814238]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("12_acbyf")
-stretch_mode = 3
-
-[node name="IconName" type="Label" parent="Icons/DesktopIconContainer2/IconTexture" unique_id=2110656810]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 49.0
-offset_bottom = 72.0
-grow_horizontal = 2
-text = "Nom de fichier vraiment très long, car en soit je n'ai pas mis de limite à la taille qu'ils peuvent prendre, et j'imagine donc que la taille maximale est la limite établie par godot, mais je ne connais malheuresement pas la valeur de cette limite"
-label_settings = SubResource("LabelSettings_ig3hw")
-horizontal_alignment = 1
-autowrap_mode = 3
-clip_text = true
-text_overrun_behavior = 3
-
-[node name="IconHitBox" type="TextureButton" parent="Icons/DesktopIconContainer2" unique_id=1289635581]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="DesktopIconContainer3" parent="Icons" unique_id=412043561 instance=ExtResource("4_n4uon")]
 layout_mode = 0
+offset_top = 0.0
+offset_bottom = 72.0
+
+[node name="DesktopIconContainer4" parent="Icons" unique_id=1906459908 instance=ExtResource("4_n4uon")]
+layout_mode = 0
+offset_top = 64.0
+offset_bottom = 136.0
+icon_name = "Nom de fichier vraiment très long, car en soit je n'ai pas mis de limite à la taille qu'ils peuvent prendre, et j'imagine donc que la taille maximale est la limite établie par godot, mais je ne connais malheuresement pas la valeur de cette limite"
+
+[node name="DesktopIconContainer5" parent="Icons" unique_id=874801450 instance=ExtResource("4_n4uon")]
+layout_mode = 0
+offset_top = 128.0
+offset_bottom = 200.0
+icon_name = "Godot"
+icon_type = 1
 
 [node name="Windows" type="Control" parent="." unique_id=1739345683]
 layout_mode = 1
@@ -241,6 +172,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_ig3hw")
+
+[node name="VHSFilter" type="TextureRect" parent="." unique_id=140234150]
+material = SubResource("ShaderMaterial_n4uon")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_d2o5o")
 
 [connection signal="button_down" from="Windows/Window/WindowTopBar/WindowName/TextureButton" to="Windows/Window/WindowTopBar/WindowName/TextureButton" method="_on_button_down"]
 [connection signal="button_up" from="Windows/Window/WindowTopBar/WindowName/TextureButton" to="Windows/Window/WindowTopBar/WindowName/TextureButton" method="_on_button_up"]
