@@ -13,7 +13,7 @@ gradient = SubResource("Gradient_orhlc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n4uon"]
 shader = ExtResource("14_qawy3")
-shader_parameter/shake = 0.0
+shader_parameter/shake = 0.0010000000475
 shader_parameter/scanline_opacity = 0.0130000006175
 shader_parameter/scanline_size = 302.2290119808775
 shader_parameter/color_glitch_intensity = 0.0010000000475

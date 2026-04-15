@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cirdnwv6m51wb"]
+
+[ext_resource type="Texture2D" uid="uid://bhajo1ge3pfe6" path="res://GameData/Asset/Graphism/Texture/UI/window_tileset_warning.png" id="1_wemtv"]
+[ext_resource type="Texture2D" uid="uid://b8p05ens2eso8" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_red.png" id="2_yf1dk"]
+[ext_resource type="Texture2D" uid="uid://dj08fbuac0nst" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed_red.png" id="3_prgmj"]
+[ext_resource type="Script" uid="uid://cni0dowa5q1a" path="res://GameData/Code/Script/UI/button.gd" id="4_2shet"]
+[ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="5_p1bro"]
+[ext_resource type="Script" uid="uid://ctb6ljjp4bnho" path="res://GameData/Code/Script/UI/window_bar.gd" id="6_uiy7w"]
+[ext_resource type="Texture2D" uid="uid://dcq8ygd1ub68e" path="res://GameData/Asset/Graphism/Texture/UI/warning_icon.png" id="7_belch"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywg7u"]
+font = ExtResource("5_p1bro")
+font_size = 8
+
+[node name="Error" type="NinePatchRect" unique_id=688648162]
+custom_minimum_size = Vector2(0, 48)
+offset_right = 144.0
+offset_bottom = 94.0
+texture = ExtResource("1_wemtv")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="CloseButton" type="TextureButton" parent="." unique_id=2102519671]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -12.0
+offset_top = 5.0
+offset_right = -3.0
+offset_bottom = 14.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_yf1dk")
+texture_pressed = ExtResource("3_prgmj")
+script = ExtResource("4_2shet")
+
+[node name="WindowTopBar" type="HBoxContainer" parent="." unique_id=1693428634]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = -31.0
+offset_bottom = 14.0
+grow_horizontal = 2
+
+[node name="WindowName" type="Label" parent="WindowTopBar" unique_id=1315461703]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nom d'erreur grave"
+label_settings = SubResource("LabelSettings_ywg7u")
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="TextureButton" type="TextureButton" parent="WindowTopBar/WindowName" unique_id=1447402145]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_uiy7w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=471789652]
+layout_mode = 1
+offset_top = 16.0
+offset_right = 32.0
+offset_bottom = 48.0
+texture = ExtResource("7_belch")
+
+[connection signal="button_down" from="WindowTopBar/WindowName/TextureButton" to="WindowTopBar/WindowName/TextureButton" method="_on_button_down"]
+[connection signal="button_up" from="WindowTopBar/WindowName/TextureButton" to="WindowTopBar/WindowName/TextureButton" method="_on_button_up"]
