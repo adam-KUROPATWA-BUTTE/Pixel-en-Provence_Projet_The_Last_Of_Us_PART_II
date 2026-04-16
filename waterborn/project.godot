@@ -16,7 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global_calculation="*uid://b1bpmot1tvwih"
+global_calculation="*uid://dpn71hcutqg0v"
+global_enums="*uid://b5cj60587ncwg"
 
 [input]
 

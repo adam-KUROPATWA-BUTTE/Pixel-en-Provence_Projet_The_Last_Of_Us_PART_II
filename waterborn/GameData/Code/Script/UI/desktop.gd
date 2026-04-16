@@ -25,6 +25,18 @@ var windows : Dictionary = {
 		"pos" : Vector2i(512, 96),
 		"name" : "Sandwich Archive",
 		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/sandwich_content.tscn")
+	},
+	3 : {
+		"size" : Vector2i(278, 258),
+		"pos" : Vector2i(512, 96),
+		"name" : "Bimont Archive",
+		"content" : null
+	},
+	4 : {
+		"size" : Vector2i(280, 150),
+		"pos" : Vector2i(640, 288),
+		"name" : "Archives",
+		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/archives_folder_content.tscn")
 	}
 }
 
@@ -33,6 +45,12 @@ var errors: Dictionary = {
 		"size" : Vector2i(150, 90),
 		"pos" : Vector2i(900, 470),
 		"name" : "Your computer have a virus",
+		"content" : null
+	},
+	1 : {
+		"size" : Vector2i(150, 90),
+		"pos" : Vector2i(900, 470),
+		"name" : "Restricted Access",
 		"content" : null
 	}
 }
@@ -49,17 +67,19 @@ func load_window(window_id, type) -> void:
 	var dico : Dictionary
 	var container : Control
 	match type:
-		"window":
+		global_enums.window_types.WINDOW:
 			dico = windows
 			container = window_container
 			new_window = window_scene.instantiate()
-		"error":
+		global_enums.window_types.ERROR:
 			dico = errors
 			container = error_container
 			new_window = error_scene.instantiate()
+		_:
+			return
 	if dico:
 		for window in container.get_children():
-			if window.window_name == dico[window_id]["name"] and !duplicate_window and type != "error":
+			if window.window_name == dico[window_id]["name"] and !duplicate_window and type != global_enums.window_types.ERROR:
 				return
 		new_window.window_name = dico[window_id]["name"]
 		new_window.window_size = dico[window_id]["size"]

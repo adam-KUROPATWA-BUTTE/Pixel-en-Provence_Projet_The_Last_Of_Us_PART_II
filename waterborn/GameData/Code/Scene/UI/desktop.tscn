@@ -24,7 +24,7 @@ shader_parameter/color_glitch_intensity = 0.0010000000475
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_d2o5o"]
 gradient = SubResource("Gradient_i3tbq")
 
-[node name="Desktop" type="Control" unique_id=972921025]
+[node name="Desktop" type="Control" unique_id=972921025 groups=["desktop"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,12 +56,16 @@ mouse_filter = 2
 layout_mode = 0
 offset_top = 0.0
 offset_bottom = 72.0
+icon_name = "Worker Datas"
+window_id = 1
+window_type = 1
 
 [node name="DesktopIconContainer4" parent="Icons" unique_id=1906459908 instance=ExtResource("4_n4uon")]
 layout_mode = 0
 offset_top = 64.0
 offset_bottom = 136.0
-icon_name = "Nom de fichier vraiment très long, car en soit je n'ai pas mis de limite à la taille qu'ils peuvent prendre, et j'imagine donc que la taille maximale est la limite établie par godot, mais je ne connais malheuresement pas la valeur de cette limite"
+icon_name = "Archives"
+window_id = 4
 
 [node name="DesktopIconContainer5" parent="Icons" unique_id=874801450 instance=ExtResource("4_n4uon")]
 layout_mode = 0
@@ -90,10 +94,10 @@ mouse_filter = 2
 
 [node name="Window" parent="Windows" unique_id=1577778383 instance=ExtResource("3_lg7vl")]
 layout_mode = 0
-offset_left = 339.0
-offset_top = 206.0
-offset_right = 538.0
-offset_bottom = 312.0
+offset_left = 640.0
+offset_top = 288.0
+offset_right = 839.0
+offset_bottom = 394.0
 window_pos = Vector2i(150, 180)
 
 [node name="Errors" type="Control" parent="." unique_id=1906758052]

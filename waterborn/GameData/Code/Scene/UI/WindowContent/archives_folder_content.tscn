@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dknaqrlodtlph"]
+
+[ext_resource type="PackedScene" uid="uid://c7kkjqdpi8hw0" path="res://GameData/Code/Scene/UI/desktop_icon_container.tscn" id="1_5b77k"]
+
+[node name="WindowContent" type="Control" unique_id=971535724]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DesktopIconContainer3" parent="." unique_id=412043561 instance=ExtResource("1_5b77k")]
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 72.0
+icon_name = "Sandwich Archive"
+icon_type = 1
+window_id = 2
+
+[node name="DesktopIconContainer4" parent="." unique_id=411456390 instance=ExtResource("1_5b77k")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 0.0
+offset_right = 160.0
+offset_bottom = 72.0
+icon_name = "Bimont Archive"
+icon_type = 1

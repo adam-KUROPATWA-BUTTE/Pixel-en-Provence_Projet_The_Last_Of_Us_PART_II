@@ -17,7 +17,7 @@
 offset_left = 240.0
 offset_top = 224.0
 offset_right = 518.0
-offset_bottom = 482.0
+offset_bottom = 366.0
 texture = ExtResource("1_xumrm")
 region_rect = Rect2(0, 0, 48, 48)
 patch_margin_left = 16
