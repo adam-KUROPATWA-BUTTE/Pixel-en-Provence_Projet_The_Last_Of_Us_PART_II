@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cf60trpso7ho3"]
+
+[ext_resource type="Script" uid="uid://ceeqrdwyfpudi" path="res://GameData/Code/Script/Character/movement.gd" id="1_qfrup"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7e1pp"]
+radius = 0.3
+height = 1.7
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qfrup"]
+radius = 0.3
+height = 1.7
+
+[node name="Player" type="CharacterBody3D" unique_id=606121970]
+script = ExtResource("1_qfrup")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76263131]
+shape = SubResource("CapsuleShape3D_7e1pp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=326561916]
+mesh = SubResource("CapsuleMesh_qfrup")
+
+[node name="head" type="Node3D" parent="." unique_id=1610918034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5569549, 0)
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=133844194]
+current = true
