@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cf60trpso7ho3"]
+[gd_scene format=3 uid="uid://dudli885dapht"]
 
 [ext_resource type="Script" uid="uid://ceeqrdwyfpudi" path="res://GameData/Code/Script/Character/movement.gd" id="1_qfrup"]
 
@@ -10,7 +10,7 @@ height = 1.7
 radius = 0.3
 height = 1.7
 
-[node name="Player" type="CharacterBody3D" unique_id=606121970]
+[node name="Player" type="CharacterBody3D" unique_id=606121970 groups=["player"]]
 script = ExtResource("1_qfrup")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76263131]

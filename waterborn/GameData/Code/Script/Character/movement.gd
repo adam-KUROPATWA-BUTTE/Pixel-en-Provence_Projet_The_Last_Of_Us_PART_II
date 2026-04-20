@@ -1,12 +1,16 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
+@export var speed: float = 6.0
 @export var mouse_sensitivity: float = 0.003
 @export var gravity: float = 9.8
 @export var toglable : bool
 
 var head: Node3D
 var pitch: float = 0.0
+
+var cam_time = 0.0
+var cam_amplitude= 0.08
+var cam_freq = 7.0
 
 func _ready() -> void:
 	head = $head
@@ -20,6 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			head.rotation.x = pitch
 
 func _physics_process(delta: float) -> void:
+	
 	if toglable:
 		var direction = Vector3.ZERO
 		var forward = -transform.basis.z
@@ -33,13 +38,21 @@ func _physics_process(delta: float) -> void:
 			direction += right
 		elif  Input.is_action_pressed("left"):
 			direction -= right
-			
-		direction = direction.normalized()
-		
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		if direction != Vector3.ZERO :
+			cam_time += cam_freq*delta
+			head.position.y = sin(cam_time) * cam_amplitude	
+			direction = direction.normalized()
+			if (Input.is_action_pressed("run")):
+				velocity.x = direction.x * (speed*1.5)
+				velocity.z = direction.z * (speed*1.5)
+				cam_time += 0.08
+			else:
+				velocity.x = direction.x * speed
+				velocity.z = direction.z * speed
 
-		if not is_on_floor():
-			velocity.y -= gravity * delta	
+			if not is_on_floor():
+				velocity.y -= gravity * delta	
 
-		move_and_slide()
+			move_and_slide()
+		else :
+			lerp(head.position.y, 0.0, 0.1)

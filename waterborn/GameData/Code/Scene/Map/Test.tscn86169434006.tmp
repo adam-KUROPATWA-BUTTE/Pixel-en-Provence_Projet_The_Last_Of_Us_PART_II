@@ -16,7 +16,7 @@ mesh = SubResource("PlaneMesh_fp3a6")
 
 [node name="Player" parent="." unique_id=606121970 instance=ExtResource("1_qtb0c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92842406, 0)
-speed = 6.0
+speed = 5.0
 mouse_sensitivity = 0.003
 gravity = 9.8
 toglable = true
