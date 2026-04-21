@@ -30,13 +30,13 @@ func _physics_process(delta: float) -> void:
 		var forward = -transform.basis.z
 		var right = transform.basis.x
 		
-		if Input.is_action_pressed("move_forward"):
+		if Input.is_action_pressed('Forward'):
 			direction += forward
-		elif Input.is_action_pressed("move_back"):
+		elif Input.is_action_pressed("Backward"):
 			direction -= forward
-		elif Input.is_action_pressed("right"):
+		elif Input.is_action_pressed("Right"):
 			direction += right
-		elif  Input.is_action_pressed("left"):
+		elif  Input.is_action_pressed("Left"):
 			direction -= right
 		if direction != Vector3.ZERO :
 			cam_time += cam_freq*delta
