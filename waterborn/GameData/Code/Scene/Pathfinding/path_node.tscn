@@ -15,4 +15,5 @@ rings = 10
 script = ExtResource("1_4cfcg")
 
 [node name="DebugTexture" type="MeshInstance3D" parent="." unique_id=1475824984]
+visible = false
 mesh = SubResource("SphereMesh_4cfcg")

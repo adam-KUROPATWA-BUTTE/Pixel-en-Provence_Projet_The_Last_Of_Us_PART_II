@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 global_variable="*uid://dbsptwgnkcd2r"
 global_calculation="*uid://b1bpmot1tvwih"
+pathfinding="*uid://dvkt1tcwg6jvm"
 
 [global_group]
 
