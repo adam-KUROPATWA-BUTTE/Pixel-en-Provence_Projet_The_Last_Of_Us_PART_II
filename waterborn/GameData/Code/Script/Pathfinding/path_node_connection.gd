@@ -1,7 +1,7 @@
 extends Node3D
 
 ## Passive Pathfinding var
-@export var node_connection_distance : float = 6
+@export var node_connection_distance : float = 8
 
 var connections : Array = []
 var time_to_process : float
@@ -60,7 +60,7 @@ func _ready() -> void:
 	print("connections : ", connections.size())
 	var end_time = Time.get_ticks_usec()
 	time_to_process = (end_time - start_time) / 1_000_000.0
-	build_astar_grid()
+	await build_astar_grid()
 	print("time to process pathfinding nodes = ", time_to_process, "s")
 	print(astar)
 
@@ -107,3 +107,4 @@ func build_astar_grid():
 			astar.add_point(nodes.find(connection[1]), connection[1].position)
 		astar.connect_points(nodes.find(connection[0]), nodes.find(connection[1]), true)
 	pathfinding.astar = astar
+	pathfinding.astar_ready = true

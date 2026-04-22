@@ -1,3 +1,3 @@
 extends Node
 
-var full_debug : bool = false
+var full_debug : bool = true
