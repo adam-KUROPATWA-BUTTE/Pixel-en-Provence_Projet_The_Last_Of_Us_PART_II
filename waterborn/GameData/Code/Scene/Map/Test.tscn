@@ -16,8 +16,6 @@ size = Vector3(25, 0.1, 25)
 mesh = SubResource("PlaneMesh_fp3a6")
 
 [node name="Player" parent="." unique_id=606121970 instance=ExtResource("1_qtb0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92842406, 0)
-toglable = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1935884957]
 

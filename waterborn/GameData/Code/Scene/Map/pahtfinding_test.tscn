@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bpo1r1d5i88yx"]
+
+[ext_resource type="Script" uid="uid://dyw406lnobd6a" path="res://GameData/Code/Script/Pathfinding/path_node_connection.gd" id="1_5grdx"]
+[ext_resource type="PackedScene" uid="uid://cd5gn4g7mdy51" path="res://GameData/Code/Scene/Pathfinding/path_node.tscn" id="1_i6105"]
+[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="3_autah"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t2s0u"]
+size = Vector2(20, 20)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5grdx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_autah"]
+
+[node name="PahtfindingTest" type="Node3D" unique_id=571014521]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1995786872]
+mesh = SubResource("PlaneMesh_t2s0u")
+
+[node name="PathNodes" type="Node3D" parent="." unique_id=554732150]
+script = ExtResource("1_5grdx")
+
+[node name="PathNode" parent="PathNodes" unique_id=728488579 instance=ExtResource("1_i6105")]
+
+[node name="PathNode2" parent="PathNodes" unique_id=1003585373 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.872851, 0, 0)
+
+[node name="PathNode3" parent="PathNodes" unique_id=1162751861 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode4" parent="PathNodes" unique_id=1554316815 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode5" parent="PathNodes" unique_id=478525473 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode6" parent="PathNodes" unique_id=1194117212 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode7" parent="PathNodes" unique_id=202198664 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode8" parent="PathNodes" unique_id=728913883 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode9" parent="PathNodes" unique_id=659627135 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="Amalgamation" type="CharacterBody3D" parent="." unique_id=486636307]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Amalgamation" unique_id=1134088674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("CylinderMesh_5grdx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Amalgamation" unique_id=870334460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_autah")
+
+[node name="Player" parent="." unique_id=606121970 instance=ExtResource("3_autah")]

@@ -2,18 +2,19 @@ extends CharacterBody3D
 
 @export var speed: float = 6.0
 @export var mouse_sensitivity: float = 0.003
-@export var gravity: float = 9.8
+#@export var gravity: float = 9.8
 @export var toglable : bool
 
-var head: Node3D
+@onready var head: Node3D = $head
 var pitch: float = 0.0
 
-var cam_time = 0.0
-var cam_amplitude= 0.08
-var cam_freq = 7.0
+var cam_bas_pos : float
+var cam_time : float = 0.0
+var cam_amplitude : float = 0.08
+var cam_freq : float = 7.0
 
 func _ready() -> void:
-	head = $head
+	cam_bas_pos = head.position.y
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -40,7 +41,7 @@ func _physics_process(delta: float) -> void:
 			direction -= right
 		if direction != Vector3.ZERO :
 			cam_time += cam_freq*delta
-			head.position.y = sin(cam_time) * cam_amplitude	
+			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
 			if (Input.is_action_pressed("run")):
 				velocity.x = direction.x * (speed*1.5)
@@ -50,8 +51,8 @@ func _physics_process(delta: float) -> void:
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
 
-			if not is_on_floor():
-				velocity.y -= gravity * delta	
+			#if not is_on_floor():
+			#	velocity.y -= gravity * delta	
 
 			move_and_slide()
 		else :
