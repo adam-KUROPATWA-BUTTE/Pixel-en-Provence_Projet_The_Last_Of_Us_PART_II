@@ -17,7 +17,7 @@ func _ready() -> void:
 	if window_container != null and window_container is Control:
 		for window in window_container.get_children():
 			if window != self:
-				if global_calculation.two_position_to_distance(Vector2i(window.position), window_pos) <= 8:
+				if global_calculation.two_2d_position_to_distance(Vector2i(window.position), window_pos) <= 8:
 					window_pos += Vector2i(16, 16)
 		position = window_pos
 	

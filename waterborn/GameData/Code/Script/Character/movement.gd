@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 		elif  Input.is_action_pressed("Left"):
 			direction -= right
 		if direction != Vector3.ZERO :
-			cam_time += cam_freq*delta
+			cam_time += cam_freq * delta
 			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
 			if (Input.is_action_pressed("run")):

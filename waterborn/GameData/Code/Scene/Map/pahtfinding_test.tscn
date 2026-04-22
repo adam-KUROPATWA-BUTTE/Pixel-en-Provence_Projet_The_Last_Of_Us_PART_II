@@ -14,6 +14,7 @@ size = Vector2(20, 20)
 [node name="PahtfindingTest" type="Node3D" unique_id=571014521]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1995786872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.001, 0)
 mesh = SubResource("PlaneMesh_t2s0u")
 
 [node name="PathNodes" type="Node3D" parent="." unique_id=554732150]
@@ -22,7 +23,7 @@ script = ExtResource("1_5grdx")
 [node name="PathNode" parent="PathNodes" unique_id=728488579 instance=ExtResource("1_i6105")]
 
 [node name="PathNode2" parent="PathNodes" unique_id=1003585373 instance=ExtResource("1_i6105")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.872851, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
 [node name="PathNode3" parent="PathNodes" unique_id=1162751861 instance=ExtResource("1_i6105")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
@@ -43,6 +44,812 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 
 [node name="PathNode9" parent="PathNodes" unique_id=659627135 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode10" parent="PathNodes" unique_id=1572987436 instance=ExtResource("1_i6105")]
+
+[node name="PathNode11" parent="PathNodes" unique_id=1040055341 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode12" parent="PathNodes" unique_id=267727106 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode13" parent="PathNodes" unique_id=883093818 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode14" parent="PathNodes" unique_id=1019321372 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode15" parent="PathNodes" unique_id=1036682071 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode16" parent="PathNodes" unique_id=1735932227 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode17" parent="PathNodes" unique_id=298005221 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode18" parent="PathNodes" unique_id=93877951 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode19" parent="PathNodes" unique_id=898964319 instance=ExtResource("1_i6105")]
+
+[node name="PathNode20" parent="PathNodes" unique_id=1403961038 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode21" parent="PathNodes" unique_id=1761714915 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode22" parent="PathNodes" unique_id=1286296820 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode23" parent="PathNodes" unique_id=47394228 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode24" parent="PathNodes" unique_id=622319203 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode25" parent="PathNodes" unique_id=44896439 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode26" parent="PathNodes" unique_id=1597462722 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode27" parent="PathNodes" unique_id=440371462 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode28" parent="PathNodes" unique_id=147040513 instance=ExtResource("1_i6105")]
+
+[node name="PathNode29" parent="PathNodes" unique_id=462545527 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode30" parent="PathNodes" unique_id=1422915078 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode31" parent="PathNodes" unique_id=508980797 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode32" parent="PathNodes" unique_id=837037328 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode33" parent="PathNodes" unique_id=1388839830 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode34" parent="PathNodes" unique_id=305303703 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode35" parent="PathNodes" unique_id=1665527026 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode36" parent="PathNodes" unique_id=1695484858 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode37" parent="PathNodes" unique_id=619870194 instance=ExtResource("1_i6105")]
+
+[node name="PathNode38" parent="PathNodes" unique_id=854159260 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode39" parent="PathNodes" unique_id=35921038 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode40" parent="PathNodes" unique_id=2104511094 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode41" parent="PathNodes" unique_id=1656972321 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode42" parent="PathNodes" unique_id=1341424096 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode43" parent="PathNodes" unique_id=1872631679 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode44" parent="PathNodes" unique_id=486654029 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode45" parent="PathNodes" unique_id=246829555 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode46" parent="PathNodes" unique_id=1379261158 instance=ExtResource("1_i6105")]
+
+[node name="PathNode47" parent="PathNodes" unique_id=1295695692 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode48" parent="PathNodes" unique_id=405996966 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode49" parent="PathNodes" unique_id=1074034031 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode50" parent="PathNodes" unique_id=1041201472 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode51" parent="PathNodes" unique_id=1301008745 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode52" parent="PathNodes" unique_id=2132070424 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode53" parent="PathNodes" unique_id=32386416 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode54" parent="PathNodes" unique_id=331202836 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode55" parent="PathNodes" unique_id=1041325992 instance=ExtResource("1_i6105")]
+
+[node name="PathNode56" parent="PathNodes" unique_id=607364160 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode57" parent="PathNodes" unique_id=1019820816 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode58" parent="PathNodes" unique_id=700879273 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode59" parent="PathNodes" unique_id=363119403 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode60" parent="PathNodes" unique_id=1449046980 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode61" parent="PathNodes" unique_id=138067185 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode62" parent="PathNodes" unique_id=1511227808 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode63" parent="PathNodes" unique_id=622874590 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode64" parent="PathNodes" unique_id=961181599 instance=ExtResource("1_i6105")]
+
+[node name="PathNode65" parent="PathNodes" unique_id=1132453306 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode66" parent="PathNodes" unique_id=833437167 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode67" parent="PathNodes" unique_id=1492051257 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode68" parent="PathNodes" unique_id=1011470267 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode69" parent="PathNodes" unique_id=1570046400 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode70" parent="PathNodes" unique_id=1500915395 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode71" parent="PathNodes" unique_id=1768200321 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode72" parent="PathNodes" unique_id=6721845 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode73" parent="PathNodes" unique_id=1211782648 instance=ExtResource("1_i6105")]
+
+[node name="PathNode74" parent="PathNodes" unique_id=1886502749 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode75" parent="PathNodes" unique_id=1006211957 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode76" parent="PathNodes" unique_id=609749614 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode77" parent="PathNodes" unique_id=1645839271 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode78" parent="PathNodes" unique_id=867458591 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode79" parent="PathNodes" unique_id=788404003 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode80" parent="PathNodes" unique_id=249202487 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode81" parent="PathNodes" unique_id=852125712 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode82" parent="PathNodes" unique_id=1736792213 instance=ExtResource("1_i6105")]
+
+[node name="PathNode83" parent="PathNodes" unique_id=1112051111 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode84" parent="PathNodes" unique_id=268086003 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode85" parent="PathNodes" unique_id=111190571 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode86" parent="PathNodes" unique_id=240606333 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode87" parent="PathNodes" unique_id=316239801 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode88" parent="PathNodes" unique_id=1269149412 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode89" parent="PathNodes" unique_id=1876758034 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode90" parent="PathNodes" unique_id=1045869434 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode91" parent="PathNodes" unique_id=1526154866 instance=ExtResource("1_i6105")]
+
+[node name="PathNode92" parent="PathNodes" unique_id=461860134 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode93" parent="PathNodes" unique_id=1213651879 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode94" parent="PathNodes" unique_id=1551250749 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode95" parent="PathNodes" unique_id=1079812537 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode96" parent="PathNodes" unique_id=636920004 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode97" parent="PathNodes" unique_id=896215070 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode98" parent="PathNodes" unique_id=1152292589 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode99" parent="PathNodes" unique_id=194652622 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode100" parent="PathNodes" unique_id=761603174 instance=ExtResource("1_i6105")]
+
+[node name="PathNode101" parent="PathNodes" unique_id=246060253 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode102" parent="PathNodes" unique_id=560699215 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode103" parent="PathNodes" unique_id=1310557780 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode104" parent="PathNodes" unique_id=1128221040 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode105" parent="PathNodes" unique_id=70885761 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode106" parent="PathNodes" unique_id=211420162 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode107" parent="PathNodes" unique_id=1171315531 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode108" parent="PathNodes" unique_id=1593552017 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode109" parent="PathNodes" unique_id=1637195140 instance=ExtResource("1_i6105")]
+
+[node name="PathNode110" parent="PathNodes" unique_id=1902235654 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode111" parent="PathNodes" unique_id=511474495 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode112" parent="PathNodes" unique_id=1582893671 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode113" parent="PathNodes" unique_id=1307880402 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode114" parent="PathNodes" unique_id=611443301 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode115" parent="PathNodes" unique_id=1769239603 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode116" parent="PathNodes" unique_id=395909628 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode117" parent="PathNodes" unique_id=877178776 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode118" parent="PathNodes" unique_id=894027255 instance=ExtResource("1_i6105")]
+
+[node name="PathNode119" parent="PathNodes" unique_id=1460274143 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode120" parent="PathNodes" unique_id=1985885584 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode121" parent="PathNodes" unique_id=1419770947 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode122" parent="PathNodes" unique_id=433110448 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode123" parent="PathNodes" unique_id=1460090750 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode124" parent="PathNodes" unique_id=285558454 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode125" parent="PathNodes" unique_id=966352279 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode126" parent="PathNodes" unique_id=1620569203 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode127" parent="PathNodes" unique_id=1796226066 instance=ExtResource("1_i6105")]
+
+[node name="PathNode128" parent="PathNodes" unique_id=688876953 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode129" parent="PathNodes" unique_id=1457317128 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode130" parent="PathNodes" unique_id=1446555266 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode131" parent="PathNodes" unique_id=68758705 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode132" parent="PathNodes" unique_id=1073508008 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode133" parent="PathNodes" unique_id=1743702648 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode134" parent="PathNodes" unique_id=2024177138 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode135" parent="PathNodes" unique_id=1839253341 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode136" parent="PathNodes" unique_id=1523668081 instance=ExtResource("1_i6105")]
+
+[node name="PathNode137" parent="PathNodes" unique_id=478779956 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode138" parent="PathNodes" unique_id=955332957 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode139" parent="PathNodes" unique_id=1433335937 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode140" parent="PathNodes" unique_id=1467433456 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode141" parent="PathNodes" unique_id=1360738152 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode142" parent="PathNodes" unique_id=1511984931 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode143" parent="PathNodes" unique_id=1744806371 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode144" parent="PathNodes" unique_id=1378252991 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode145" parent="PathNodes" unique_id=1005965607 instance=ExtResource("1_i6105")]
+
+[node name="PathNode146" parent="PathNodes" unique_id=167407766 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode147" parent="PathNodes" unique_id=144018059 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode148" parent="PathNodes" unique_id=812272147 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode149" parent="PathNodes" unique_id=1532420085 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode150" parent="PathNodes" unique_id=1481813253 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode151" parent="PathNodes" unique_id=358840651 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode152" parent="PathNodes" unique_id=1765145705 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode153" parent="PathNodes" unique_id=2984411 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode154" parent="PathNodes" unique_id=750836462 instance=ExtResource("1_i6105")]
+
+[node name="PathNode155" parent="PathNodes" unique_id=1652976175 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode156" parent="PathNodes" unique_id=310593411 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode157" parent="PathNodes" unique_id=982495551 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode158" parent="PathNodes" unique_id=25030720 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode159" parent="PathNodes" unique_id=975489522 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode160" parent="PathNodes" unique_id=1986573136 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode161" parent="PathNodes" unique_id=334964797 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode162" parent="PathNodes" unique_id=855163781 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode163" parent="PathNodes" unique_id=2130084194 instance=ExtResource("1_i6105")]
+
+[node name="PathNode164" parent="PathNodes" unique_id=1752504321 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode165" parent="PathNodes" unique_id=1229353188 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode166" parent="PathNodes" unique_id=1752766320 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode167" parent="PathNodes" unique_id=3670990 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode168" parent="PathNodes" unique_id=1071285881 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode169" parent="PathNodes" unique_id=377258731 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode170" parent="PathNodes" unique_id=1102638589 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode171" parent="PathNodes" unique_id=1297311259 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode172" parent="PathNodes" unique_id=1539143016 instance=ExtResource("1_i6105")]
+
+[node name="PathNode173" parent="PathNodes" unique_id=272549216 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode174" parent="PathNodes" unique_id=1818733504 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode175" parent="PathNodes" unique_id=727737890 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode176" parent="PathNodes" unique_id=1841730976 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode177" parent="PathNodes" unique_id=1493713563 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode178" parent="PathNodes" unique_id=13223995 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode179" parent="PathNodes" unique_id=1908038230 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode180" parent="PathNodes" unique_id=1637317590 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode181" parent="PathNodes" unique_id=2098711855 instance=ExtResource("1_i6105")]
+
+[node name="PathNode182" parent="PathNodes" unique_id=1960345790 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode183" parent="PathNodes" unique_id=1690157662 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode184" parent="PathNodes" unique_id=1200224394 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode185" parent="PathNodes" unique_id=1789663761 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode186" parent="PathNodes" unique_id=1618167863 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode187" parent="PathNodes" unique_id=1015353201 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode188" parent="PathNodes" unique_id=1166837704 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode189" parent="PathNodes" unique_id=1633593397 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode190" parent="PathNodes" unique_id=929130893 instance=ExtResource("1_i6105")]
+
+[node name="PathNode191" parent="PathNodes" unique_id=1158304961 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode192" parent="PathNodes" unique_id=446211039 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode193" parent="PathNodes" unique_id=101851537 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode194" parent="PathNodes" unique_id=288565527 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode195" parent="PathNodes" unique_id=1551912301 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode196" parent="PathNodes" unique_id=649920637 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode197" parent="PathNodes" unique_id=961471038 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode198" parent="PathNodes" unique_id=2122725381 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode199" parent="PathNodes" unique_id=369770079 instance=ExtResource("1_i6105")]
+
+[node name="PathNode200" parent="PathNodes" unique_id=699090137 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode201" parent="PathNodes" unique_id=1311422589 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode202" parent="PathNodes" unique_id=487798815 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode203" parent="PathNodes" unique_id=1550864337 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode204" parent="PathNodes" unique_id=1713717504 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode205" parent="PathNodes" unique_id=89413863 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode206" parent="PathNodes" unique_id=1487626413 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode207" parent="PathNodes" unique_id=834495978 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode208" parent="PathNodes" unique_id=793577041 instance=ExtResource("1_i6105")]
+
+[node name="PathNode209" parent="PathNodes" unique_id=1211351135 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode210" parent="PathNodes" unique_id=2118084655 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode211" parent="PathNodes" unique_id=1040581206 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode212" parent="PathNodes" unique_id=1797454524 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode213" parent="PathNodes" unique_id=1572733956 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode214" parent="PathNodes" unique_id=854074656 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode215" parent="PathNodes" unique_id=1222555205 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode216" parent="PathNodes" unique_id=9565422 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode217" parent="PathNodes" unique_id=23379494 instance=ExtResource("1_i6105")]
+
+[node name="PathNode218" parent="PathNodes" unique_id=1732336065 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode219" parent="PathNodes" unique_id=1199859499 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode220" parent="PathNodes" unique_id=275640369 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode221" parent="PathNodes" unique_id=675266698 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode222" parent="PathNodes" unique_id=1261125325 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode223" parent="PathNodes" unique_id=672707909 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode224" parent="PathNodes" unique_id=1492242971 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode225" parent="PathNodes" unique_id=836418099 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode226" parent="PathNodes" unique_id=1841676908 instance=ExtResource("1_i6105")]
+
+[node name="PathNode227" parent="PathNodes" unique_id=1467617876 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode228" parent="PathNodes" unique_id=527009486 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode229" parent="PathNodes" unique_id=722028582 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode230" parent="PathNodes" unique_id=2084202576 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode231" parent="PathNodes" unique_id=96533640 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode232" parent="PathNodes" unique_id=1738823076 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode233" parent="PathNodes" unique_id=1235552972 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode234" parent="PathNodes" unique_id=1776737763 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode235" parent="PathNodes" unique_id=1389461051 instance=ExtResource("1_i6105")]
+
+[node name="PathNode236" parent="PathNodes" unique_id=197466033 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode237" parent="PathNodes" unique_id=243637260 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode238" parent="PathNodes" unique_id=1347836515 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode239" parent="PathNodes" unique_id=1221189012 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode240" parent="PathNodes" unique_id=2049368941 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode241" parent="PathNodes" unique_id=707888193 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode242" parent="PathNodes" unique_id=529906639 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode243" parent="PathNodes" unique_id=1216551660 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode244" parent="PathNodes" unique_id=2132679293 instance=ExtResource("1_i6105")]
+
+[node name="PathNode245" parent="PathNodes" unique_id=1153653791 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode246" parent="PathNodes" unique_id=2085340532 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode247" parent="PathNodes" unique_id=1964531160 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode248" parent="PathNodes" unique_id=768720789 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode249" parent="PathNodes" unique_id=264241609 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode250" parent="PathNodes" unique_id=554504844 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode251" parent="PathNodes" unique_id=698468491 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode252" parent="PathNodes" unique_id=657077171 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode253" parent="PathNodes" unique_id=1860125575 instance=ExtResource("1_i6105")]
+
+[node name="PathNode254" parent="PathNodes" unique_id=2045789783 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode255" parent="PathNodes" unique_id=1606625008 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode256" parent="PathNodes" unique_id=1346208020 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode257" parent="PathNodes" unique_id=835532506 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode258" parent="PathNodes" unique_id=626849756 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode259" parent="PathNodes" unique_id=19761625 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode260" parent="PathNodes" unique_id=1274615887 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode261" parent="PathNodes" unique_id=1139201808 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode262" parent="PathNodes" unique_id=1649709155 instance=ExtResource("1_i6105")]
+
+[node name="PathNode263" parent="PathNodes" unique_id=861893635 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode264" parent="PathNodes" unique_id=1737132581 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode265" parent="PathNodes" unique_id=675059795 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode266" parent="PathNodes" unique_id=1717034192 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode267" parent="PathNodes" unique_id=1981818441 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode268" parent="PathNodes" unique_id=778563476 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode269" parent="PathNodes" unique_id=2127470498 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode270" parent="PathNodes" unique_id=2108452047 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode271" parent="PathNodes" unique_id=2083949228 instance=ExtResource("1_i6105")]
+
+[node name="PathNode272" parent="PathNodes" unique_id=2039650802 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode273" parent="PathNodes" unique_id=2022649361 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode274" parent="PathNodes" unique_id=765259882 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode275" parent="PathNodes" unique_id=1539015478 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode276" parent="PathNodes" unique_id=1748024310 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode277" parent="PathNodes" unique_id=580352762 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode278" parent="PathNodes" unique_id=928060106 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode279" parent="PathNodes" unique_id=286101884 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="PathNode280" parent="PathNodes" unique_id=742840107 instance=ExtResource("1_i6105")]
+
+[node name="PathNode281" parent="PathNodes" unique_id=1518110892 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="PathNode282" parent="PathNodes" unique_id=76443679 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PathNode283" parent="PathNodes" unique_id=930448210 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="PathNode284" parent="PathNodes" unique_id=636378098 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="PathNode285" parent="PathNodes" unique_id=425952107 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="PathNode286" parent="PathNodes" unique_id=1359386059 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="PathNode287" parent="PathNodes" unique_id=50113435 instance=ExtResource("1_i6105")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="PathNode288" parent="PathNodes" unique_id=2113381942 instance=ExtResource("1_i6105")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
 
 [node name="Amalgamation" type="CharacterBody3D" parent="." unique_id=486636307]
