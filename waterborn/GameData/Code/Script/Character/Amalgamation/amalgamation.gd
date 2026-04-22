@@ -7,7 +7,7 @@ var direction
 var last_direction
 var arrive_threshold = 0.2
 
-var speed : int = 3 # range (?min, 30max)
+var speed : int = 3 # range (3min, 30max)
 var run_multiplier : float = 2.0
 var is_running : bool = false
 
@@ -15,6 +15,7 @@ var is_moving : bool = false
 var done : bool = false
 
 func _process(_delta: float) -> void:
+	#move to 0, 0 to test pathfinding
 	if !is_moving:
 		is_moving = true
 		done = await try_go_to(Vector3(0, 0, 0))
@@ -44,7 +45,6 @@ func go_to(destination : Vector3) -> void:
 	return
 
 func move_to() -> void: #TODO split function, too long
-	
 	path_index = 0
 	var previous_pos : Vector3 = global_position
 	var time_at_same_place : int = 0
