@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cd5gn4g7mdy51"]
+
+[ext_resource type="Script" uid="uid://d3mvxxubmky3d" path="res://GameData/Code/Script/Pathfinding/path_node.gd" id="1_4cfcg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52ve4"]
+shading_mode = 0
+albedo_color = Color(1, 1, 0.30588236, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4cfcg"]
+material = SubResource("StandardMaterial3D_52ve4")
+radial_segments = 10
+rings = 10
+
+[node name="PathNode" type="Node3D" unique_id=728488579]
+script = ExtResource("1_4cfcg")
+
+[node name="DebugTexture" type="MeshInstance3D" parent="." unique_id=1475824984]
+mesh = SubResource("SphereMesh_4cfcg")
