@@ -1,6 +1,6 @@
 extends Node
 
-## Active Pathfinding var
+## Active Pathfinding var 
 var astar_ready : bool = false
 var astar: AStar3D = AStar3D.new()
 var start : Vector3

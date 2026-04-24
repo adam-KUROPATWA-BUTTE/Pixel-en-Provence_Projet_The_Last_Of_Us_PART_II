@@ -42,6 +42,28 @@ func go_to(destination : Vector3) -> void:
 		return
 	
 	await move_to()
+	
+	
+	
+	if path_index == path.size():
+		print("last step")
+		var at_destination : bool = false
+		while (!at_destination):
+			var to_target : Vector3 = destination - global_position
+			
+			if to_target.length() < arrive_threshold:
+				at_destination = true
+			
+			var dir := to_target.normalized()
+			last_direction = direction
+			direction = dir
+			direction_to_velocity()
+			
+			await (Engine.get_main_loop() as SceneTree).process_frame
+			if not is_instance_valid(self):
+				return
+	velocity = Vector3.ZERO
+	direction = Vector3.ZERO
 	return
 
 func move_to() -> void: #TODO split function, too long
@@ -67,7 +89,7 @@ func move_to() -> void: #TODO split function, too long
 		last_direction = direction
 		direction = dir
 		direction_to_velocity()
-
+		
 		await (Engine.get_main_loop() as SceneTree).process_frame
 		if not is_instance_valid(self):
 			return

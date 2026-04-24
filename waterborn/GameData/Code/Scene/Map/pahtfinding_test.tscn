@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bpo1r1d5i88yx"]
+[gd_scene format=3 uid="uid://7l7drkphe2ks"]
 
 [ext_resource type="Script" uid="uid://dyw406lnobd6a" path="res://GameData/Code/Script/Pathfinding/path_node_connection.gd" id="1_5grdx"]
 [ext_resource type="PackedScene" uid="uid://cd5gn4g7mdy51" path="res://GameData/Code/Scene/Pathfinding/path_node.tscn" id="1_i6105"]

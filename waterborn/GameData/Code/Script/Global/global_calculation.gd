@@ -1,6 +1,6 @@
 extends Node
 
-#use sqrt() so can be slow if use in to many iterations
+#use sqrt() so can be slow if use in to many iterations 
 func two_2d_position_to_distance(pos1 : Vector2, pos2 : Vector2) -> float:
 	var pos : Vector2 = (pos1 - pos2).abs()
 	var distance : float = sqrt(pos.x**2 + pos.y**2)
