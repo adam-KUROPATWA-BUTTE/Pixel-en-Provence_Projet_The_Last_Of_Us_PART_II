@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://byfaarmwlxneu" path="res://GameData/Asset/Graphism/Model/blockbench_export.tscn" id="5_vw2fk"]
 [ext_resource type="Script" uid="uid://drvd8w3n2axir" path="res://GameData/Code/Script/Light/omni_light_3d.gd" id="6_8cldo"]
 [ext_resource type="PackedScene" uid="uid://hn2173j173w8" path="res://GameData/Code/Scene/Character/player.tscn" id="6_qikam"]
+[ext_resource type="Texture2D" uid="uid://cqiuhh3f6h35g" path="res://GameData/Code/Scene/Character/mathis_abyss.png" id="8_8cldo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_36w3b"]
 
@@ -27,6 +28,7 @@ albedo_texture = SubResource("ViewportTexture_8dteh")
 texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_8dteh"]
+size = Vector2(0.8, 0.45)
 
 [sub_resource type="Environment" id="Environment_vw2fk"]
 background_energy_multiplier = 0.2
@@ -58,20 +60,32 @@ transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.8, 0)
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=384941960]
 disable_3d = true
+size = Vector2i(1152, 648)
 
 [node name="Desktop" parent="SubViewport" unique_id=972921025 instance=ExtResource("4_yptfu")]
 material = SubResource("ShaderMaterial_vw2fk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=423531049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48587632, 2.137447, -8.118478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8713455, 0.6702525, -1.4371663)
+layers = 3
 material_override = SubResource("StandardMaterial3D_8cldo")
 mesh = SubResource("QuadMesh_8dteh")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="MeshInstance3D" unique_id=1123134540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5541949)
+layers = 2
+light_energy = 0.366
+light_indirect_energy = 16.0
+light_cull_mask = 4294967294
+spot_range = 5.895
+spot_angle_attenuation = 2.3943663e-05
 
 [node name="blockbench_export2" parent="." unique_id=1122043056 instance=ExtResource("5_vw2fk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007632971, -0.1407932, -0.0029159784)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="blockbench_export2" unique_id=1181627545]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80775154, 0)
+visible = false
 light_color = Color(1, 0.9254902, 0.8627451, 1)
 omni_range = 5.411
 omni_attenuation = -0.825
@@ -81,3 +95,7 @@ script = ExtResource("6_8cldo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1134348015]
 environment = SubResource("Environment_vw2fk")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=321951807]
+transform = Transform3D(-6.556708e-09, 4.440892e-16, 0.14999999, 0, 0.14999999, -4.440892e-16, -0.14999999, -1.9411756e-23, -6.556708e-09, -1.4444053, 0.728877, 0.84540194)
+texture = ExtResource("8_8cldo")
