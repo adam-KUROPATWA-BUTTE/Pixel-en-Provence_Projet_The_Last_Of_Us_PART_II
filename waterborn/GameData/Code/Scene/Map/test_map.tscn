@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://r3vfmq1xn43v" path="res://icon.svg" id="1_t1dbi"]
 [ext_resource type="Script" path="res://GameData/Code/Script/Character/player.gd" id="2_36w3b"]
-[ext_resource type="PackedScene" uid="uid://gkys1oa2b81m" path="res://GameData/Asset/Graphism/Model/Office.gltf" id="3_wh7ha"]
-[ext_resource type="PackedScene" uid="uid://duk8vib8uorov" path="res://GameData/Asset/Graphism/Model/Wall.gltf" id="4_qikam"]
 [ext_resource type="PackedScene" uid="uid://d35oto7o386j" path="res://GameData/Code/Scene/UI/desktop.tscn" id="4_yptfu"]
 [ext_resource type="Shader" path="res://GameData/Code/Shader/test_map.gdshader" id="5_8dteh"]
-[ext_resource type="PackedScene" uid="uid://c78qesuilkyel" path="res://GameData/Asset/Graphism/Model/Valve.gltf" id="7_8cldo"]
+[ext_resource type="PackedScene" uid="uid://byfaarmwlxneu" path="res://GameData/Asset/Graphism/Model/blockbench_export.tscn" id="5_vw2fk"]
+[ext_resource type="Script" uid="uid://drvd8w3n2axir" path="res://GameData/Code/Script/Light/omni_light_3d.gd" id="6_8cldo"]
+[ext_resource type="PackedScene" uid="uid://hn2173j173w8" path="res://GameData/Code/Scene/Character/player.tscn" id="6_qikam"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_36w3b"]
 
@@ -28,10 +28,14 @@ texture_filter = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_8dteh"]
 
+[sub_resource type="Environment" id="Environment_vw2fk"]
+background_energy_multiplier = 0.2
+
 [node name="TestMap" type="Node3D" unique_id=1017150095]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1023124523]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+visible = false
 physics_material_override = SubResource("PhysicsMaterial_36w3b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=965958719]
@@ -52,16 +56,6 @@ shape = SubResource("CapsuleShape3D_t1dbi")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1828192856]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.8, 0)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=470366961]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1623041872]
-
-[node name="blockbench_export" parent="StaticBody3D2" unique_id=1826930491 instance=ExtResource("3_wh7ha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5888536, 0, 11.399323)
-
-[node name="blockbench_export2" parent="StaticBody3D2" unique_id=1712608550 instance=ExtResource("4_qikam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3696578, -0.25000024, -1.4304876)
-
 [node name="SubViewport" type="SubViewport" parent="." unique_id=384941960]
 disable_3d = true
 
@@ -73,5 +67,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48587632, 2.137447, -8.1184
 material_override = SubResource("StandardMaterial3D_8cldo")
 mesh = SubResource("QuadMesh_8dteh")
 
-[node name="blockbench_export" parent="." unique_id=898277055 instance=ExtResource("7_8cldo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1674185, 0, 1.7526774)
+[node name="blockbench_export2" parent="." unique_id=1122043056 instance=ExtResource("5_vw2fk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007632971, -0.1407932, -0.0029159784)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="blockbench_export2" unique_id=1181627545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80775154, 0)
+light_color = Color(1, 0.9254902, 0.8627451, 1)
+omni_range = 5.411
+omni_attenuation = -0.825
+script = ExtResource("6_8cldo")
+
+[node name="Player" parent="." unique_id=606121970 instance=ExtResource("6_qikam")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1134348015]
+environment = SubResource("Environment_vw2fk")
