@@ -22,6 +22,7 @@ global_calculation="*uid://b1bpmot1tvwih"
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 
