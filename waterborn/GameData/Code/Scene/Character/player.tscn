@@ -13,6 +13,8 @@ height = 1.7
 radial_segments = 10
 
 [node name="Player" type="CharacterBody3D" unique_id=606121970 groups=["player"]]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_qfrup")
 toglable = true
 

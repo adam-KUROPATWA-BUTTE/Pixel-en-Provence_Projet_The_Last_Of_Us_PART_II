@@ -1,8 +1,7 @@
 extends CharacterBody3D
 
-@export var speed: float = 6.0
+@export var speed: float = 8.0
 @export var mouse_sensitivity: float = 0.003
-#@export var gravity: float = 9.8
 @export var toglable : bool
 
 @onready var head: Node3D = $head
@@ -44,16 +43,17 @@ func _physics_process(delta: float) -> void:
 			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
 			if (Input.is_action_pressed("run")):
-				velocity.x = direction.x * (speed*1.5)
-				velocity.z = direction.z * (speed*1.5)
+				velocity.x = direction.x * (speed*1.3)
+				velocity.z = direction.z * (speed*1.)
 				cam_time += 0.08
 			else:
 				velocity.x = direction.x * speed
-				velocity.z = direction.z * speed
+				velocity.z = direction.z * speed	
 
-			#if not is_on_floor():
-			#	velocity.y -= gravity * delta	
 
 			move_and_slide()
 		else :
 			lerp(head.position.y, 0.0, 0.1)
+			
+func die() : 
+	print("tu es mort")

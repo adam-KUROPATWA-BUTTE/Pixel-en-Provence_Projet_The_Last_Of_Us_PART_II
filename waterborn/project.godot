@@ -24,6 +24,7 @@ pathfinding="*uid://dvkt1tcwg6jvm"
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 
