@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://d35oto7o386j"]
+[gd_scene format=3 uid="uid://dse2ss6r0gnun"]
 
 [ext_resource type="Script" uid="uid://cxcibwu4g7nqb" path="res://GameData/Code/Script/UI/desktop.gd" id="1_5ogt5"]
 [ext_resource type="PackedScene" uid="uid://ca5hgykrfl6uo" path="res://GameData/Code/Scene/UI/window.tscn" id="3_lg7vl"]
 [ext_resource type="PackedScene" uid="uid://cirdnwv6m51wb" path="res://GameData/Code/Scene/UI/error.tscn" id="4_lg7vl"]
 [ext_resource type="PackedScene" uid="uid://c7kkjqdpi8hw0" path="res://GameData/Code/Scene/UI/desktop_icon_container.tscn" id="4_n4uon"]
-[ext_resource type="Shader" uid="uid://dtslnmxfhxun2" path="res://GameData/Code/Shader/vhs_shader.gdshader" id="14_qawy3"]
+[ext_resource type="Shader" path="res://GameData/Code/Shader/vhs_shader.gdshader" id="14_qawy3"]
 
 [sub_resource type="Gradient" id="Gradient_orhlc"]
 colors = PackedColorArray(0.3137255, 0.6156863, 0.78431374, 1, 0.3137255, 0.6156863, 0.78431374, 1)

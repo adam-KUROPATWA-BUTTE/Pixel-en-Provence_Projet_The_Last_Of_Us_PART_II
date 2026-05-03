@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://dsegyf7luhref" path="res://GameData/Asset/Graphism/Texture/UI/window_icons_container.png" id="3_taddv"]
 [ext_resource type="Texture2D" uid="uid://bwi368s8f6dqw" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon.png" id="4_0hshl"]
 [ext_resource type="Texture2D" uid="uid://bgipg7p4bfvmj" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon_pressed.png" id="5_r1yw8"]
-[ext_resource type="Script" uid="uid://cni0dowa5q1a" path="res://GameData/Code/Script/UI/button.gd" id="6_1yobl"]
+[ext_resource type="Script" path="res://GameData/Code/Script/UI/button.gd" id="6_1yobl"]
 [ext_resource type="Texture2D" uid="uid://cnmdkg6xefy3i" path="res://GameData/Asset/Graphism/Texture/UI/fullscreen_icon.png" id="7_djorq"]
 [ext_resource type="Texture2D" uid="uid://cd6l5mntrkv2" path="res://GameData/Asset/Graphism/Texture/UI/fullscreen_icon_pressed.png" id="8_qkbve"]
 [ext_resource type="Texture2D" uid="uid://chgxlcvdk4nda" path="res://GameData/Asset/Graphism/Texture/UI/close_icon.png" id="9_kvdmc"]
 [ext_resource type="Texture2D" uid="uid://8f7vusu411qn" path="res://GameData/Asset/Graphism/Texture/UI/close_icon_pressed.png" id="10_garnm"]
 [ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="11_u8wtx"]
-[ext_resource type="Script" uid="uid://ctb6ljjp4bnho" path="res://GameData/Code/Script/UI/window_bar.gd" id="12_iwoa7"]
+[ext_resource type="Script" path="res://GameData/Code/Script/UI/window_bar.gd" id="12_iwoa7"]
 
 [node name="Window" type="NinePatchRect" unique_id=1577778383]
 offset_left = 240.0
