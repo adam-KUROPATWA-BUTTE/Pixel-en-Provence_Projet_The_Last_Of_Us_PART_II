@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bk8o3ckxvhpv7"]
+[gd_scene format=3 uid="uid://b6okcs2lkoygu"]
 
-[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
+[ext_resource type="Script" uid="uid://dpwwkf5g3nq4t" path="res://GameData/Code/Script/Tool/systemeValve.gd" id="1_m3asa"]
+[ext_resource type="PackedScene" uid="uid://cf60trpso7ho3" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
 [ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/enemi/trap_detect.tscn" id="2_vnleq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_y3ych"]
@@ -18,10 +19,10 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 size = Vector3(25, 0.1, 25)
 
 [node name="Node3D" type="Node3D" unique_id=1965322240]
+script = ExtResource("1_m3asa")
 
 [node name="trap" parent="." unique_id=690965634 node_paths=PackedStringArray("spawnTab") instance=ExtResource("2_vnleq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9139442, 0, 6.659028)
-collision_layer = 3
 collision_mask = 3
 spawnTab = [NodePath("../Marker3D"), NodePath("../Marker3D2")]
 
@@ -46,7 +47,6 @@ shape = SubResource("BoxShape3D_fp3a6")
 
 [node name="Player" parent="." unique_id=606121970 instance=ExtResource("1_qtb0c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5859723, 0.8197283, 5.505452)
-toglable = true
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=157582252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.099699, 0, -8.775081)
