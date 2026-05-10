@@ -14,12 +14,10 @@ func _on_body_entered(body: Node3D) -> void:
 		their_in = true
 		character = body
 		new_position = character.position
-		print("dans la zone")
 
 func _on_body_exited(body: Node3D) -> void:
 	if body.is_in_group('player'):
 		their_in = false
-		print("sort de la zone")
 
 func _physics_process(delta: float) -> void:
 	var distance = 0
