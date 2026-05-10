@@ -25,7 +25,13 @@ var windows : Dictionary = {
 		"pos" : Vector2i(512, 96),
 		"name" : "Sandwich Archive",
 		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/sandwich_content.tscn")
-	}
+	},
+	3 : {
+	"size" : Vector2i(278, 258),
+	"pos" : Vector2i(200, 100),
+	"name" : "Niveaux d'eau",
+	"content" : preload("res://GameData/Code/Scene/UI/waterLevel.tscn")
+}
 }
 
 var errors: Dictionary = {

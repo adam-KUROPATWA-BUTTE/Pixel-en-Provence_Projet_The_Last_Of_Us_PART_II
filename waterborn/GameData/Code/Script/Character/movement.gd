@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var toglable : bool
 
 @onready var head: Node3D = $head
+@onready var  seecast: RayCast3D = $head/Camera3D/RayCast3D
 var pitch: float = 0.0
 
 var cam_bas_pos : float
@@ -15,7 +16,7 @@ var cam_freq : float = 7.0
 func _ready() -> void:
 	cam_bas_pos = head.position.y
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if toglable:
 		if event is InputEventMouseMotion:
@@ -24,6 +25,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			head.rotation.x = pitch
 
 func _physics_process(delta: float) -> void:
+	if seecast.is_colliding():
+		var target = seecast.get_collider()
+		if target.has_method("interact"):
+			if target.has_method("interact") and toglable:
+				$CanvasLayer/BoxContainer/Label.show()
+			if Input.is_action_just_pressed("interact"):
+				target.interact()
+		else :
+			$CanvasLayer/BoxContainer/Label.hide()
+	else :
+		$CanvasLayer/BoxContainer/Label.hide()
+		
 	
 	if toglable:
 		var direction = Vector3.ZERO
