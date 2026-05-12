@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bja4mrdus2lk5"
-path="res://.godot/imported/corridor.gltf-7111835aebc63d33abf6323736261c56.scn"
+path="res://.godot/imported/corridor.gltf-2625cf768d47d45f80cc2ad0d34dfb12.scn"
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/corridor.gltf"
-dest_files=["res://.godot/imported/corridor.gltf-7111835aebc63d33abf6323736261c56.scn"]
+source_file="res://GameData/Asset/Graphism/Model/TestModel/corridor.gltf"
+dest_files=["res://.godot/imported/corridor.gltf-2625cf768d47d45f80cc2ad0d34dfb12.scn"]
 
 [params]
 

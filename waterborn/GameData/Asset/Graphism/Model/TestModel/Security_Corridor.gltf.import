@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://biw3t6g2wglrl"
-path="res://.godot/imported/Security_Corridor.gltf-5f5af5fe78d5378f78e82c537d3e9f83.scn"
+path="res://.godot/imported/Security_Corridor.gltf-4e9be56c5d0ffdb4f35ca63e59e856f1.scn"
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/Security_Corridor.gltf"
-dest_files=["res://.godot/imported/Security_Corridor.gltf-5f5af5fe78d5378f78e82c537d3e9f83.scn"]
+source_file="res://GameData/Asset/Graphism/Model/TestModel/Security_Corridor.gltf"
+dest_files=["res://.godot/imported/Security_Corridor.gltf-4e9be56c5d0ffdb4f35ca63e59e856f1.scn"]
 
 [params]
 

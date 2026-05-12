@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q2ut3xk1bx5j"
-path.s3tc="res://.godot/imported/Valve_0.png-ae47e17896dbcee71a03f99ec51a40d2.s3tc.ctex"
+uid="uid://dr5uxfavhsysp"
+path="res://.godot/imported/wall_tileset_texture.png-2bf2b0550a06d1c1efd29a34417f430d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "12dbfc93882d41ee63e99ac5df8270c6"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/TestModel/Valve_0.png"
-dest_files=["res://.godot/imported/Valve_0.png-ae47e17896dbcee71a03f99ec51a40d2.s3tc.ctex"]
+source_file="res://GameData/Asset/Graphism/Model/Tileset/wall_tileset_texture.png"
+dest_files=["res://.godot/imported/wall_tileset_texture.png-2bf2b0550a06d1c1efd29a34417f430d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

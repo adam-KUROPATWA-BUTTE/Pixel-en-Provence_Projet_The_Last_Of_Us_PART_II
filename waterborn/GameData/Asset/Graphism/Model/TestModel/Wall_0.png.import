@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgq73c1edru3p"
-path.s3tc="res://.godot/imported/Wall_0.png-e2982d2a9fdeffb14fe3b023b0bffada.s3tc.ctex"
+path.s3tc="res://.godot/imported/Wall_0.png-131c83bc33513610c0c8750e5801a5ee.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/Wall_0.png"
-dest_files=["res://.godot/imported/Wall_0.png-e2982d2a9fdeffb14fe3b023b0bffada.s3tc.ctex"]
+source_file="res://GameData/Asset/Graphism/Model/TestModel/Wall_0.png"
+dest_files=["res://.godot/imported/Wall_0.png-131c83bc33513610c0c8750e5801a5ee.s3tc.ctex"]
 
 [params]
 

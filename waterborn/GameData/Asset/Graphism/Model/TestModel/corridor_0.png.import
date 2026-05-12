@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bavh75gd4brgn"
-path.s3tc="res://.godot/imported/corridor_0.png-a9a419bff00f9305be32cc2e80c990e9.s3tc.ctex"
+path.s3tc="res://.godot/imported/corridor_0.png-1063c1303ca5143cb8ef4eb4000852f7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/corridor_0.png"
-dest_files=["res://.godot/imported/corridor_0.png-a9a419bff00f9305be32cc2e80c990e9.s3tc.ctex"]
+source_file="res://GameData/Asset/Graphism/Model/TestModel/corridor_0.png"
+dest_files=["res://.godot/imported/corridor_0.png-1063c1303ca5143cb8ef4eb4000852f7.s3tc.ctex"]
 
 [params]
 

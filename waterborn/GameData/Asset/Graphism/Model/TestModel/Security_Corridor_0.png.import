@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nepesb6l7vmo"
-path.s3tc="res://.godot/imported/Security_Corridor_0.png-239ca77581a08fcbb4cc1db95dad53d1.s3tc.ctex"
+path.s3tc="res://.godot/imported/Security_Corridor_0.png-b37f54b932530bc22e84db4e6c623aa5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/Security_Corridor_0.png"
-dest_files=["res://.godot/imported/Security_Corridor_0.png-239ca77581a08fcbb4cc1db95dad53d1.s3tc.ctex"]
+source_file="res://GameData/Asset/Graphism/Model/TestModel/Security_Corridor_0.png"
+dest_files=["res://.godot/imported/Security_Corridor_0.png-b37f54b932530bc22e84db4e6c623aa5.s3tc.ctex"]
 
 [params]
 
