@@ -44,8 +44,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
 [node name="PathNode8" parent="Yellow/PathNodes" unique_id=1307790113 instance=ExtResource("4_0lmme")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -5.5)
 
+[node name="PathNode9" parent="Yellow/PathNodes" unique_id=1090998762 instance=ExtResource("4_0lmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+entry = true
+
 [node name="LightBlue" type="GridMap" parent="." unique_id=553785239]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -100,7 +103,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4)
 
 [node name="Red" type="GridMap" parent="." unique_id=677817437]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -133,10 +135,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
 
 [node name="PathNode7" parent="Red/PathNodes" unique_id=503143104 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0)
+
+[node name="PathNode10" parent="Red/PathNodes" unique_id=123859314 instance=ExtResource("4_0lmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+entry = true
+
+[node name="PathNode11" parent="Red/PathNodes" unique_id=496606860 instance=ExtResource("4_0lmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
 
 [node name="Green" type="GridMap" parent="." unique_id=1776106002]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -202,7 +210,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -4)
 
 [node name="Blue" type="GridMap" parent="." unique_id=912363870]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -266,7 +273,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
 
 [node name="Brown" type="GridMap" parent="." unique_id=1584807346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -326,7 +332,6 @@ entry = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8)
 
 [node name="Beige" type="GridMap" parent="." unique_id=1837653138]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -368,7 +373,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
 
 [node name="LeftHallway" type="GridMap" parent="." unique_id=342603023]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -471,7 +475,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 
 [node name="RightHallway" type="GridMap" parent="." unique_id=332235445]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -575,7 +578,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 entry = true
 
 [node name="Purple" type="GridMap" parent="." unique_id=1596655182]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -648,7 +650,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 
 [node name="PinkLeft" type="GridMap" parent="." unique_id=2017578246]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -700,7 +701,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
 
 [node name="PinkMiddle" type="GridMap" parent="." unique_id=1483724173]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -795,7 +795,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
 
 [node name="PinkRight" type="GridMap" parent="." unique_id=646478958]
-visible = false
 mesh_library = ExtResource("1_v46i7")
 cell_size = Vector3(1, 1, 1)
 data = {
