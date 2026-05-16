@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 			cam_time += cam_freq * delta
 			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
-			if (Input.is_action_pressed("run")):
+			if (Input.is_action_pressed("Run")):
 				velocity.x = direction.x * (speed*1.5)
 				velocity.z = direction.z * (speed*1.5)
 				cam_time += 0.08

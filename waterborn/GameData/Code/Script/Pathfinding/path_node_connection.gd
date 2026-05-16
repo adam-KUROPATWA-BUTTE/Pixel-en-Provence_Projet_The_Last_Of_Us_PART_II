@@ -1,7 +1,7 @@
 extends Node3D
 
 ## Passive Pathfinding var
-@export var node_connection_distance : float = 8
+@export var node_connection_distance : float = 2.5
 
 var connections : Array = []
 var time_to_process : float
