@@ -16,11 +16,8 @@ size = Vector3(1, 0.05, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t1dbi"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vw2fk"]
-shader = ExtResource("5_8dteh")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_8dteh"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("MeshInstance3D/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cldo"]
 resource_local_to_scene = true

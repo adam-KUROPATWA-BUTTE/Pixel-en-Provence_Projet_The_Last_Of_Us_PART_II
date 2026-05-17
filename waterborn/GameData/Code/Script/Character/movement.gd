@@ -16,7 +16,6 @@ var cam_freq : float = 7.0
 func _ready() -> void:
 	cam_bas_pos = head.position.y
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 func _unhandled_input(event: InputEvent) -> void:
 	if toglable:
 		if event is InputEventMouseMotion:
@@ -57,3 +56,6 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 		else :
 			lerp(head.position.y, 0.0, 0.1)
+			
+func die() : 
+	print("You Died")
