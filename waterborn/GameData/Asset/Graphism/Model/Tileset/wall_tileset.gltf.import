@@ -138,6 +138,41 @@ _subresources={
 "save_to_file/fallback_path": "",
 "save_to_file/path": ""
 }
+},
+"nodes": {
+"PATH:celling": {
+"generate/physics": true
+},
+"PATH:floor": {
+"generate/physics": true
+},
+"PATH:in-corner_wall/bottom_wall": {
+"generate/physics": true
+},
+"PATH:in-corner_wall/bottom_wall2": {
+"generate/physics": true
+},
+"PATH:in-corner_wall/middle_wall2": {
+"generate/physics": true
+},
+"PATH:out-corner_wall/middle_wall3": {
+"generate/physics": true
+},
+"PATH:out-corner_wall/middle_wall_top2": {
+"generate/physics": true
+},
+"PATH:out-corner_wall/top_wall2": {
+"generate/physics": true
+},
+"PATH:straight_wall/middle_wall": {
+"generate/physics": true
+},
+"PATH:straight_wall/middle_wall_top": {
+"generate/physics": true
+},
+"PATH:straight_wall/top_wall": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=2

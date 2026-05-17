@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b6okcs2lkoygu"]
 
 [ext_resource type="Script" uid="uid://dpwwkf5g3nq4t" path="res://GameData/Code/Script/Tool/systemeValve.gd" id="1_m3asa"]
-[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
-[ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/enemi/trap_detect.tscn" id="2_vnleq"]
+[ext_resource type="PackedScene" uid="uid://hn2173j173w8" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
+[ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/trap_detect.tscn" id="2_vnleq"]
 [ext_resource type="PackedScene" uid="uid://dpm6j1hkiln88" path="res://GameData/Code/Scene/Element/valve.tscn" id="4_y3ych"]
 [ext_resource type="PackedScene" uid="uid://c1pyvx3a6l13y" path="res://GameData/Code/Scene/Element/door.tscn" id="6_2har7"]
 [ext_resource type="PackedScene" uid="uid://cerlbaenoamuh" path="res://GameData/Code/Scene/Element/computer.tscn" id="6_6mm18"]
