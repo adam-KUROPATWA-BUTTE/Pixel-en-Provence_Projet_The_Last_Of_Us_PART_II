@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b88gkgy58estv"]
+[gd_scene format=3 uid="uid://da7noc4ex85f5"]
 
 [ext_resource type="Script" uid="uid://f8qns0g4nln1" path="res://GameData/Code/Script/Element/trap_detect.gd" id="1_2kln2"]
 
