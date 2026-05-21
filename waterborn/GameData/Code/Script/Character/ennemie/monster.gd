@@ -6,7 +6,8 @@ signal reached_player
 @export var max_spotting_distance := 50.0
 
 var _current_speed := 0.0
-var target
+var global_target
+var current_target
 var path : PackedVector3Array
 var path_index : int
 
@@ -37,7 +38,7 @@ func _process(_delta: float) -> void:
 	#move to 0, 0 to test pathfinding
 	if !is_moving:
 		is_moving = true
-		done = await try_go_to(target)
+		done = await try_go_to(global_target)
 		if done:
 			print("done :)")
 		else:
@@ -64,7 +65,7 @@ func _process(_delta: float) -> void:
 	#move_and_slide()
 
 func travel_to_position(wanted_position: Vector3, import_speed: float) -> void:
-	target = wanted_position
+	global_target = wanted_position
 	#navigation_agent.target_position = wanted_position
 	_current_speed = import_speed
 
@@ -102,6 +103,7 @@ func try_go_to(destination : Vector3) -> bool:
 	return true
 
 func go_to(destination : Vector3) -> void:
+	current_target = global_target
 	path = pathfinding.get_astar_path(global_position, destination)
 	last_direction = global_calculation.two_3d_position_to_distance(global_position, destination)
 	
@@ -109,10 +111,13 @@ func go_to(destination : Vector3) -> void:
 		print("AStar path empty, cannot move to ", destination)
 		return
 	
+	if global_calculation.two_3d_position_to_distance(global_position, path[0]) >= global_calculation.two_3d_position_to_distance(global_position, destination):
+		path = [destination]
+	
 	await move_to()
 	
 	if path_index == path.size():
-		print("last step")
+		#print("last step")
 		var at_destination : bool = false
 		while (!at_destination):
 			var to_target : Vector3 = destination - global_position
@@ -135,10 +140,10 @@ func go_to(destination : Vector3) -> void:
 func move_to() -> void:
 	path_index = 0
 	var previous_pos : Vector3 = global_position
-	var time_at_same_place : int = 0
+	var time_at_same_place : float = 0
 	
-	while (path_index < path.size() and time_at_same_place < 40) :
-		if Vector3i(previous_pos) == Vector3i(global_position):
+	while (path_index < path.size() and time_at_same_place < 40 and global_target == current_target) :
+		if previous_pos == global_position:
 			time_at_same_place += 1
 		else:
 			time_at_same_place = 0

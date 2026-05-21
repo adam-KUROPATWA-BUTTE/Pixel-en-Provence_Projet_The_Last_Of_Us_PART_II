@@ -1,7 +1,7 @@
 extends EnemyState
 
 @export var update_path_delay := 0.0 # if you do not want to update the path every physics frame, increase this
-@export var _chasing_speed := 6.0
+@export var _chasing_speed := 60.0 # 6.0
 @export var _catching_distance := 1.8
 
 var _end_chase := 0.0
