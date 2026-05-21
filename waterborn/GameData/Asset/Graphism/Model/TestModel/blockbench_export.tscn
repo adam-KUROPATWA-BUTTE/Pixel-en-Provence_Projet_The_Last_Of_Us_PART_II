@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://byfaarmwlxneu"]
+
+[ext_resource type="PackedScene" uid="uid://gkys1oa2b81m" path="res://GameData/Asset/Graphism/Model/Office.gltf" id="1_ycgwo"]
+[ext_resource type="Shader" uid="uid://cp1jxhlxhvn1v" path="res://GameData/Code/Shader/crunchy_texture.gdshader" id="2_1chka"]
+[ext_resource type="Texture2D" uid="uid://jeq6xs25mkbb" path="res://GameData/Asset/Graphism/Model/Office_0.png" id="3_n58fs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xr65j"]
+render_priority = 0
+shader = ExtResource("2_1chka")
+shader_parameter/albedo_tex = ExtResource("3_n58fs")
+shader_parameter/aging_strength = 0.23999999463552
+shader_parameter/noise_scale = 128.0
+shader_parameter/aging_color = Color(0.4392157, 0.4509804, 0.43529412, 1)
+shader_parameter/roughness = 0.3710000176225
+shader_parameter/seed = Vector2(0, 0)
+shader_parameter/texture_size = Vector2i(256, 256)
+
+[node name="blockbench_export" unique_id=1122043056 instance=ExtResource("1_ycgwo")]
+
+[node name="Office" parent="Office/Skeleton3D" parent_id_path=PackedInt32Array(125703495) index="0" unique_id=954417666]
+surface_material_override/0 = SubResource("ShaderMaterial_xr65j")

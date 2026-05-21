@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 		wait = 0.0
 		for i in range(6):
 			zone[i] -= 2
-			print(zone[i])
 		recharge_zone()
 
 func recharge_zone():

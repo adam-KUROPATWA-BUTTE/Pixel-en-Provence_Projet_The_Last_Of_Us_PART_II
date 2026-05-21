@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gkys1oa2b81m"
-path="res://.godot/imported/Office.gltf-4ce96e397b15c18018d067d4731f65e8.scn"
+uid="uid://b0i0hqsa22mw7"
+path="res://.godot/imported/corridor.gltf-0c8fa881f5f3be57e0fa46a12c20fe43.scn"
 
 [deps]
 
-source_file="res://GameData/Asset/Graphism/Model/Office.gltf"
-dest_files=["res://.godot/imported/Office.gltf-4ce96e397b15c18018d067d4731f65e8.scn"]
+source_file="res://GameData/Asset/Graphism/Texture/UI/corridor.gltf"
+dest_files=["res://.godot/imported/corridor.gltf-0c8fa881f5f3be57e0fa46a12c20fe43.scn"]
 
 [params]
 

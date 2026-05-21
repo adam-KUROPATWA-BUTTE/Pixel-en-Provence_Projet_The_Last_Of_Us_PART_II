@@ -1,56 +1,32 @@
-[gd_scene format=3 uid="uid://dudli885dapht"]
+[gd_scene format=3 uid="uid://hn2173j173w8"]
 
 [ext_resource type="Script" uid="uid://ceeqrdwyfpudi" path="res://GameData/Code/Script/Character/movement.gd" id="1_qfrup"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7e1pp"]
-radius = 0.3
-height = 1.7
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qfrup"]
+height = 0.85
+radius = 0.15
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_qfrup"]
-top_radius = 0.3
-bottom_radius = 0.3
-height = 1.7
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.85
 radial_segments = 10
 
 [node name="Player" type="CharacterBody3D" unique_id=606121970 groups=["player"]]
-collision_layer = 2
-collision_mask = 13
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_qfrup")
 toglable = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76263131]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
-shape = SubResource("CapsuleShape3D_7e1pp")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
+shape = SubResource("CylinderShape3D_qfrup")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=326561916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
 mesh = SubResource("CylinderMesh_qfrup")
 
 [node name="head" type="Node3D" parent="." unique_id=1610918034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=133844194]
 current = true
-
-[node name="RayCast3D" type="RayCast3D" parent="head/Camera3D" unique_id=817554272]
-transform = Transform3D(-0.8748418, 0, 0, 0, -0.014392035, 0.29123136, 0, 1.8912498, 0.002216202, 0, -0.008000016, -0.09305155)
-collision_mask = 8
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1758910222]
-
-[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer" unique_id=1203278211]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/BoxContainer" unique_id=1788691002]
-layout_mode = 2
-text = "Press \"E\" to interact"

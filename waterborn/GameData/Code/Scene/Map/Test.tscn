@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://b6okcs2lkoygu"]
 
 [ext_resource type="Script" uid="uid://dpwwkf5g3nq4t" path="res://GameData/Code/Script/Tool/systemeValve.gd" id="1_m3asa"]
-[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
-[ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/enemi/trap_detect.tscn" id="2_vnleq"]
+[ext_resource type="PackedScene" uid="uid://hn2173j173w8" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
+[ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/trap_detect.tscn" id="2_vnleq"]
 [ext_resource type="PackedScene" uid="uid://dpm6j1hkiln88" path="res://GameData/Code/Scene/Element/valve.tscn" id="4_y3ych"]
+[ext_resource type="PackedScene" uid="uid://c1pyvx3a6l13y" path="res://GameData/Code/Scene/Element/door.tscn" id="6_2har7"]
 [ext_resource type="PackedScene" uid="uid://cerlbaenoamuh" path="res://GameData/Code/Scene/Element/computer.tscn" id="6_6mm18"]
+[ext_resource type="PackedScene" uid="uid://cdfxahjfxvtku" path="res://GameData/Code/Scene/Element/button.tscn" id="7_ysxxn"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_y3ych"]
 vertices = PackedVector3Array(-12, 0.45, -12, -12, 0.45, 12, 12, 0.45, 12, 12, 0.45, -12)
@@ -80,3 +82,14 @@ zone_index = 5
 
 [node name="computer" parent="." unique_id=1792267288 instance=ExtResource("6_6mm18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7787857, 0.5500002, -10.425318)
+
+[node name="door" parent="." unique_id=1526128547 instance=ExtResource("6_2har7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.031275, 2.0043674, -10.357613)
+
+[node name="button" parent="." unique_id=2010240265 node_paths=PackedStringArray("door") instance=ExtResource("7_ysxxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31221, 0.39481306, -9.141229)
+door = NodePath("../door")
+
+[node name="button2" parent="." unique_id=249525209 node_paths=PackedStringArray("door") instance=ExtResource("7_ysxxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31221, 0.39481306, -11.984013)
+door = NodePath("../door")

@@ -1,7 +1,7 @@
 extends Node3D
 
 ## Passive Pathfinding var
-@export var node_connection_distance : float = 8
+@export var node_connection_distance : float = 2.5
 
 var connections : Array = []
 var time_to_process : float
@@ -25,6 +25,8 @@ func _ready() -> void:
 	var seen : Dictionary = {}
 	
 	for node in nodes:
+		if node.entry:
+			pathfinding.entry_nodes.append(node)
 		var cell = Vector3i(
 		floori(node.position.x / node_connection_distance),
 		floori(node.position.y / node_connection_distance),
@@ -63,41 +65,6 @@ func _ready() -> void:
 	await build_astar_grid()
 	print("time to process pathfinding nodes = ", time_to_process, "s")
 	print(astar)
-
-#func _draw() -> void:
-	#if astar == null and (path.size() == 0 or path == null or path.is_empty() and !debug):
-		#return
-#
-	#if (path.size() == 0 or path == null or path.is_empty()):
-		#for id in astar.get_point_ids():
-			#var connections = astar.get_point_connections(id)
-			##if debug:
-				##for lid in connections:
-					##draw_line(
-						##Vector2(
-						##(astar.get_point_position(id).x*cell_size), 
-						##(astar.get_point_position(id).y*cell_size)), 
-						##Vector2(
-						##(astar.get_point_position(lid).x*cell_size), 
-						##(astar.get_point_position(lid).y*cell_size)), 
-						 ##Color.WHITE, 2.0)
-		#for id in astar.get_point_ids():
-			#var pos = Vector2(
-					#(astar.get_point_position(id).x*cell_size), 
-					#(astar.get_point_position(id).y*cell_size))
-			##if debug:
-				##draw_circle(pos, 4.0, Color.BLUE)
-#
-	## Draw current path in red
-	##if debug:
-		##for point in path:
-			##draw_circle(point, 4.0, Color.RED)
-		##for i in range(path.size() - 1):
-			##draw_line(path[i], path[i + 1], Color.RED, 2.0)	
-		##if start:
-			##draw_circle(start, 4.0, Color.YELLOW)
-		##if target:
-			##draw_circle(target, 4.0, Color.GREEN)
 
 func build_astar_grid():
 	for connection in connections:
