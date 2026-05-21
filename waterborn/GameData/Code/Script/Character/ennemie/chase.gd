@@ -7,10 +7,8 @@ extends EnemyState
 var _end_chase := 0.0
 var _update_path_timer := 0.0
 
-
 func enter(_previous_state_name: String, _data := {}) -> void:
 	_end_chase = randf_range(60.0, 100.0)
-
 
 func update(delta: float) -> void:
 	_update_path_timer -= delta

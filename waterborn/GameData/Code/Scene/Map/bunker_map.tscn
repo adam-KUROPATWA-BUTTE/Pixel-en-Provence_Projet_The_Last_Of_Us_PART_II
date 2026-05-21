@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cq2awvb50uo8n"]
 
-[ext_resource type="MeshLibrary" path="res://GameData/Asset/Graphism/Model/wall_tileset.meshlib" id="1_v46i7"]
+[ext_resource type="MeshLibrary" uid="uid://4hkxnpmq7s16" path="res://GameData/Asset/Graphism/Model/wall_tileset.meshlib" id="1_v46i7"]
 [ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="2_xrx0u"]
 [ext_resource type="Script" uid="uid://dyw406lnobd6a" path="res://GameData/Code/Script/Pathfinding/path_node_connection.gd" id="3_xtcgn"]
 [ext_resource type="PackedScene" uid="uid://cd5gn4g7mdy51" path="res://GameData/Code/Scene/Pathfinding/path_node.tscn" id="4_0lmme"]
@@ -9,6 +9,7 @@
 [node name="Node3D" type="Node3D" unique_id=1986439457]
 
 [node name="Rooms" type="Node3D" parent="." unique_id=226616276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.062, 0)
 
 [node name="Yellow" type="GridMap" parent="Rooms" unique_id=1397989108]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
@@ -24,38 +25,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Yellow/PathNodes" unique_id=728488579 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Yellow/PathNodes" unique_id=269989758 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -2)
 visible = false
 
 [node name="PathNode3" parent="Rooms/Yellow/PathNodes" unique_id=1229023811 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -2)
 visible = false
 
 [node name="PathNode4" parent="Rooms/Yellow/PathNodes" unique_id=1927947962 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -4)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Yellow/PathNodes" unique_id=1987675625 instance=ExtResource("4_0lmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
 visible = false
 
 [node name="PathNode6" parent="Rooms/Yellow/PathNodes" unique_id=680926286 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.063, 2.5)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Yellow/PathNodes" unique_id=1666112103 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.063, 1.5)
 visible = false
 
 [node name="PathNode8" parent="Rooms/Yellow/PathNodes" unique_id=1307790113 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.063, -5.5)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Yellow/PathNodes" unique_id=1090998762 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, -6)
 visible = false
 
 [node name="LightBlue" type="GridMap" parent="Rooms" unique_id=553785239]
@@ -70,55 +73,59 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/LightBlue/PathNodes" unique_id=172501615 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/LightBlue/PathNodes" unique_id=81283743 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -2)
 visible = false
 
 [node name="PathNode3" parent="Rooms/LightBlue/PathNodes" unique_id=948749435 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -3)
 visible = false
 
 [node name="PathNode4" parent="Rooms/LightBlue/PathNodes" unique_id=745266675 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -4)
+visible = false
 entry = true
 
 [node name="PathNode5" parent="Rooms/LightBlue/PathNodes" unique_id=642460041 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -5.5)
 visible = false
 
 [node name="PathNode6" parent="Rooms/LightBlue/PathNodes" unique_id=1141790234 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -8)
 visible = false
 
 [node name="PathNode7" parent="Rooms/LightBlue/PathNodes" unique_id=892812877 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -9)
 visible = false
 
 [node name="PathNode8" parent="Rooms/LightBlue/PathNodes" unique_id=821288900 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, -9)
+visible = false
 entry = true
 
 [node name="PathNode9" parent="Rooms/LightBlue/PathNodes" unique_id=447515896 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -9.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.063, -9.5)
 visible = false
 
 [node name="PathNode10" parent="Rooms/LightBlue/PathNodes" unique_id=1951001074 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -0.5)
 visible = false
 
 [node name="PathNode11" parent="Rooms/LightBlue/PathNodes" unique_id=755025926 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode12" parent="Rooms/LightBlue/PathNodes" unique_id=1369350635 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 2)
 visible = false
 
 [node name="PathNode13" parent="Rooms/LightBlue/PathNodes" unique_id=1463393891 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.063, 4)
 visible = false
 
 [node name="Red" type="GridMap" parent="Rooms" unique_id=677817437]
@@ -133,39 +140,43 @@ metadata/_editor_floor_ = Vector3(0, 2, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Red/PathNodes" unique_id=414413839 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Red/PathNodes" unique_id=2062408650 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/Red/PathNodes" unique_id=1313585736 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -4)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/Red/PathNodes" unique_id=1674974482 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, -4)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Red/PathNodes" unique_id=1032911430 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.063, -3)
 visible = false
 
 [node name="PathNode6" parent="Rooms/Red/PathNodes" unique_id=1504002984 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.063, -1)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Red/PathNodes" unique_id=503143104 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.063, 0)
 visible = false
 
 [node name="PathNode10" parent="Rooms/Red/PathNodes" unique_id=123859314 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.063, 3)
+visible = false
 entry = true
 
 [node name="PathNode11" parent="Rooms/Red/PathNodes" unique_id=496606860 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 2)
 visible = false
 
 [node name="Green" type="GridMap" parent="Rooms" unique_id=1776106002]
@@ -180,71 +191,75 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Green/PathNodes" unique_id=1485043696 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, 3)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Green/PathNodes" unique_id=1373031281 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/Green/PathNodes" unique_id=946619885 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, -1)
 visible = false
 
 [node name="PathNode4" parent="Rooms/Green/PathNodes" unique_id=1929737288 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, -3)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Green/PathNodes" unique_id=1365292077 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.063, -2)
 visible = false
 
 [node name="PathNode6" parent="Rooms/Green/PathNodes" unique_id=162264054 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.063, -1)
+visible = false
 entry = true
 
 [node name="PathNode7" parent="Rooms/Green/PathNodes" unique_id=899657865 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.063, 0)
 visible = false
 
 [node name="PathNode8" parent="Rooms/Green/PathNodes" unique_id=472340726 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.063, -2)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Green/PathNodes" unique_id=1194157242 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.063, -1)
 visible = false
 
 [node name="PathNode10" parent="Rooms/Green/PathNodes" unique_id=423356505 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, 1)
 visible = false
 
 [node name="PathNode11" parent="Rooms/Green/PathNodes" unique_id=1659167228 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.063, 3)
 visible = false
 
 [node name="PathNode12" parent="Rooms/Green/PathNodes" unique_id=11838923 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.063, 2)
 visible = false
 
 [node name="PathNode13" parent="Rooms/Green/PathNodes" unique_id=403099716 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.063, 2)
 visible = false
 
 [node name="PathNode14" parent="Rooms/Green/PathNodes" unique_id=813730474 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.063, -6)
+visible = false
 entry = true
 
 [node name="PathNode15" parent="Rooms/Green/PathNodes" unique_id=364931107 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.063, -4)
 visible = false
 
 [node name="PathNode16" parent="Rooms/Green/PathNodes" unique_id=897067126 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, -5)
 visible = false
 
 [node name="PathNode17" parent="Rooms/Green/PathNodes" unique_id=111273856 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0.063, -4)
 visible = false
 
 [node name="Blue" type="GridMap" parent="Rooms" unique_id=912363870]
@@ -260,63 +275,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Blue/PathNodes" unique_id=1283826223 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Blue/PathNodes" unique_id=1595702242 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 4)
 visible = false
 
 [node name="PathNode3" parent="Rooms/Blue/PathNodes" unique_id=265745302 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 4)
 visible = false
 
 [node name="PathNode4" parent="Rooms/Blue/PathNodes" unique_id=814805920 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 6)
+visible = false
 entry = true
 
 [node name="PathNode5" parent="Rooms/Blue/PathNodes" unique_id=843522355 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode6" parent="Rooms/Blue/PathNodes" unique_id=450614316 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 3)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Blue/PathNodes" unique_id=1600448732 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 4)
 visible = false
 
 [node name="PathNode8" parent="Rooms/Blue/PathNodes" unique_id=1175425492 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 4)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Blue/PathNodes" unique_id=137262192 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 5)
 visible = false
 
 [node name="PathNode10" parent="Rooms/Blue/PathNodes" unique_id=855734259 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 5)
 visible = false
 
 [node name="PathNode11" parent="Rooms/Blue/PathNodes" unique_id=223776479 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 3)
 visible = false
 
 [node name="PathNode12" parent="Rooms/Blue/PathNodes" unique_id=6446290 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 3)
 visible = false
 
 [node name="PathNode13" parent="Rooms/Blue/PathNodes" unique_id=969984948 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 5)
 visible = false
 
 [node name="PathNode14" parent="Rooms/Blue/PathNodes" unique_id=235786040 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 4)
 visible = false
 
 [node name="PathNode15" parent="Rooms/Blue/PathNodes" unique_id=1974771778 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 5)
 visible = false
 
 [node name="Brown" type="GridMap" parent="Rooms" unique_id=1584807346]
@@ -333,59 +351,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Brown/PathNodes" unique_id=1683891047 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 6)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Brown/PathNodes" unique_id=331305142 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 5)
 visible = false
 
 [node name="PathNode3" parent="Rooms/Brown/PathNodes" unique_id=462892210 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 3)
 visible = false
 
 [node name="PathNode4" parent="Rooms/Brown/PathNodes" unique_id=13396603 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 1)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Brown/PathNodes" unique_id=2029548203 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode6" parent="Rooms/Brown/PathNodes" unique_id=1161253398 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 0)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Brown/PathNodes" unique_id=716722875 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -1)
+visible = false
 entry = true
 
 [node name="PathNode8" parent="Rooms/Brown/PathNodes" unique_id=1392739305 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -2)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Brown/PathNodes" unique_id=1547009175 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -1)
 visible = false
 
 [node name="PathNode10" parent="Rooms/Brown/PathNodes" unique_id=1695805143 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -4)
 visible = false
 
 [node name="PathNode11" parent="Rooms/Brown/PathNodes" unique_id=207776045 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -5)
+visible = false
 entry = true
 
 [node name="PathNode12" parent="Rooms/Brown/PathNodes" unique_id=1439311607 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -6)
 visible = false
 
 [node name="PathNode13" parent="Rooms/Brown/PathNodes" unique_id=1569505165 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -9)
+visible = false
 entry = true
 
 [node name="PathNode14" parent="Rooms/Brown/PathNodes" unique_id=946633647 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -8)
 visible = false
 
 [node name="Beige" type="GridMap" parent="Rooms" unique_id=1837653138]
@@ -401,39 +424,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 10)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Beige/PathNodes" unique_id=50307799 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Beige/PathNodes" unique_id=285164582 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 2)
 visible = false
 
 [node name="PathNode3" parent="Rooms/Beige/PathNodes" unique_id=1368073 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/Beige/PathNodes" unique_id=1207769545 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 3)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Beige/PathNodes" unique_id=396536950 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 3)
 visible = false
 
 [node name="PathNode6" parent="Rooms/Beige/PathNodes" unique_id=2031203818 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 3)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Beige/PathNodes" unique_id=685933057 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 5)
 visible = false
 
 [node name="PathNode8" parent="Rooms/Beige/PathNodes" unique_id=741944255 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 5)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Beige/PathNodes" unique_id=1698427512 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 4)
 visible = false
 
 [node name="LeftHallway" type="GridMap" parent="Rooms" unique_id=342603023]
@@ -449,115 +474,125 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 5)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/LeftHallway/PathNodes" unique_id=671230459 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/LeftHallway/PathNodes" unique_id=1969272562 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 6)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/LeftHallway/PathNodes" unique_id=206956760 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 4)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/LeftHallway/PathNodes" unique_id=1354364725 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.063, -1)
+visible = false
 entry = true
 
 [node name="PathNode5" parent="Rooms/LeftHallway/PathNodes" unique_id=1984098120 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode6" parent="Rooms/LeftHallway/PathNodes" unique_id=1188317316 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.063, -1)
+visible = false
 entry = true
 
 [node name="PathNode7" parent="Rooms/LeftHallway/PathNodes" unique_id=243856201 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode8" parent="Rooms/LeftHallway/PathNodes" unique_id=2005016751 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.063, 0)
 visible = false
 
 [node name="PathNode9" parent="Rooms/LeftHallway/PathNodes" unique_id=1568805109 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.063, 0)
 visible = false
 
 [node name="PathNode10" parent="Rooms/LeftHallway/PathNodes" unique_id=1146888169 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.063, 0)
 visible = false
 
 [node name="PathNode11" parent="Rooms/LeftHallway/PathNodes" unique_id=864616514 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.063, 0)
 visible = false
 
 [node name="PathNode12" parent="Rooms/LeftHallway/PathNodes" unique_id=464673459 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 1)
 visible = false
 
 [node name="PathNode13" parent="Rooms/LeftHallway/PathNodes" unique_id=991208469 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 2)
 visible = false
 
 [node name="PathNode14" parent="Rooms/LeftHallway/PathNodes" unique_id=1402225589 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 3)
 visible = false
 
 [node name="PathNode15" parent="Rooms/LeftHallway/PathNodes" unique_id=1392863344 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 3)
 visible = false
 
 [node name="PathNode16" parent="Rooms/LeftHallway/PathNodes" unique_id=1719976175 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode17" parent="Rooms/LeftHallway/PathNodes" unique_id=1245161747 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 4)
 visible = false
 
 [node name="PathNode18" parent="Rooms/LeftHallway/PathNodes" unique_id=1647987880 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 5)
 visible = false
 
 [node name="PathNode19" parent="Rooms/LeftHallway/PathNodes" unique_id=941215840 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 4)
 visible = false
 
 [node name="PathNode20" parent="Rooms/LeftHallway/PathNodes" unique_id=90028755 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 8)
+visible = false
 entry = true
 
 [node name="PathNode21" parent="Rooms/LeftHallway/PathNodes" unique_id=1037501901 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 7)
 visible = false
 
 [node name="PathNode22" parent="Rooms/LeftHallway/PathNodes" unique_id=1543370941 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 5)
 visible = false
 
 [node name="PathNode23" parent="Rooms/LeftHallway/PathNodes" unique_id=171881173 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 4)
 visible = false
 
 [node name="PathNode24" parent="Rooms/LeftHallway/PathNodes" unique_id=1964266525 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 3)
 visible = false
 
 [node name="PathNode25" parent="Rooms/LeftHallway/PathNodes" unique_id=1975725527 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 1)
 visible = false
 
 [node name="PathNode26" parent="Rooms/LeftHallway/PathNodes" unique_id=18804011 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -1)
 visible = false
 
 [node name="PathNode27" parent="Rooms/LeftHallway/PathNodes" unique_id=1148120604 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -3)
+visible = false
 entry = true
 
 [node name="PathNode28" parent="Rooms/LeftHallway/PathNodes" unique_id=1177164875 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -3)
 visible = false
 
 [node name="RightHallway" type="GridMap" parent="Rooms" unique_id=332235445]
@@ -573,123 +608,132 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -11)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/RightHallway/PathNodes" unique_id=186064724 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.063, -4)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/RightHallway/PathNodes" unique_id=530160715 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, -4)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/RightHallway/PathNodes" unique_id=495188644 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, -3)
 visible = false
 
 [node name="PathNode4" parent="Rooms/RightHallway/PathNodes" unique_id=1100925890 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, -5)
 visible = false
 
 [node name="PathNode5" parent="Rooms/RightHallway/PathNodes" unique_id=2029769694 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, -6)
 visible = false
 
 [node name="PathNode6" parent="Rooms/RightHallway/PathNodes" unique_id=407849152 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, 5)
+visible = false
 entry = true
 
 [node name="PathNode7" parent="Rooms/RightHallway/PathNodes" unique_id=807826649 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.063, 6)
 visible = false
 
 [node name="PathNode8" parent="Rooms/RightHallway/PathNodes" unique_id=411411830 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, 4)
 visible = false
 
 [node name="PathNode9" parent="Rooms/RightHallway/PathNodes" unique_id=758826303 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 0)
+visible = false
 entry = true
 
 [node name="PathNode10" parent="Rooms/RightHallway/PathNodes" unique_id=440372295 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode11" parent="Rooms/RightHallway/PathNodes" unique_id=1941471404 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.063, 1)
 visible = false
 
 [node name="PathNode12" parent="Rooms/RightHallway/PathNodes" unique_id=2084520365 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.063, 2)
 visible = false
 
 [node name="PathNode13" parent="Rooms/RightHallway/PathNodes" unique_id=1853442250 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 3)
 visible = false
 
 [node name="PathNode14" parent="Rooms/RightHallway/PathNodes" unique_id=1670851822 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 0)
 visible = false
 
 [node name="PathNode15" parent="Rooms/RightHallway/PathNodes" unique_id=1126208330 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 2)
 visible = false
 
 [node name="PathNode16" parent="Rooms/RightHallway/PathNodes" unique_id=545601386 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 1)
 visible = false
 
 [node name="PathNode17" parent="Rooms/RightHallway/PathNodes" unique_id=496294740 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -1)
 visible = false
 
 [node name="PathNode18" parent="Rooms/RightHallway/PathNodes" unique_id=2063593613 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, -1)
 visible = false
 
 [node name="PathNode19" parent="Rooms/RightHallway/PathNodes" unique_id=998937766 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, -1)
 visible = false
 
 [node name="PathNode20" parent="Rooms/RightHallway/PathNodes" unique_id=127885096 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.063, -2)
 visible = false
 
 [node name="PathNode21" parent="Rooms/RightHallway/PathNodes" unique_id=1883113475 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, 0)
 visible = false
 
 [node name="PathNode22" parent="Rooms/RightHallway/PathNodes" unique_id=2065664647 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.063, 2)
 visible = false
 
 [node name="PathNode23" parent="Rooms/RightHallway/PathNodes" unique_id=40830432 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 3)
 visible = false
 
 [node name="PathNode24" parent="Rooms/RightHallway/PathNodes" unique_id=282319654 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 3)
 visible = false
 
 [node name="PathNode25" parent="Rooms/RightHallway/PathNodes" unique_id=176697231 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 4)
 visible = false
 
 [node name="PathNode26" parent="Rooms/RightHallway/PathNodes" unique_id=2071973715 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 0)
 visible = false
 
 [node name="PathNode27" parent="Rooms/RightHallway/PathNodes" unique_id=1522592262 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode28" parent="Rooms/RightHallway/PathNodes" unique_id=442502289 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode29" parent="Rooms/RightHallway/PathNodes" unique_id=1684718338 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 6)
+visible = false
 entry = true
 
 [node name="PathNode30" parent="Rooms/RightHallway/PathNodes" unique_id=748713211 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 4)
+visible = false
 entry = true
 
 [node name="Purple" type="GridMap" parent="Rooms" unique_id=1596655182]
@@ -705,79 +749,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -14)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/Purple/PathNodes" unique_id=464876130 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -1)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/Purple/PathNodes" unique_id=1234856213 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 1)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/Purple/PathNodes" unique_id=147133080 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.063, 3)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/Purple/PathNodes" unique_id=692384959 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -1)
 visible = false
 
 [node name="PathNode5" parent="Rooms/Purple/PathNodes" unique_id=1787542669 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -2)
 visible = false
 
 [node name="PathNode6" parent="Rooms/Purple/PathNodes" unique_id=1152942684 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -1)
 visible = false
 
 [node name="PathNode7" parent="Rooms/Purple/PathNodes" unique_id=959467303 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 0)
 visible = false
 
 [node name="PathNode8" parent="Rooms/Purple/PathNodes" unique_id=862521327 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -1)
 visible = false
 
 [node name="PathNode9" parent="Rooms/Purple/PathNodes" unique_id=1865152495 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -2)
 visible = false
 
 [node name="PathNode10" parent="Rooms/Purple/PathNodes" unique_id=601991456 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 0)
 visible = false
 
 [node name="PathNode11" parent="Rooms/Purple/PathNodes" unique_id=1052065404 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 0)
 visible = false
 
 [node name="PathNode12" parent="Rooms/Purple/PathNodes" unique_id=2078283004 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, -2)
 visible = false
 
 [node name="PathNode13" parent="Rooms/Purple/PathNodes" unique_id=1224384204 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, -2)
 visible = false
 
 [node name="PathNode14" parent="Rooms/Purple/PathNodes" unique_id=622409780 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, -1)
 visible = false
 
 [node name="PathNode15" parent="Rooms/Purple/PathNodes" unique_id=1678051784 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 1)
 visible = false
 
 [node name="PathNode16" parent="Rooms/Purple/PathNodes" unique_id=1115516084 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 2)
 visible = false
 
 [node name="PathNode17" parent="Rooms/Purple/PathNodes" unique_id=1169244620 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 1)
 visible = false
 
 [node name="PathNode18" parent="Rooms/Purple/PathNodes" unique_id=1200533981 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.063, 2)
 visible = false
 
 [node name="PathNode19" parent="Rooms/Purple/PathNodes" unique_id=1653721182 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, 3)
 visible = false
 
 [node name="PinkLeft" type="GridMap" parent="Rooms" unique_id=2017578246]
@@ -793,51 +840,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 11)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/PinkLeft/PathNodes" unique_id=2015779089 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/PinkLeft/PathNodes" unique_id=1839563488 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -3)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/PinkLeft/PathNodes" unique_id=756651182 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/PinkLeft/PathNodes" unique_id=1116394220 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, -2)
 visible = false
 
 [node name="PathNode5" parent="Rooms/PinkLeft/PathNodes" unique_id=1899285823 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -2)
 visible = false
 
 [node name="PathNode6" parent="Rooms/PinkLeft/PathNodes" unique_id=345681304 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -1)
 visible = false
 
 [node name="PathNode7" parent="Rooms/PinkLeft/PathNodes" unique_id=1851814156 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 0)
 visible = false
 
 [node name="PathNode8" parent="Rooms/PinkLeft/PathNodes" unique_id=200739264 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 1)
 visible = false
 
 [node name="PathNode9" parent="Rooms/PinkLeft/PathNodes" unique_id=1298041669 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 1)
 visible = false
 
 [node name="PathNode10" parent="Rooms/PinkLeft/PathNodes" unique_id=1104084791 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.063, 2)
 visible = false
 
 [node name="PathNode11" parent="Rooms/PinkLeft/PathNodes" unique_id=1630658092 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 3)
 visible = false
 
 [node name="PathNode12" parent="Rooms/PinkLeft/PathNodes" unique_id=1578502150 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.063, 3)
 visible = false
 
 [node name="PinkMiddle" type="GridMap" parent="Rooms" unique_id=1483724173]
@@ -853,107 +903,111 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/PinkMiddle/PathNodes" unique_id=1250497485 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, 3)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/PinkMiddle/PathNodes" unique_id=882739051 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 6)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/PinkMiddle/PathNodes" unique_id=153575329 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -6)
+visible = false
 entry = true
 
 [node name="PathNode4" parent="Rooms/PinkMiddle/PathNodes" unique_id=543160494 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -9)
+visible = false
 entry = true
 
 [node name="PathNode5" parent="Rooms/PinkMiddle/PathNodes" unique_id=1049899937 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -8)
 visible = false
 
 [node name="PathNode6" parent="Rooms/PinkMiddle/PathNodes" unique_id=2017308036 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -8)
 visible = false
 
 [node name="PathNode7" parent="Rooms/PinkMiddle/PathNodes" unique_id=840089878 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -7)
 visible = false
 
 [node name="PathNode8" parent="Rooms/PinkMiddle/PathNodes" unique_id=1067138845 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -7)
 visible = false
 
 [node name="PathNode9" parent="Rooms/PinkMiddle/PathNodes" unique_id=1593834723 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -5)
 visible = false
 
 [node name="PathNode10" parent="Rooms/PinkMiddle/PathNodes" unique_id=202414910 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -5)
 visible = false
 
 [node name="PathNode11" parent="Rooms/PinkMiddle/PathNodes" unique_id=1002137524 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -6)
 visible = false
 
 [node name="PathNode12" parent="Rooms/PinkMiddle/PathNodes" unique_id=1071195282 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -4)
 visible = false
 
 [node name="PathNode13" parent="Rooms/PinkMiddle/PathNodes" unique_id=908945939 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -4)
 visible = false
 
 [node name="PathNode14" parent="Rooms/PinkMiddle/PathNodes" unique_id=1439524223 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -3)
 visible = false
 
 [node name="PathNode15" parent="Rooms/PinkMiddle/PathNodes" unique_id=466315085 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, -2)
 visible = false
 
 [node name="PathNode16" parent="Rooms/PinkMiddle/PathNodes" unique_id=2126942589 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 0)
 visible = false
 
 [node name="PathNode17" parent="Rooms/PinkMiddle/PathNodes" unique_id=341995519 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 0)
 visible = false
 
 [node name="PathNode18" parent="Rooms/PinkMiddle/PathNodes" unique_id=987876474 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, -2)
 visible = false
 
 [node name="PathNode19" parent="Rooms/PinkMiddle/PathNodes" unique_id=78859044 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, -1)
 visible = false
 
 [node name="PathNode20" parent="Rooms/PinkMiddle/PathNodes" unique_id=1440520444 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 1)
 visible = false
 
 [node name="PathNode21" parent="Rooms/PinkMiddle/PathNodes" unique_id=1089296700 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 2)
 visible = false
 
 [node name="PathNode22" parent="Rooms/PinkMiddle/PathNodes" unique_id=2047869238 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 2)
 visible = false
 
 [node name="PathNode23" parent="Rooms/PinkMiddle/PathNodes" unique_id=1186647585 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.063, 4)
 visible = false
 
 [node name="PathNode24" parent="Rooms/PinkMiddle/PathNodes" unique_id=725274572 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 3)
 visible = false
 
 [node name="PathNode25" parent="Rooms/PinkMiddle/PathNodes" unique_id=1386351652 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.063, 4)
 visible = false
 
 [node name="PathNode26" parent="Rooms/PinkMiddle/PathNodes" unique_id=243270147 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.063, 5)
 visible = false
 
 [node name="PinkRight" type="GridMap" parent="Rooms" unique_id=646478958]
@@ -969,42 +1023,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -13)
 script = ExtResource("3_xtcgn")
 
 [node name="PathNode" parent="Rooms/PinkRight/PathNodes" unique_id=332899510 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.063, -2)
+visible = false
 entry = true
 
 [node name="PathNode2" parent="Rooms/PinkRight/PathNodes" unique_id=1253019893 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 3)
+visible = false
 entry = true
 
 [node name="PathNode3" parent="Rooms/PinkRight/PathNodes" unique_id=781643803 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -3)
 visible = false
 
 [node name="PathNode4" parent="Rooms/PinkRight/PathNodes" unique_id=906227808 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.063, -1)
 visible = false
 
 [node name="PathNode5" parent="Rooms/PinkRight/PathNodes" unique_id=452914338 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -2)
 visible = false
 
 [node name="PathNode6" parent="Rooms/PinkRight/PathNodes" unique_id=1865609572 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, -3)
 visible = false
 
 [node name="PathNode7" parent="Rooms/PinkRight/PathNodes" unique_id=660164257 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, -1)
 visible = false
 
 [node name="PathNode8" parent="Rooms/PinkRight/PathNodes" unique_id=1113935371 instance=ExtResource("4_0lmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
 visible = false
 
 [node name="PathNode9" parent="Rooms/PinkRight/PathNodes" unique_id=1021635307 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 2)
 visible = false
 
 [node name="PathNode10" parent="Rooms/PinkRight/PathNodes" unique_id=1618080669 instance=ExtResource("4_0lmme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.063, 1)
 visible = false
 
 [node name="Player" parent="." unique_id=606121970 instance=ExtResource("2_xrx0u")]
