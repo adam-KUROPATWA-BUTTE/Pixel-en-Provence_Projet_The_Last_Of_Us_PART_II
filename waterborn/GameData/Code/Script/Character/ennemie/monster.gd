@@ -47,6 +47,9 @@ func travel_to_position(wanted_position: Vector3, speed: float) -> void:
 
 
 func is_player_in_view() -> bool:
+	if !player:
+		return false
+	
 	var vec_to_player := (player.global_position - global_position)
 	
 	if vec_to_player.length() > max_spotting_distance:
@@ -61,6 +64,9 @@ func is_player_in_view() -> bool:
 
 
 func is_line_of_sight_broken() -> bool:
+	if !player:
+		return true
+	
 	_eye_ray_cast.target_position = _eye_ray_cast.to_local(player.global_position)
 	_eye_ray_cast.force_raycast_update()
 	return _eye_ray_cast.is_colliding()

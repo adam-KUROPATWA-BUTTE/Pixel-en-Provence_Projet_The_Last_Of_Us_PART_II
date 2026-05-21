@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://r1e0y286e3pm"]
+[gd_scene format=3 uid="uid://w5kdhpgbktag"]
 
 [ext_resource type="Script" uid="uid://8i7np6fwli7t" path="res://GameData/Code/Script/Character/ennemie/monster.gd" id="1_4jcbj"]
 [ext_resource type="Script" uid="uid://c8nc54e1vymyp" path="res://GameData/Code/Script/Character/ennemie/stateMachine.gd" id="2_2rcj4"]
@@ -10,12 +10,13 @@
 radius = 0.8
 height = 3.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whl0o"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rcj4"]
 albedo_color = Color(0.3764706, 0.1882353, 0.08627451, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_whl0o"]
-material = SubResource("StandardMaterial3D_whl0o")
-radius = 0.8
+[sub_resource type="CylinderMesh" id="CylinderMesh_r7k0j"]
+material = SubResource("StandardMaterial3D_2rcj4")
+top_radius = 0.8
+bottom_radius = 0.8
 height = 3.0
 
 [node name="monster" type="CharacterBody3D" unique_id=1087529850]
@@ -28,7 +29,7 @@ shape = SubResource("CapsuleShape3D_whl0o")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1094274813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-mesh = SubResource("CapsuleMesh_whl0o")
+mesh = SubResource("CylinderMesh_r7k0j")
 
 [node name="eye" type="Node3D" parent="." unique_id=892178470]
 
