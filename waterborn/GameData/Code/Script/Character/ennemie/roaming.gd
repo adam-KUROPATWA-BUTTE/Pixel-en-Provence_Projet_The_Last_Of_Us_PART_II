@@ -3,9 +3,9 @@ extends EnemyState
 @export var _roaming_speed := 2.0
 
 var _map_synchronized := false
+@warning_ignore("unused_private_class_variable")
 var _target_position: Vector3
 var _nav_map: RID
-
 
 func _ready() -> void:
 	await get_tree().physics_frame
@@ -13,8 +13,7 @@ func _ready() -> void:
 	_map_synchronized = true
 	_nav_map = _monster.get_world_3d().get_navigation_map()
 
-
-func enter(previous_state_name: String, data := {}) -> void:
+func enter(_previous_state_name: String, data := {}) -> void:
 	if not _map_synchronized:
 		return
 	
@@ -23,7 +22,6 @@ func enter(previous_state_name: String, data := {}) -> void:
 		return
 	
 	_travel_to_random_position()
-
 
 func physics_update(_delta: float) -> void:
 	if not _map_synchronized:
@@ -34,7 +32,6 @@ func physics_update(_delta: float) -> void:
 	
 	if _monster.is_player_in_view():
 		requested_transition_to_other_state.emit("Chase")
-
 
 func _travel_to_random_position() -> void:
 	var rand_pos := NavigationServer3D.map_get_random_point(_nav_map, 1, true)

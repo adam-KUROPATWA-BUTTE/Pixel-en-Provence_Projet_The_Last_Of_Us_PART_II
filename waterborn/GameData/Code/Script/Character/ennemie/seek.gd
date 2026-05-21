@@ -8,7 +8,7 @@ var _search_timer := 0.0
 var _player_last_seen_position: Vector3
 
 
-func enter(previous_state_name: String, data := {}) -> void:
+func enter(_previous_state_name: String, data := {}) -> void:
 	if data["player_last_seen_position"]:
 		_player_last_seen_position = data["player_last_seen_position"]
 	else:
