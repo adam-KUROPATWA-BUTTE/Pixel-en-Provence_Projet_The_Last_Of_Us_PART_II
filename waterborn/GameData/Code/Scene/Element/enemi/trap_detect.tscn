@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b88gkgy58estv"]
+
+[ext_resource type="Script" uid="uid://cj3yrhg8w2vih" path="res://GameData/Code/Script/Element/slow_motion_trap.gd" id="1_fnd8p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_38o0g"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kln2"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.35686275, 0.58431375, 1, 0.5372549)
+
+[sub_resource type="BoxMesh" id="BoxMesh_25m8o"]
+lightmap_size_hint = Vector2i(104, 66)
+material = SubResource("StandardMaterial3D_2kln2")
+size = Vector3(10, 1, 10)
+
+[node name="trap" type="Area3D" unique_id=690965634]
+collision_layer = 3
+script = ExtResource("1_fnd8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1479188673]
+shape = SubResource("BoxShape3D_38o0g")
+debug_color = Color(0.8262079, 0.94713634, 0.93027985, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=89735455]
+mesh = SubResource("BoxMesh_25m8o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

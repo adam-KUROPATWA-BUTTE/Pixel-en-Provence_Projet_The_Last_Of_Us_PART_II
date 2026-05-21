@@ -16,7 +16,6 @@ var cam_freq : float = 7.0
 func _ready() -> void:
 	cam_bas_pos = head.position.y
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 func _unhandled_input(event: InputEvent) -> void:
 	if toglable:
 		if event is InputEventMouseMotion:
@@ -43,7 +42,7 @@ func _physics_process(delta: float) -> void:
 			cam_time += cam_freq * delta
 			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
-			if (Input.is_action_pressed("run")):
+			if (Input.is_action_pressed("Run")):
 				velocity.x = direction.x * (speed*1.5)
 				velocity.z = direction.z * (speed*1.5)
 				cam_time += 0.08
@@ -57,3 +56,6 @@ func _physics_process(delta: float) -> void:
 			move_and_slide()
 		else :
 			lerp(head.position.y, 0.0, 0.1)
+			
+func die() : 
+	print("You Died")
