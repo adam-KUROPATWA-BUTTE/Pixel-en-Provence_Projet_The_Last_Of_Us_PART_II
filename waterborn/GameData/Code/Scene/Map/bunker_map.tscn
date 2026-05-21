@@ -1,12 +1,22 @@
-[gd_scene format=3 uid="uid://cq2awvb50uo8n"]
+[gd_scene format=3 uid="uid://dyrw5oe6v3bpb"]
 
 [ext_resource type="MeshLibrary" uid="uid://4hkxnpmq7s16" path="res://GameData/Asset/Graphism/Model/wall_tileset.meshlib" id="1_v46i7"]
-[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="2_xrx0u"]
+[ext_resource type="PackedScene" uid="uid://hn2173j173w8" path="res://GameData/Code/Scene/Character/player.tscn" id="2_xrx0u"]
 [ext_resource type="Script" uid="uid://dyw406lnobd6a" path="res://GameData/Code/Script/Pathfinding/path_node_connection.gd" id="3_xtcgn"]
 [ext_resource type="PackedScene" uid="uid://cd5gn4g7mdy51" path="res://GameData/Code/Scene/Pathfinding/path_node.tscn" id="4_0lmme"]
 [ext_resource type="PackedScene" uid="uid://w5kdhpgbktag" path="res://GameData/Code/Scene/Character/Monster.tscn" id="5_0lmme"]
+[ext_resource type="PackedScene" uid="uid://crkpurl7h3f7n" path="res://GameData/Asset/Graphism/Model/Tileset/light_2_unmerged.tscn" id="6_1y8m5"]
+
+[sub_resource type="Environment" id="Environment_1y8m5"]
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+ambient_light_energy = 0.0
+reflected_light_source = 1
 
 [node name="Node3D" type="Node3D" unique_id=1986439457]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=402034382]
+environment = SubResource("Environment_1y8m5")
 
 [node name="Rooms" type="Node3D" parent="." unique_id=226616276]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.062, 0)
@@ -1069,3 +1079,16 @@ visible = false
 
 [node name="monster" parent="." unique_id=1087529850 instance=ExtResource("5_0lmme")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.434784, 0, 0)
+
+[node name="light22" parent="." unique_id=1480342872 instance=ExtResource("6_1y8m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.329839, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="light22" unique_id=804446032]
+transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 0, 0)
+light_energy = 5.614
+light_size = 0.413
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+spot_range = 22.185
+spot_angle = 80.77
+spot_angle_attenuation = 0.3186403
