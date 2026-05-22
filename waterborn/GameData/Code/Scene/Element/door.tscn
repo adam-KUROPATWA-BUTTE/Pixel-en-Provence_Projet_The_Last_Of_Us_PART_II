@@ -10,13 +10,12 @@ size = Vector3(2, 4, 0.05)
 [sub_resource type="BoxShape3D" id="BoxShape3D_h75x2"]
 size = Vector3(2, 4, 0.05)
 
-[node name="door" type="AnimatableBody3D" unique_id=1526128547]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0043674, 0)
+[node name="door" type="AnimatableBody3D" unique_id=667105229]
 physics_material_override = SubResource("PhysicsMaterial_fah8p")
 script = ExtResource("1_sbhy4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1043291533]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=815757862]
 mesh = SubResource("BoxMesh_sbhy4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1866271640]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1946809937]
 shape = SubResource("BoxShape3D_h75x2")
