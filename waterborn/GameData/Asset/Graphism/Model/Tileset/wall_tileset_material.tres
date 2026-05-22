@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b4sxb2buf2lcm"]
+
+[ext_resource type="Shader" uid="uid://cp1jxhlxhvn1v" path="res://GameData/Code/Shader/crunchy_texture.gdshader" id="1_1ianu"]
+[ext_resource type="Texture2D" uid="uid://dolu6dhiuj066" path="res://GameData/Asset/Graphism/Model/Tileset/wall_tileset_0.png" id="2_ptogm"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1ianu")
+shader_parameter/albedo_tex = ExtResource("2_ptogm")
+shader_parameter/aging_strength = 0.21999999508256
+shader_parameter/noise_scale = 128.0
+shader_parameter/aging_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
+shader_parameter/roughness = 0.8
+shader_parameter/seed = Vector2(0, 0)
+shader_parameter/texture_size = Vector2i(128, 128)
