@@ -49,7 +49,7 @@ navigation_mesh = SubResource("NavigationMesh_vnleq")
 shape = SubResource("BoxShape3D_fp3a6")
 
 [node name="Player" parent="." unique_id=606121970 instance=ExtResource("1_qtb0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5859723, -0.057872593, 5.505452)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2871823, -0.057872593, -5.433404)
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=157582252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.099699, 0, -8.775081)
@@ -83,7 +83,7 @@ zone_index = 5
 [node name="computer" parent="." unique_id=1792267288 instance=ExtResource("6_6mm18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7787857, 0.5500002, -10.425318)
 
-[node name="door" parent="." unique_id=1526128547 instance=ExtResource("6_2har7")]
+[node name="door" parent="." unique_id=667105229 instance=ExtResource("6_2har7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.031275, 2.0043674, -10.357613)
 
 [node name="button" parent="." unique_id=2010240265 node_paths=PackedStringArray("door") instance=ExtResource("7_ysxxn")]

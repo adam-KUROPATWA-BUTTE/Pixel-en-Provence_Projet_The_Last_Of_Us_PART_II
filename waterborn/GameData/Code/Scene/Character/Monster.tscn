@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://w5kdhpgbktag"]
 
 [ext_resource type="Script" uid="uid://8i7np6fwli7t" path="res://GameData/Code/Script/Character/ennemie/monster.gd" id="1_4jcbj"]
-[ext_resource type="Script" uid="uid://c8nc54e1vymyp" path="res://GameData/Code/Script/Character/ennemie/stateMachine.gd" id="2_2rcj4"]
-[ext_resource type="Script" uid="uid://cplmxxdpkpacl" path="res://GameData/Code/Script/Character/ennemie/chase.gd" id="3_7ngye"]
+[ext_resource type="Script" uid="uid://c8nc54e1vymyp" path="res://GameData/Code/Script/Character/ennemie/state_machine.gd" id="2_2rcj4"]
+[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/chase.gd" id="3_7ngye"]
 [ext_resource type="Script" uid="uid://dt1br2moin3tu" path="res://GameData/Code/Script/Character/ennemie/seek.gd" id="4_2rcj4"]
-[ext_resource type="Script" uid="uid://chgemd03kskyg" path="res://GameData/Code/Script/Character/ennemie/roaming.gd" id="4_sindi"]
+[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/roaming.gd" id="4_sindi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2rcj4"]
 

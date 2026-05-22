@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfvbljuyu4dxs"]
+
+[sub_resource type="Environment" id="Environment_1y8m5"]
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+ambient_light_energy = 0.0
+reflected_light_source = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" unique_id=53311613]
+environment = SubResource("Environment_1y8m5")

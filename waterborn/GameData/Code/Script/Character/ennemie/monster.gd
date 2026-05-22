@@ -35,38 +35,15 @@ func _ready() -> void:
 	reached_player.connect(func(): player.die())
 
 func _process(_delta: float) -> void:
-	#move to 0, 0 to test pathfinding
 	if !is_moving:
 		is_moving = true
 		done = await try_go_to(global_target)
-		if done:
-			print("done :)")
-		else:
+		if !done:
 			print("something went wrong :(")
 		is_moving = false
 
-#func _physics_process(_delta: float) -> void:
-	#if navigation_agent.is_navigation_finished():
-		#return
-	#
-	#var next_path_position := navigation_agent.get_next_path_position()
-	#
-	#var where_to_look := next_path_position
-	#where_to_look.y = global_position.y
-	#if not where_to_look.is_equal_approx(global_position):
-		## if you want interpolation, look into quaternions and slerp()
-		## I'm just using look_at for simplicity
-		#look_at(where_to_look)
-	#
-	#var direction := next_path_position - global_position
-	#direction.y = 0.0
-	#direction = direction.normalized()
-	#velocity = direction * _current_speed
-	#move_and_slide()
-
 func travel_to_position(wanted_position: Vector3, import_speed: float) -> void:
 	global_target = wanted_position
-	#navigation_agent.target_position = wanted_position
 	_current_speed = import_speed
 
 func is_player_in_view() -> bool:
@@ -117,7 +94,6 @@ func go_to(destination : Vector3) -> void:
 	await move_to()
 	
 	if path_index == path.size():
-		#print("last step")
 		var at_destination : bool = false
 		while (!at_destination):
 			var to_target : Vector3 = destination - global_position
@@ -155,7 +131,15 @@ func move_to() -> void:
 		if to_target.length() < arrive_threshold:
 			path_index += 1
 			continue
-
+		
+		
+		var where_to_look : Vector3 = target
+		where_to_look.y = global_position.y
+		if not where_to_look.is_equal_approx(global_position):
+			# if you want interpolation, look into quaternions and slerp()
+			# I'm just using look_at for simplicity
+			look_at(where_to_look)
+		
 		var dir := to_target.normalized()
 		last_direction = direction
 		direction = dir
