@@ -26,3 +26,14 @@ offset_right = 160.0
 offset_bottom = 72.0
 icon_name = "Bimont Archive"
 icon_type = 1
+window_id = 3
+
+[node name="DesktopIconContainer5" parent="." unique_id=1112991031 instance=ExtResource("1_5b77k")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 0.0
+offset_right = 240.0
+offset_bottom = 72.0
+icon_name = "Valve System"
+icon_type = 1
+window_id = 5

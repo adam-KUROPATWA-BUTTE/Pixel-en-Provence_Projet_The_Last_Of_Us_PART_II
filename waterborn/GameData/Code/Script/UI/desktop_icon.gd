@@ -1,7 +1,5 @@
 extends Control
 
-
-
 @export var icon_name : String = "Default"
 @export var icon_type : global_enums.icon_types = global_enums.icon_types.FOLDER
 @export var window_id : int = -1
