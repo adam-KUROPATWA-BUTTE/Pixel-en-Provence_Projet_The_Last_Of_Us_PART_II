@@ -9,7 +9,6 @@ var cam_time : float = 0.0
 var cam_amplitude : float = 0.03
 var cam_freq : float = 4.0
 
-
 func _ready() -> void:
 	cam_bas_pos = head.position.y
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -33,17 +32,17 @@ func _physics_process(delta: float) -> void:
 			direction += forward
 		elif Input.is_action_pressed("Backward"):
 			direction -= forward
-		elif Input.is_action_pressed("Right"):
+		if Input.is_action_pressed("Right"):
 			direction += right
 		elif  Input.is_action_pressed("Left"):
 			direction -= right
+		
 		if direction != Vector3.ZERO :
 			cam_time += cam_freq * delta
 			head.position.y = cam_bas_pos + (sin(cam_time) * cam_amplitude)
 			direction = direction.normalized()
 			if (Input.is_action_pressed("Run")):
-				parent.velocity.x = direction.x * (parent.speed*1.5)
-				parent.velocity.z = direction.z * (parent.speed*1.5)
+				parent.velocity = direction * (parent.speed*1.5)
 				cam_time += 0.08
 			else:
 				parent.velocity.x = direction.x * parent.speed

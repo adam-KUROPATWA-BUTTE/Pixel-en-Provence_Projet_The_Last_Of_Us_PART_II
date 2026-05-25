@@ -7,11 +7,11 @@ class_name StateMachine extends Node
 ).call()
 
 func _ready() -> void:
-	for state_node: EnemyState in find_children("*", "EnemyState"):
-		state_node.requested_transition_to_other_state.connect(_transition_to_next_state)
+	for state_node : EnemyState in find_children("*", "EnemyState"):
+		state_node.requested_transition_to_other_state.connect(transition_to_next_state)
 	
 	await owner.ready
-	state.enter("")
+	state.enter("Roaming")
 
 func _process(delta: float) -> void:
 	state.update(delta)
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	state.physics_update(delta)
 
-func _transition_to_next_state(target_state_name: String, data: Dictionary = {}) -> void:
+func transition_to_next_state(target_state_name: String, data: Dictionary = {}) -> void:
 	if not has_node(target_state_name):
 		printerr(owner.name + ": Trying to transition to state " + target_state_name + " but it does not exist.")
 		return
