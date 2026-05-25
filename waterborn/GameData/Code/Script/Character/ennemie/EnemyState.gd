@@ -3,7 +3,8 @@ class_name EnemyState
 
 signal requested_transition_to_other_state(target_state_name: String, data: Dictionary)
 
-@onready var _monster: monster = owner
+@warning_ignore("unused_private_class_variable")
+@onready var monster_entity : monster = owner
 
 func enter(previous_state_name: String, data := {}) -> void:
 	pass

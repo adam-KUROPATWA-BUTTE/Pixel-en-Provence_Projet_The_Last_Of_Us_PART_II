@@ -1,31 +1,32 @@
 extends EnemyState
 
-@export var update_path_delay := 0.0 # if you do not want to update the path every physics frame, increase this
-@export var _chasing_speed := 6.0
-@export var _catching_distance := 1.8
+@export var update_path_delay := 1.0
+@export var chasing_speed := 60.0 # 6.0
+@export var catching_distance := 1.8
 
-var _end_chase := 0.0
-var _update_path_timer := 0.0
+var end_chase := 0.0
+var update_path_timer := 0.0
 
-
-func enter(previous_state_name: String, data := {}) -> void:
-	_end_chase = randf_range(60.0, 100.0)
+func enter(_previous_state_name: String, _data := {}) -> void:
+	print("now chasing")
+	end_chase = randf_range(60.0, 100.0)
 
 
 func update(delta: float) -> void:
-	_update_path_timer -= delta
-	_end_chase -= delta
-	if _end_chase <= 0.0:
-		print("disparais")
-		_monster.queue_free()
+	update_path_timer -= delta
+	end_chase -= delta
+	if end_chase <= 0.0:
+		print("le monstre disparais après un chasse très longue")
+		monster_entity.queue_free()
 
 func physics_update(_delta: float) -> void:
-	if _update_path_timer <= 0.0:
-		_update_path_timer = update_path_delay
-		_monster.travel_to_position(_monster.player.global_position, _chasing_speed)
+	if update_path_timer <= 0.0:
+		update_path_timer = update_path_delay
+		print("go to player")
+		monster_entity.travel_to_position(monster_entity.player.global_position, chasing_speed)
 	
-	if  _monster.is_line_of_sight_broken():
-		requested_transition_to_other_state.emit("Searching", {"player_last_seen_position":_monster.player.global_position})
+	if  monster_entity.is_line_of_sight_broken():
+		requested_transition_to_other_state.emit("Searching", {"player_last_seen_position":monster_entity.player.global_position})
 	
-	if _monster.global_position.distance_to(_monster.player.global_position) <= _catching_distance:
-		_monster.reached_player.emit()
+	if monster_entity.global_position.distance_to(monster_entity.player.global_position) <= catching_distance:
+		monster_entity.reached_player.emit()
