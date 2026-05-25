@@ -132,7 +132,6 @@ func move_to() -> void:
 			path_index += 1
 			continue
 		
-		
 		var where_to_look : Vector3 = target
 		where_to_look.y = global_position.y
 		if not where_to_look.is_equal_approx(global_position):
@@ -148,6 +147,12 @@ func move_to() -> void:
 		await (Engine.get_main_loop() as SceneTree).process_frame
 		if not is_instance_valid(self):
 			return
+	
+	#check why pathfinding ended
+	print(
+		"reason of end pathfinding : path_size = ",
+		!(path_index < path.size()), ", time at same place = ",!(time_at_same_place < 40), 
+		", target changed = ", !(global_target == current_target))
 	
 	velocity = Vector3.ZERO
 	direction = Vector3.ZERO
