@@ -11,13 +11,21 @@ config_version=5
 [application]
 
 config/name="Waterborn"
+run/main_scene="uid://b6okcs2lkoygu"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-global_calculation="*uid://dpn71hcutqg0v"
-global_enums="*uid://b5cj60587ncwg"
+global_variable="*uid://dbsptwgnkcd2r"
+global_calculation="*uid://b1bpmot1tvwih"
+pathfinding="*uid://dvkt1tcwg6jvm"
+SystemeValve="*uid://dpwwkf5g3nq4t"
+
+[global_group]
+
+player=""
+enemies=""
 
 [input]
 
@@ -41,13 +49,32 @@ Backward={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]
 }
-
-[physics]
-
-3d/physics_engine="Jolt Physics"
+Interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+Retour={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Run={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194325,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
 rendering_device/driver.windows="d3d12"
+lights_and_shadows/directional_shadow/size=16384
+lights_and_shadows/directional_shadow/size.mobile=8192
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
+lights_and_shadows/directional_shadow/16_bits=false
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+lights_and_shadows/positional_shadow/atlas_16_bits=false
+lights_and_shadows/positional_shadow/atlas_size=16384
+lights_and_shadows/positional_shadow/atlas_size.mobile=8192

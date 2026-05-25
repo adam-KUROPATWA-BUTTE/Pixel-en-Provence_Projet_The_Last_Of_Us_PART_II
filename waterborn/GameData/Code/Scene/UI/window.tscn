@@ -28,7 +28,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("2_u8wtx")
 window_size = Vector2i(500, 300)
-window_pos = null
 window_name = "Godot"
 
 [node name="WindowIconContainer" type="TextureRect" parent="." unique_id=758068488]

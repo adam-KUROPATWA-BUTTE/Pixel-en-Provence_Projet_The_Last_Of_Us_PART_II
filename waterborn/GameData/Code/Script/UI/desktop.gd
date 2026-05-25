@@ -38,6 +38,12 @@ var windows : Dictionary = {
 		"name" : "Archives",
 		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/archives_folder_content.tscn")
 	}
+	5 : {
+		"size" : Vector2i(278, 258),
+		"pos" : Vector2i(200, 100),
+		"name" : "Niveaux d'eau",
+		"content" : preload("res://GameData/Code/Scene/UI/waterLevel.tscn")
+	}
 }
 
 var errors: Dictionary = {

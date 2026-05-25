@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bk8o3ckxvhpv7"]
+
+[ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
+[ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/trap_detect.tscn" id="2_vnleq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fp3a6"]
+size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fp3a6"]
+size = Vector3(25, 0.1, 25)
+
+[node name="Node3D" type="Node3D" unique_id=1965322240]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1246005407]
+mesh = SubResource("PlaneMesh_fp3a6")
+
+[node name="Player" parent="." unique_id=606121970 instance=ExtResource("1_qtb0c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92842406, 0)
+speed = 5.0
+mouse_sensitivity = 0.003
+gravity = 9.8
+toglable = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1935884957]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=439981808]
+shape = SubResource("BoxShape3D_fp3a6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=733126772]
+transform = Transform3D(-0.48970217, -0.87189, 0, 0.71236396, -0.4001034, 0.57658935, -0.50272226, 0.28235692, 0.8170342, 0, 0, 0)
+
+[node name="Area3D" parent="." unique_id=690965634 instance=ExtResource("2_vnleq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.550745, 0, 6.8843775)

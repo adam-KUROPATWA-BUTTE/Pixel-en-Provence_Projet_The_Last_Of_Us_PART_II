@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://w5kdhpgbktag"]
+
+[ext_resource type="Script" uid="uid://8i7np6fwli7t" path="res://GameData/Code/Script/Character/ennemie/monster.gd" id="1_4jcbj"]
+[ext_resource type="Script" uid="uid://c8nc54e1vymyp" path="res://GameData/Code/Script/Character/ennemie/state_machine.gd" id="2_2rcj4"]
+[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/chase.gd" id="3_7ngye"]
+[ext_resource type="Script" uid="uid://dt1br2moin3tu" path="res://GameData/Code/Script/Character/ennemie/seek.gd" id="4_2rcj4"]
+[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/roaming.gd" id="4_sindi"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2rcj4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rcj4"]
+albedo_color = Color(0.3764706, 0.1882353, 0.08627451, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r7k0j"]
+material = SubResource("StandardMaterial3D_2rcj4")
+
+[node name="monster" type="CharacterBody3D" unique_id=1087529850]
+collision_mask = 6
+script = ExtResource("1_4jcbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=510721556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_2rcj4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1094274813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_r7k0j")
+
+[node name="eye" type="Node3D" parent="." unique_id=892178470]
+
+[node name="RayCast3D" type="RayCast3D" parent="eye" unique_id=1259355763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5134605, 0)
+collision_mask = 4
+debug_shape_custom_color = Color(0, 0.47843137, 0.4627451, 1)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1805556705]
+path_height_offset = 0.1
+
+[node name="state" type="Node" parent="." unique_id=435131857 node_paths=PackedStringArray("initial_state") groups=["enemies"]]
+script = ExtResource("2_2rcj4")
+initial_state = NodePath("Roaming")
+
+[node name="Roaming" type="Node" parent="state" unique_id=1706129681]
+script = ExtResource("4_sindi")
+
+[node name="Chase" type="Node" parent="state" unique_id=1733717241]
+script = ExtResource("3_7ngye")
+
+[node name="Searching" type="Node" parent="state" unique_id=1460120966]
+script = ExtResource("4_2rcj4")
