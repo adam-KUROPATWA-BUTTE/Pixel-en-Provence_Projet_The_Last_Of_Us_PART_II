@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dt5nrso4du63a"]
+
+[ext_resource type="Script" uid="uid://clq50p8y6tdxy" path="res://GameData/Code/Script/UI/water_level.gd" id="1_shvwn"]
+[ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="2_moikw"]
+
+[node name="waterLevel" type="Control" unique_id=1038024045]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shvwn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=549093730]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 9.0
+offset_bottom = 88.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=666726528]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1407846045]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1077519849]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1308801814]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Label5" type="Label" parent="VBoxContainer" unique_id=1460643572]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Label6" type="Label" parent="VBoxContainer" unique_id=1722714633]
+layout_mode = 2
+label_settings = ExtResource("2_moikw")

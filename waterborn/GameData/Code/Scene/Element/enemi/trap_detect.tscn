@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b88gkgy58estv"]
 
-[ext_resource type="Script" uid="uid://f8qns0g4nln1" path="res://GameData/Code/Script/Element/trap_detect.gd" id="1_2kln2"]
+[ext_resource type="Script" uid="uid://cj3yrhg8w2vih" path="res://GameData/Code/Script/Element/slow_motion_trap.gd" id="1_fnd8p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_38o0g"]
 size = Vector3(10, 1, 10)
@@ -18,7 +18,7 @@ size = Vector3(10, 1, 10)
 
 [node name="trap" type="Area3D" unique_id=690965634]
 collision_layer = 3
-script = ExtResource("1_2kln2")
+script = ExtResource("1_fnd8p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1479188673]
 shape = SubResource("BoxShape3D_38o0g")

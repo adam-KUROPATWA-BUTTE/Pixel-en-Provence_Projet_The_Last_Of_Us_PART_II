@@ -1,30 +1,20 @@
 extends CharacterBody3D
 
-var speed : int = 10
-var target_velocity : Vector3
+@export var speed : float = 6.0
+@export var mouse_sensitivity : float = 0.003
+@export var toglable : bool
 
-func _physics_process(_delta):
-	# We create a local variable to store the input direction.
-	var direction = Vector3.ZERO
-	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("Right"):
-		direction.x += 1
-	if Input.is_action_pressed("Left"):
-		direction.x -= 1
-	if Input.is_action_pressed("Backward"):
-		# Notice how we are working with the vector's x and z axes.
-		# In 3D, the XZ plane is the ground plane.
-		direction.z += 1
-	if Input.is_action_pressed("Forward"):
-		direction.z -= 1
-		
-	target_velocity.x = direction.x * speed
-	target_velocity.z = direction.z * speed
+@onready var camera = $head/Camera3D
 
-	# Vertical Velocity
-	#if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-	#	target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+func die() : 
+	print("You Died")
 
-	# Moving the Character
-	velocity = target_velocity
-	move_and_slide()
+func _try_interact():
+	var space = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(
+		camera.global_position,
+		camera.global_position + (-camera.global_transform.basis.z * 2.0)  # 2m de portée
+	)
+	var result = space.intersect_ray(query)
+	if result and result.collider.has_method("interact"):
+		result.collider.interact()

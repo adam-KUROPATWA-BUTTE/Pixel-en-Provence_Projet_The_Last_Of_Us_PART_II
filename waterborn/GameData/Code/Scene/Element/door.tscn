@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c1pyvx3a6l13y"]
+
+[ext_resource type="Script" uid="uid://pcoq6kmq2d3a" path="res://GameData/Code/Script/Element/door.gd" id="1_sbhy4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fah8p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sbhy4"]
+size = Vector3(2, 4, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h75x2"]
+size = Vector3(2, 4, 0.05)
+
+[node name="door" type="AnimatableBody3D" unique_id=667105229]
+physics_material_override = SubResource("PhysicsMaterial_fah8p")
+script = ExtResource("1_sbhy4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=815757862]
+mesh = SubResource("BoxMesh_sbhy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1946809937]
+shape = SubResource("BoxShape3D_h75x2")
