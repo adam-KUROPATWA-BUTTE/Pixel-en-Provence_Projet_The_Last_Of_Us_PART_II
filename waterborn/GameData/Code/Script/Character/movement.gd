@@ -2,6 +2,7 @@ extends Node
 
 @onready var parent : CharacterBody3D = get_parent()
 @onready var head : Node3D = parent.get_node("head")
+@onready var interact_label : Label = parent.get_node("CanvasLayer/Label")
 var pitch: float = 0.0
 
 var cam_bas_pos : float
@@ -14,16 +15,31 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if parent.toglable:
+	if parent.toggled:
 		if event is InputEventMouseMotion:
 			parent.rotate_y(-event.relative.x * parent.mouse_sensitivity)
 			pitch = clamp(pitch - event.relative.y * parent.mouse_sensitivity, deg_to_rad(-89), deg_to_rad(89))
 			head.rotation.x = pitch
 		if event.is_action_pressed("Interact"):
 			parent._try_interact()
+		update_interact_label()
+
+func update_interact_label() -> void:
+	var space = parent.get_world_3d().direct_space_state
+	var camera = parent.get_node("head/Camera3D")
+	var query = PhysicsRayQueryParameters3D.create(
+		camera.global_position,
+		camera.global_position + (-camera.global_transform.basis.z * 2.0)
+	)
+	var result = space.intersect_ray(query)
+	
+	if result and result.collider.has_method("interact"):
+		interact_label.show()
+	else:
+		interact_label.hide()
 
 func _physics_process(delta: float) -> void:
-	if parent.toglable:
+	if parent.toggled:
 		var direction = Vector3.ZERO
 		var forward = -parent.transform.basis.z
 		var right = parent.transform.basis.x
