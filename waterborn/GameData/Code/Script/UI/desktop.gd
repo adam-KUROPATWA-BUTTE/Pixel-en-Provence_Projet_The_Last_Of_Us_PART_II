@@ -52,6 +52,12 @@ var errors: Dictionary = {
 		"pos" : Vector2i(900, 470),
 		"name" : "Your computer have a virus",
 		"content" : null
+	},
+	1 : {
+		"size" : Vector2i(150, 90),
+		"pos" : Vector2i(900, 470),
+		"name" : "Your computer have a virus",
+		"content" : null
 	}
 }
 

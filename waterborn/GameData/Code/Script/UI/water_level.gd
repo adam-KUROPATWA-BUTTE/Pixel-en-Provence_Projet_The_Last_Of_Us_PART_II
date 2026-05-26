@@ -10,4 +10,4 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	for i in range(system_valve.zone_amount):
 		labels[i].text = "Zone %d : %.1f" % [i + 1, system_valve.zone[i]]
-		labels[i].position.y = labels_pos[i] + 21
+		#labels[i].position.y = labels_pos[i] + 21

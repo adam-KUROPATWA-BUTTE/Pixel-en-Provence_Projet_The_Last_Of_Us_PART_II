@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 global_variable="*uid://dbsptwgnkcd2r"
 global_calculation="*uid://b1bpmot1tvwih"
 pathfinding="*uid://dvkt1tcwg6jvm"
-SystemeValve="*uid://dpwwkf5g3nq4t"
+system_valve="*uid://bmpkmah4157o0"
 
 [global_group]
 

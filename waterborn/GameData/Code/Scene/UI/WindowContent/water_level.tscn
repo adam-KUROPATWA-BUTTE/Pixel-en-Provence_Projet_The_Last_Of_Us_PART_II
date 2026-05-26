@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://dt5nrso4du63a"]
 
 [ext_resource type="Script" uid="uid://clq50p8y6tdxy" path="res://GameData/Code/Script/UI/water_level.gd" id="1_shvwn"]
-[ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="2_moikw"]
-<<<<<<< HEAD:waterborn/GameData/Code/Scene/UI/waterLevel.tscn
 [ext_resource type="Texture2D" uid="uid://cqp70bf1ln5ft" path="res://GameData/Asset/Graphism/Texture/UI/bouche-du-rhone_outline.png" id="3_mqvra"]
 [ext_resource type="Texture2D" uid="uid://cqhataqrs0u4o" path="res://GameData/Asset/Graphism/Texture/UI/bouche-du-rhone_dataline.png" id="4_klqf3"]
-=======
->>>>>>> dev:waterborn/GameData/Code/Scene/UI/WindowContent/water_level.tscn
+[ext_resource type="Texture2D" uid="uid://bwi368s8f6dqw" path="res://GameData/Asset/Graphism/Texture/UI/reduce_icon.png" id="5_a6vi7"]
+[ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="5_nyowi"]
+[ext_resource type="Script" uid="uid://24f7ongfhwe" path="res://GameData/Code/Script/Element/valve.gd" id="6_nxfhl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqvra"]
+line_spacing = 0.0
+font = ExtResource("5_nyowi")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
 
 [node name="waterLevel" type="Control" unique_id=1038024045]
 layout_mode = 3
@@ -17,50 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_shvwn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=549093730]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 9.0
-offset_bottom = 88.0
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=666726528]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-
-[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1407846045]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-
-[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1077519849]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-
-[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1308801814]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-
-[node name="Label5" type="Label" parent="VBoxContainer" unique_id=1460643572]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-
-[node name="Label6" type="Label" parent="VBoxContainer" unique_id=1722714633]
-layout_mode = 2
-label_settings = ExtResource("2_moikw")
-<<<<<<< HEAD:waterborn/GameData/Code/Scene/UI/waterLevel.tscn
-
-[node name="Control" type="Control" parent="." unique_id=1304480850]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RegionOutline" type="TextureRect" parent="Control" unique_id=602968327]
+[node name="RegionOutline" type="TextureRect" parent="." unique_id=1201419248]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_mqvra")
 
-[node name="RegionDataLine" type="TextureRect" parent="Control" unique_id=1353838526]
+[node name="RegionDataLine" type="TextureRect" parent="." unique_id=2109939244]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,5 +51,142 @@ offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_klqf3")
-=======
->>>>>>> dev:waterborn/GameData/Code/Scene/UI/WindowContent/water_level.tscn
+
+[node name="Valves" type="Control" parent="." unique_id=690957535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Valves" unique_id=1691040763]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 52.0
+offset_right = 295.0
+offset_bottom = 62.0
+text = "Zone 1 : 22.4"
+label_settings = SubResource("LabelSettings_mqvra")
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label" unique_id=1084740448]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+
+[node name="Label2" type="Label" parent="Valves" unique_id=177739377]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 100.0
+offset_right = 388.0
+offset_bottom = 110.0
+text = "Zone 2 : 10.5"
+label_settings = SubResource("LabelSettings_mqvra")
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label2" unique_id=246846323]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+zone_index = 2
+
+[node name="Label3" type="Label" parent="Valves" unique_id=250879130]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 204.0
+offset_right = 377.0
+offset_bottom = 214.0
+text = "Zone 3 : 18.2"
+label_settings = SubResource("LabelSettings_mqvra")
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label3" unique_id=419411285]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+zone_index = 3
+
+[node name="Label4" type="Label" parent="Valves" unique_id=445738284]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 61.0
+offset_bottom = 85.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("5_nyowi")
+text = "Zone 4 : 9.8"
+label_settings = SubResource("LabelSettings_mqvra")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label4" unique_id=1863351488]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+zone_index = 4
+
+[node name="Label5" type="Label" parent="Valves" unique_id=269993948]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 145.0
+offset_right = 85.0
+offset_bottom = 155.0
+text = "Zone 5 : 12.7"
+label_settings = SubResource("LabelSettings_mqvra")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label5" unique_id=1630629925]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+zone_index = 5
+
+[node name="Label6" type="Label" parent="Valves" unique_id=1067184609]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 196.0
+offset_right = 181.0
+offset_bottom = 206.0
+text = "Zone 6 : 15.0"
+label_settings = SubResource("LabelSettings_mqvra")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Valves/Label6" unique_id=78180567]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 35.0
+offset_bottom = 20.0
+texture_normal = ExtResource("5_a6vi7")
+script = ExtResource("6_nxfhl")
+zone_index = 6
+
+[connection signal="pressed" from="Valves/Label/TextureButton" to="Valves/Label/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Valves/Label2/TextureButton" to="Valves/Label2/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Valves/Label3/TextureButton" to="Valves/Label3/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Valves/Label4/TextureButton" to="Valves/Label4/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Valves/Label5/TextureButton" to="Valves/Label5/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Valves/Label6/TextureButton" to="Valves/Label6/TextureButton" method="_on_pressed"]

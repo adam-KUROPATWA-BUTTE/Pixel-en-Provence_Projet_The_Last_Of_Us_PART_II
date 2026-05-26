@@ -8,7 +8,7 @@ enum icon_types {FOLDER, FILE}
 
 @onready var label : Label = $IconTexture/IconName
 @onready var texture : TextureRect = $IconTexture
-@onready var desktop : Control = $"../.."
+@onready var desktop : Control = get_tree().get_first_node_in_group("desktop")
 
 var icon_textures : Array = [
 	"res://GameData/Asset/Graphism/Texture/UI/folder_icon.png",
