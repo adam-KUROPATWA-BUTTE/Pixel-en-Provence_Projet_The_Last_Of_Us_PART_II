@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dt5nrso4du63a"]
 
-[ext_resource type="Script" uid="uid://clq50p8y6tdxy" path="res://GameData/Code/Script/UI/waterLevel.gd" id="1_shvwn"]
+[ext_resource type="Script" uid="uid://clq50p8y6tdxy" path="res://GameData/Code/Script/UI/water_level.gd" id="1_shvwn"]
+[ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="2_moikw"]
+[ext_resource type="Texture2D" uid="uid://cqp70bf1ln5ft" path="res://GameData/Asset/Graphism/Texture/UI/bouche-du-rhone_outline.png" id="3_mqvra"]
+[ext_resource type="Texture2D" uid="uid://cqhataqrs0u4o" path="res://GameData/Asset/Graphism/Texture/UI/bouche-du-rhone_dataline.png" id="4_klqf3"]
 
 [node name="waterLevel" type="Control" unique_id=1038024045]
 layout_mode = 3
@@ -31,3 +34,42 @@ layout_mode = 2
 
 [node name="Label6" type="Label" parent="VBoxContainer" unique_id=1419352988]
 layout_mode = 2
+label_settings = ExtResource("2_moikw")
+
+[node name="Control" type="Control" parent="." unique_id=1304480850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RegionOutline" type="TextureRect" parent="Control" unique_id=602968327]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -112.0
+offset_right = 138.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mqvra")
+
+[node name="RegionDataLine" type="TextureRect" parent="Control" unique_id=1353838526]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -112.0
+offset_right = 138.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_klqf3")

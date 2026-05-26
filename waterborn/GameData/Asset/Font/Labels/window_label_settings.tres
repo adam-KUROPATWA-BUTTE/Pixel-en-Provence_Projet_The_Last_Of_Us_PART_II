@@ -3,5 +3,6 @@
 [ext_resource type="FontFile" uid="uid://b2btiohitmov" path="res://GameData/Asset/Font/8px font/nokia_cellphone/nokiafc22.ttf" id="1_t8cje"]
 
 [resource]
+line_spacing = 0.0
 font = ExtResource("1_t8cje")
 font_size = 8

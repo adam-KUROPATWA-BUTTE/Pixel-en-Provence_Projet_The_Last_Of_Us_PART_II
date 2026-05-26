@@ -27,11 +27,23 @@ var windows : Dictionary = {
 		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/sandwich_content.tscn")
 	},
 	3 : {
-	"size" : Vector2i(278, 258),
-	"pos" : Vector2i(200, 100),
-	"name" : "Niveaux d'eau",
-	"content" : preload("res://GameData/Code/Scene/UI/waterLevel.tscn")
-}
+		"size" : Vector2i(278, 258),
+		"pos" : Vector2i(512, 96),
+		"name" : "Bimont Archive",
+		"content" : null
+	},
+	4 : {
+		"size" : Vector2i(280, 150),
+		"pos" : Vector2i(640, 288),
+		"name" : "Archives",
+		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/archives_folder_content.tscn")
+	},
+	5 : {
+		"size" : Vector2i(400, 258),
+		"pos" : Vector2i(200, 100),
+		"name" : "Water Levels",
+		"content" : preload("res://GameData/Code/Scene/UI/WindowContent/water_level.tscn")
+	}
 }
 
 var errors: Dictionary = {
