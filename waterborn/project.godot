@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 global_variable="*uid://dbsptwgnkcd2r"
 pathfinding="*uid://dvkt1tcwg6jvm"
-global_enums="*uid://b5cj60587ncwg"
 global_calculation="*uid://dpn71hcutqg0v"
 system_valve="*uid://bmpkmah4157o0"
+global_enums="*uid://b1lvwf84sw2to"
 
 [global_group]
 

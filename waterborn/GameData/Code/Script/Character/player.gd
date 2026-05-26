@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var speed : float = 6.0
 @export var mouse_sensitivity : float = 0.003
-@export var toglable : bool
+@export var toggled : bool
 
 @onready var camera = $head/Camera3D
 
