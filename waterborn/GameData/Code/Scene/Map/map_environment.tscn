@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://drb857a0ciefv"]
+
+[sub_resource type="Environment" id="Environment_1y8m5"]
+ambient_light_source = 2
+ambient_light_color = Color(0.39215687, 0.39215687, 0.39215687, 1)
+ambient_light_energy = 0.1
+reflected_light_source = 1
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 16.0
+fog_density = 1.0
+fog_depth_curve = 0.23325865
+fog_depth_end = 30.0
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_detail_spread = 6.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" unique_id=692378044]
+environment = SubResource("Environment_1y8m5")
