@@ -33,7 +33,7 @@ func update_interact_label() -> void:
 	)
 	var result = space.intersect_ray(query)
 	
-	if result and result.collider.has_method("interact"):
+	if result and result.collider.has_method("interact") and global_variable.int_label:
 		interact_label.show()
 	else:
 		interact_label.hide()
