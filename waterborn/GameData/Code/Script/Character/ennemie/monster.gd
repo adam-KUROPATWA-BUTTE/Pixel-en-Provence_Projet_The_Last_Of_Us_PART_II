@@ -24,29 +24,31 @@ var done : bool = false
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var player : Node3D
-@onready var _eye: Node3D = $eye
-@onready var _eye_ray_cast: RayCast3D = $eye/RayCast3D
+@onready var eye: Node3D = $eye
+@onready var eye_ray_cast: RayCast3D = $eye/RayCast3D
 
 func _ready() -> void:
 	set_physics_process(false)
 	await get_tree().physics_frame
 	set_physics_process(true)
 	player = get_tree().get_first_node_in_group('player')
-	reached_player.connect(func(): player.die())
+	#reached_player.connect(func(): player.die())
 
 func _process(_delta: float) -> void:
-	if !is_moving:
+	if !is_moving and global_target:
 		is_moving = true
 		done = await try_go_to(global_target)
 		if !done:
 			print("something went wrong :(")
 		is_moving = false
+		global_target = null
 
 func travel_to_position(wanted_position: Vector3, import_speed: float) -> void:
 	global_target = wanted_position
 	_current_speed = import_speed
 
 func is_player_in_view() -> bool:
+	#print("check for player")
 	if !player:
 		return false
 	
@@ -55,7 +57,7 @@ func is_player_in_view() -> bool:
 	if vec_to_player.length() > max_spotting_distance:
 		return false
 	
-	var in_fov := -_eye.global_basis.z.normalized().dot(vec_to_player.normalized()) > 0.3
+	var in_fov := -eye.global_basis.z.normalized().dot(vec_to_player.normalized()) > 0.3
 	
 	if in_fov:
 		return not is_line_of_sight_broken()
@@ -66,9 +68,9 @@ func is_line_of_sight_broken() -> bool:
 	if !player:
 		return true
 	
-	_eye_ray_cast.target_position = _eye_ray_cast.to_local(player.global_position)
-	_eye_ray_cast.force_raycast_update()
-	return _eye_ray_cast.is_colliding()
+	eye_ray_cast.target_position = eye_ray_cast.to_local(player.global_position) + Vector3(0, 1.8, 0)
+	eye_ray_cast.force_raycast_update()
+	return eye_ray_cast.is_colliding()
 
 
 func try_go_to(destination : Vector3) -> bool:
@@ -132,7 +134,6 @@ func move_to() -> void:
 			path_index += 1
 			continue
 		
-		
 		var where_to_look : Vector3 = target
 		where_to_look.y = global_position.y
 		if not where_to_look.is_equal_approx(global_position):
@@ -149,8 +150,15 @@ func move_to() -> void:
 		if not is_instance_valid(self):
 			return
 	
+	#check why pathfinding ended
+	print(
+		"reason of end pathfinding : path_size = ",
+		!(path_index < path.size()), ", time at same place = ",!(time_at_same_place < 40), 
+		", target changed = ", !(global_target == current_target))
+	
 	velocity = Vector3.ZERO
 	direction = Vector3.ZERO
+	current_target = null
 	if time_at_same_place >= 40:
 		print("cannot move for to long")
 	return

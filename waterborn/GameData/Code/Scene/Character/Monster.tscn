@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://8i7np6fwli7t" path="res://GameData/Code/Script/Character/ennemie/monster.gd" id="1_4jcbj"]
 [ext_resource type="Script" uid="uid://c8nc54e1vymyp" path="res://GameData/Code/Script/Character/ennemie/state_machine.gd" id="2_2rcj4"]
-[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/chase.gd" id="3_7ngye"]
+[ext_resource type="Texture2D" uid="uid://cqiuhh3f6h35g" path="res://GameData/Code/Scene/Character/mathis_abyss.png" id="2_r7k0j"]
+[ext_resource type="Script" uid="uid://cplmxxdpkpacl" path="res://GameData/Code/Script/Character/ennemie/chase.gd" id="3_7ngye"]
 [ext_resource type="Script" uid="uid://dt1br2moin3tu" path="res://GameData/Code/Script/Character/ennemie/seek.gd" id="4_2rcj4"]
-[ext_resource type="Script" path="res://GameData/Code/Script/Character/ennemie/roaming.gd" id="4_sindi"]
+[ext_resource type="Script" uid="uid://chgemd03kskyg" path="res://GameData/Code/Script/Character/ennemie/roaming.gd" id="4_sindi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2rcj4"]
+height = 1.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rcj4"]
 albedo_color = Color(0.3764706, 0.1882353, 0.08627451, 1)
@@ -14,17 +16,33 @@ albedo_color = Color(0.3764706, 0.1882353, 0.08627451, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_r7k0j"]
 material = SubResource("StandardMaterial3D_2rcj4")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujri0"]
+albedo_texture = ExtResource("2_r7k0j")
+
+[sub_resource type="QuadMesh" id="QuadMesh_42c3h"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_ujri0")
+
 [node name="monster" type="CharacterBody3D" unique_id=1087529850]
 collision_mask = 6
 script = ExtResource("1_4jcbj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=510721556]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CylinderShape3D_2rcj4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1094274813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("CylinderMesh_r7k0j")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=446513245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("QuadMesh_42c3h")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D2" unique_id=628455192]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_42c3h")
 
 [node name="eye" type="Node3D" parent="." unique_id=892178470]
 

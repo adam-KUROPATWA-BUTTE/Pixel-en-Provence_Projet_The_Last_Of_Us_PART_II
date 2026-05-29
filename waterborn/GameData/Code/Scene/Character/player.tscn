@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq11v2npdaov8" path="res://GameData/Code/Script/Character/player.gd" id="1_qfrup"]
 [ext_resource type="Script" uid="uid://ceeqrdwyfpudi" path="res://GameData/Code/Script/Character/movement.gd" id="2_d64q7"]
+[ext_resource type="LabelSettings" uid="uid://dmg6u0iiwml6b" path="res://GameData/Asset/Font/Labels/window_label_settings.tres" id="3_6y525"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qfrup"]
 height = 0.85
@@ -17,7 +18,7 @@ radial_segments = 10
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_qfrup")
 speed = 3.0
-toglable = true
+toggled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=76263131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
@@ -35,3 +36,15 @@ current = true
 
 [node name="Movement" type="Node" parent="." unique_id=338757032]
 script = ExtResource("2_d64q7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=888275667]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=202479512]
+visible = false
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 93.0
+offset_bottom = 42.0
+scale = Vector2(2, 2)
+text = "E to interact"
+label_settings = ExtResource("3_6y525")

@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://330hsx0l8vq2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vonot"]
+load_path = "res://.godot/imported/roof_lights_full_1.png-079961e9cd84c916693f04bfb7fed260.ctex"
+
+[resource]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_vonot")
+emission_enabled = true
+emission = Color(0.7058824, 0.6901961, 0.5019608, 1)
+emission_energy_multiplier = 10.0
+texture_filter = 0
+texture_repeat = false

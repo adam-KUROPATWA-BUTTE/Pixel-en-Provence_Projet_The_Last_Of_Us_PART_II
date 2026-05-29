@@ -1,19 +1,7 @@
 [gd_scene format=4 uid="uid://crkpurl7h3f7n"]
 
 [ext_resource type="Texture2D" uid="uid://puyaqs8yaut2" path="res://GameData/Asset/Graphism/Model/Tileset/roof_lights_full_1.png" id="1_84by7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84by7"]
-resource_name = "material_1"
-transparency = 2
-alpha_scissor_threshold = 0.05
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("1_84by7")
-emission_enabled = true
-emission = Color(0.8509804, 0.83137256, 0.44705883, 1)
-emission_energy_multiplier = 11.19
-texture_filter = 0
-texture_repeat = false
+[ext_resource type="Material" uid="uid://330hsx0l8vq2" path="res://GameData/Code/Shader/light_material.tres" id="1_jtbo8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yo032"]
 _surfaces = [{
@@ -37,7 +25,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_84by7"),
+"material": ExtResource("1_jtbo8"),
 "name": "material_1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -537,7 +525,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hn1kn")
 
-[node name="light22" type="Node3D" unique_id=1480342872]
+[node name="light" type="Node3D" unique_id=1480342872]
 
 [node name="light2" type="MeshInstance3D" parent="." unique_id=53824902]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.10625, 0)
@@ -618,3 +606,14 @@ mesh = SubResource("ArrayMesh_ypsay")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16875, 0.125)
 layers = 2
 mesh = SubResource("ArrayMesh_8chwn")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2054834017]
+transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 0, 0)
+light_color = Color(1, 1, 0.91764706, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+spot_range = 28.201
+spot_attenuation = 0.94
+spot_angle = 80.77
+spot_angle_attenuation = 0.3186403

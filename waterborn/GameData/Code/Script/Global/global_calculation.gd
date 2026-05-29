@@ -23,3 +23,6 @@ func two_3d_position_to_distance_squared(pos1 : Vector3, pos2 : Vector3) -> floa
 	var pos : Vector3 = (pos1 - pos2).abs()
 	var distance_square : float = pos.x**2 + pos.y**2 + pos.z**2
 	return distance_square
+
+func distance_to_random_vector3(distance : float) -> Vector3:
+	return Vector3(randf_range(-distance, distance), 0, randf_range(-distance, distance))

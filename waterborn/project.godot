@@ -11,16 +11,17 @@ config_version=5
 [application]
 
 config/name="Waterborn"
-run/main_scene="uid://b6okcs2lkoygu"
+run/main_scene="uid://dyrw5oe6v3bpb"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 global_variable="*uid://dbsptwgnkcd2r"
-global_calculation="*uid://b1bpmot1tvwih"
 pathfinding="*uid://dvkt1tcwg6jvm"
-SystemeValve="*uid://dpwwkf5g3nq4t"
+global_calculation="*uid://dpn71hcutqg0v"
+system_valve="*uid://bmpkmah4157o0"
+global_enums="*uid://b1lvwf84sw2to"
 
 [global_group]
 

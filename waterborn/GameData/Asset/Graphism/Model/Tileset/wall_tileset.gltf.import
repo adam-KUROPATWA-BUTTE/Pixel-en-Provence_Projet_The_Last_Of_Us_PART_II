@@ -146,28 +146,37 @@ _subresources={
 "PATH:floor": {
 "generate/physics": true
 },
-"PATH:in-corner_wall/bottom_wall": {
+"PATH:in-corner_wall/bottom_wall_corner": {
 "generate/physics": true
 },
-"PATH:in-corner_wall/bottom_wall2": {
+"PATH:in-corner_wall/middle_wall_corner": {
 "generate/physics": true
 },
-"PATH:in-corner_wall/middle_wall2": {
+"PATH:in-corner_wall/top_wall_corner": {
 "generate/physics": true
 },
-"PATH:out-corner_wall/middle_wall3": {
+"PATH:out-corner_wall/bottom_wall_out_corner": {
 "generate/physics": true
 },
-"PATH:out-corner_wall/middle_wall_top2": {
+"PATH:out-corner_wall/middle_wall_out_corner": {
 "generate/physics": true
 },
-"PATH:out-corner_wall/top_wall2": {
+"PATH:out-corner_wall/top_wall_out_corner": {
+"generate/physics": true
+},
+"PATH:out_out_corner/bottom_out_out_corner": {
+"generate/physics": true
+},
+"PATH:out_out_corner/middle_wall_out_out_corner": {
+"generate/physics": true
+},
+"PATH:out_out_corner/top_wall_out_out_corner": {
+"generate/physics": true
+},
+"PATH:straight_wall/bottom_wall": {
 "generate/physics": true
 },
 "PATH:straight_wall/middle_wall": {
-"generate/physics": true
-},
-"PATH:straight_wall/middle_wall_top": {
 "generate/physics": true
 },
 "PATH:straight_wall/top_wall": {

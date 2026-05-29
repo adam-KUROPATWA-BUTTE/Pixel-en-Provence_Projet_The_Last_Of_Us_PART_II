@@ -7,9 +7,9 @@
 render_priority = 0
 shader = ExtResource("1_1ianu")
 shader_parameter/albedo_tex = ExtResource("2_ptogm")
-shader_parameter/aging_strength = 0.21999999508256
+shader_parameter/aging_strength = 0.31999999284736
 shader_parameter/noise_scale = 128.0
 shader_parameter/aging_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
-shader_parameter/roughness = 0.8
+shader_parameter/roughness = 0.6650000315875
 shader_parameter/seed = Vector2(0, 0)
 shader_parameter/texture_size = Vector2i(128, 128)
