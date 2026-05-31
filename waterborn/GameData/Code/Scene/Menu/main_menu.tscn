@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c53435lht55d3"]
+
+[ext_resource type="Script" uid="uid://rxkb31gxisns" path="res://GameData/Code/Script/Menu/main_menu.gd" id="1_qans4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_isr08"]
+font_size = 87
+
+[node name="MainMenu" type="Control" unique_id=737932118]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qans4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=385292769]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.375
+offset_top = -79.75
+offset_right = 264.375
+offset_bottom = 79.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1889521148]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "Play"
+
+[node name="continue" type="Button" parent="VBoxContainer" unique_id=1573602928]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "continue"
+
+[node name="option" type="Button" parent="VBoxContainer" unique_id=105529882]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "Option
+"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1973030868]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "quit
+"
+
+[node name="Label" type="Label" parent="." unique_id=1373054054]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -234.0
+offset_top = 62.0
+offset_right = 234.0
+offset_bottom = 181.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Waterborn"
+label_settings = SubResource("LabelSettings_isr08")
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

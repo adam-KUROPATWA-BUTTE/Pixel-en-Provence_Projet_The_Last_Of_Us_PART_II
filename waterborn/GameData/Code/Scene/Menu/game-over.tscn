@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bktheyf05wjnh"]
+
+[ext_resource type="Script" uid="uid://c3w5nqmm45y0l" path="res://GameData/Code/Script/Menu/game_over.gd" id="1_ljb07"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pk4wx"]
+font_size = 87
+
+[node name="GameOver" type="Control" unique_id=1955836691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ljb07")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=128788576]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -11.5
+offset_right = 46.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=358584515]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "GAME-OVER"
+label_settings = SubResource("LabelSettings_pk4wx")
+
+[node name="retry" type="Button" parent="VBoxContainer" unique_id=844694822]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "Retry"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=2011984054]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "quit
+"
+
+[connection signal="pressed" from="VBoxContainer/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

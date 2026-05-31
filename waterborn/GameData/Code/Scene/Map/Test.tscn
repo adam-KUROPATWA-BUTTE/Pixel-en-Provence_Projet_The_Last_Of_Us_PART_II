@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://dpwwkf5g3nq4t" path="res://GameData/Code/Script/Tool/systemeValve.gd" id="1_m3asa"]
 [ext_resource type="PackedScene" uid="uid://dudli885dapht" path="res://GameData/Code/Scene/Character/player.tscn" id="1_qtb0c"]
 [ext_resource type="PackedScene" uid="uid://b88gkgy58estv" path="res://GameData/Code/Scene/Element/enemi/trap_detect.tscn" id="2_vnleq"]
+[ext_resource type="Script" uid="uid://f8qns0g4nln1" path="res://GameData/Code/Script/Element/trap_detect.gd" id="3_ysxxn"]
 [ext_resource type="PackedScene" uid="uid://dpm6j1hkiln88" path="res://GameData/Code/Scene/Element/valve.tscn" id="4_y3ych"]
 [ext_resource type="PackedScene" uid="uid://c1pyvx3a6l13y" path="res://GameData/Code/Scene/Element/door.tscn" id="6_2har7"]
 [ext_resource type="PackedScene" uid="uid://cerlbaenoamuh" path="res://GameData/Code/Scene/Element/computer.tscn" id="6_6mm18"]
 [ext_resource type="PackedScene" uid="uid://cdfxahjfxvtku" path="res://GameData/Code/Scene/Element/button.tscn" id="7_ysxxn"]
+[ext_resource type="PackedScene" uid="uid://c6iucljp2uc7w" path="res://GameData/Code/Scene/Menu/pause_menu.tscn" id="9_jlk2t"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_y3ych"]
 vertices = PackedVector3Array(-12, 0.45, -12, -12, 0.45, 12, 12, 0.45, 12, 12, 0.45, -12)
@@ -25,9 +27,11 @@ size = Vector3(25, 0.1, 25)
 [node name="Node3D" type="Node3D" unique_id=1965322240]
 script = ExtResource("1_m3asa")
 
-[node name="trap" parent="." unique_id=690965634 instance=ExtResource("2_vnleq")]
+[node name="trap" parent="." unique_id=690965634 node_paths=PackedStringArray("spawnTab") instance=ExtResource("2_vnleq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9139442, 0, 6.659028)
 collision_mask = 3
+script = ExtResource("3_ysxxn")
+spawnTab = [NodePath("../Marker3D"), NodePath("../Marker3D2")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=923714029]
 
@@ -93,3 +97,11 @@ door = NodePath("../door")
 [node name="button2" parent="." unique_id=249525209 node_paths=PackedStringArray("door") instance=ExtResource("7_ysxxn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31221, 0.39481306, -11.984013)
 door = NodePath("../door")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1238259589]
+visible = false
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=679937861 instance=ExtResource("9_jlk2t")]
+
+[node name="systeme" type="Node3D" parent="." unique_id=1092762081]
+script = ExtResource("1_m3asa")

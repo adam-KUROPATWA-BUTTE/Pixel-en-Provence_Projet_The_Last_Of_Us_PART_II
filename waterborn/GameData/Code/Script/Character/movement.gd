@@ -36,7 +36,6 @@ func _physics_process(delta: float) -> void:
 			$CanvasLayer/BoxContainer/Label.hide()
 	else :
 		$CanvasLayer/BoxContainer/Label.hide()
-		
 	
 	if toglable:
 		var direction = Vector3.ZERO
@@ -68,5 +67,5 @@ func _physics_process(delta: float) -> void:
 		else :
 			lerp(head.position.y, 0.0, 0.1)
 			
-func die() : 
-	print("tu es mort")
+func die() :
+	GameManager.game_over()
