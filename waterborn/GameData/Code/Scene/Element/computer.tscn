@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm7ncbd72xs7c" path="res://GameData/Code/Script/Element/computer.gd" id="1_7kib4"]
 [ext_resource type="PackedScene" uid="uid://dse2ss6r0gnun" path="res://GameData/Code/Scene/UI/desktop.tscn" id="2_q3853"]
+[ext_resource type="PackedScene" uid="uid://ddsn217ul1nw2" path="res://GameData/Asset/Graphism/Model/Props/Office_Monitor_Table.gltf" id="3_w11lb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lmrn1"]
 
@@ -13,11 +14,16 @@ collision_layer = 8
 script = ExtResource("1_7kib4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1739650228]
+visible = false
 mesh = SubResource("BoxMesh_lmrn1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=982591892]
+visible = false
 shape = SubResource("BoxShape3D_lmrn1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1234236860]
 
 [node name="Desktop" parent="CanvasLayer" unique_id=972921025 instance=ExtResource("2_q3853")]
+
+[node name="blockbench_export" parent="." unique_id=913544582 instance=ExtResource("3_w11lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.56, -0.25)
