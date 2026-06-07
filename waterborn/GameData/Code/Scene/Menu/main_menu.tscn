@@ -33,11 +33,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 29
 text = "Play"
 
-[node name="continue" type="Button" parent="VBoxContainer" unique_id=1573602928]
-layout_mode = 2
-theme_override_font_sizes/font_size = 29
-text = "continue"
-
 [node name="option" type="Button" parent="VBoxContainer" unique_id=105529882]
 layout_mode = 2
 theme_override_font_sizes/font_size = 29
@@ -65,7 +60,5 @@ text = "Waterborn"
 label_settings = SubResource("LabelSettings_isr08")
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -39,11 +39,6 @@ theme_override_font_sizes/font_size = 29
 text = "Option
 "
 
-[node name="save" type="Button" parent="VBoxContainer" unique_id=1224552898]
-layout_mode = 2
-theme_override_font_sizes/font_size = 29
-text = "Save"
-
 [node name="quit" type="Button" parent="VBoxContainer" unique_id=780778926]
 layout_mode = 2
 theme_override_font_sizes/font_size = 29
@@ -66,5 +61,4 @@ label_settings = SubResource("LabelSettings_1l3lv")
 
 [connection signal="pressed" from="VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/option" to="." method="_on_option_pressed"]
-[connection signal="pressed" from="VBoxContainer/save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

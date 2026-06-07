@@ -23,6 +23,10 @@ pathfinding="*uid://dvkt1tcwg6jvm"
 SystemeValve="*uid://dpwwkf5g3nq4t"
 GameManager="*uid://0kkqfe77sy25"
 
+[display]
+
+window/subwindows/embed_subwindows=false
+
 [global_group]
 
 player=""

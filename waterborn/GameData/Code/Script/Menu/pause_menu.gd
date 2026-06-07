@@ -28,9 +28,6 @@ func _resume() -> void:
 func _on_resume_pressed() -> void:
 	_resume()
 
-func _on_option_pressed() -> void:
-	pass
-
 func _on_quit_pressed() -> void:
 	GameManager.reset_runtime_data()
 	get_tree().change_scene_to_file("res://GameData/Code/Scene/Menu/main_menu.tscn")

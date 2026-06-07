@@ -101,7 +101,7 @@ door = NodePath("../door")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1238259589]
 visible = false
 
-[node name="PauseMenu" parent="CanvasLayer" unique_id=679937861 instance=ExtResource("9_jlk2t")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=679937861 groups=["pauseMenu"] instance=ExtResource("9_jlk2t")]
 
 [node name="systeme" type="Node3D" parent="." unique_id=1092762081]
 script = ExtResource("1_m3asa")
